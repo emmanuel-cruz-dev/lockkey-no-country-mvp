@@ -5,12 +5,14 @@ import "./Header.css";
 import { useNavMenu } from "../../hooks/useNavMenu";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import DarkModeToggle from "../../components/DarkModeToggle/DarkModeToggle";
+import { useDarkMode } from "../../hooks/useDarkMode";
 
 function Header() {
   const { isMenuOpen, handleClick } = useNavMenu();
   const location = useLocation();
   const navigate = useNavigate();
   const isPanel = location.pathname === "/panel";
+  const { isDarkMode } = useDarkMode();
 
   const handleLogout = () => {
     localStorage.removeItem("access_token");
@@ -19,7 +21,9 @@ function Header() {
 
   return (
     <header
-      className={`header p-4 md:px-10 md:py-5 text-[20px] font-[600] ${
+      className={`header ${
+        isDarkMode ? "dark__header" : ""
+      } p-4 md:px-10 md:py-5 text-[20px] font-[600] ${
         isPanel ? "mb-1" : "mb-8"
       }`}
     >

@@ -1,6 +1,10 @@
 .header {
   box-shadow: 0 8px 16px rgba(136, 146, 176, 0.8);
   background-color: var(--background-white);
+
+  &.dark__header {
+    background-color: var(--dark-mode-background);
+  }
 }
 
 .header__hidden-menu__container {
@@ -18,4 +22,3 @@
 .header__hidden-menu__container.active {
   transform: translateX(0);
 }
-
