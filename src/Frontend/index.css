@@ -87,6 +87,10 @@ body {
   }
 }
 
+.dark-mode__background-color {
+  background-color: var(--dark-mode-background);
+}
+
 .btn__primary {
   font-size: 1.2em;
   font-weight: 600;

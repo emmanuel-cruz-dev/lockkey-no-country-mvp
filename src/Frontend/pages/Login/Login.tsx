@@ -4,6 +4,7 @@ import LoginBanner from "../../../assets/Login.png";
 import LoginBoyBanner from "../../../assets/LoginBoy.png";
 import Planes from "../../../assets/planes.png";
 import "./Login.css";
+import { useDarkMode } from "../../hooks/useDarkMode";
 
 const initialState = { email: "", password: "", confirmPassword: "" };
 
@@ -21,6 +22,7 @@ const reducer = (state: typeof initialState, action: Action) => {
 const Login = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const navigate = useNavigate();
+  const { isDarkMode } = useDarkMode();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({
@@ -81,16 +83,22 @@ const Login = () => {
         className="LoginBoyBanner absolute hidden md:block"
       />
       <div
-        className="relative w-full max-w-md rounded-lg bg-white p-6 shadow-md backdrop-blur-md bg-opacity-90
-      transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-lg"
+        className={`relative w-full max-w-md rounded-lg ${
+          isDarkMode ? "dark-mode__background-color" : "bg-white"
+        } p-6 shadow-md backdrop-blur-md bg-opacity-90
+      transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-lg`}
       >
         <h2 className="mb-4 text-center text-2xl font-semibold">
           Inicio de sesión
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Email
+            <label
+              className={`block text-sm font-medium ${
+                isDarkMode ? "text-white/80" : "text-gray-700"
+              }`}
+            >
+              Email*
             </label>
             <input
               type="email"
@@ -102,8 +110,12 @@ const Login = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Contraseña
+            <label
+              className={`block text-sm font-medium ${
+                isDarkMode ? "text-white/80" : "text-gray-700"
+              }`}
+            >
+              Contraseña*
             </label>
             <input
               type="password"
@@ -114,14 +126,26 @@ const Login = () => {
               required
             />
           </div>
-          <p className="mt-4 text-center text-sm text-gray-600">
+          <p
+            className={`mt-4 text-center text-sm ${
+              isDarkMode ? "text-white/80" : "text-gray-600"
+            }`}
+          >
             ¿No tienes una cuenta?
-            <Link to="/register" className="text-blue-600 hover:underline">
+            <Link
+              to="/register"
+              className={`text-blue-600 ${
+                isDarkMode ? "text-blue-400" : ""
+              } hover:underline`}
+            >
               {" "}
               Regístrate aquí
             </Link>
           </p>
-          <button type="submit" className="btn__primary btn__lime w-full">
+          <button
+            type="submit"
+            className="btn__primary btn__lime w-full text-black"
+          >
             Inicia sesión
           </button>
         </form>
