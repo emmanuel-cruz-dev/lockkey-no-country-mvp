@@ -6,6 +6,7 @@
   background-image: url(../../../assets/images/login-banner.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   max-height: 660px;
   display: flex;
   align-items: center;

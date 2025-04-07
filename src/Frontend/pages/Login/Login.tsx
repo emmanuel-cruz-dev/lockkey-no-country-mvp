@@ -65,12 +65,11 @@ const Login = () => {
   };
 
   return (
-    <div className="login flex items-center justify-center min-h-screen relative group px-4">
+    <section className="login flex items-center justify-center h-full min-h-screen relative -mt-8 pt-8 group px-4">
       <img
         src={LoginBanner}
         alt=""
-        className="bannerLogin absolute sm:block w-full h-auto sm:h-[660px] object-cover
-        sm:rotate-0 sm:w-auto sm:max-h-screen"
+        className="bannerLogin absolute object-cover min-h-screen h-full top-0 z-[-1]"
       />
       <img
         src={Planes}
@@ -150,7 +149,7 @@ const Login = () => {
           </button>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 
