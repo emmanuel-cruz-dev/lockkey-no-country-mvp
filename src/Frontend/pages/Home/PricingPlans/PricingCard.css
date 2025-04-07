@@ -5,6 +5,15 @@
   transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
   box-shadow: 8px 8px 16px rgba(136, 146, 176, 0.8),
     -8px -8px 16px rgba(255, 255, 255, 0.9);
+
+  &.dark__pricing-card__container {
+    background-color: #181e3d;
+    box-shadow: 8px 8px 16px #0f121e, -8px -8px 16px #1f263e;
+
+    &:hover {
+      background-color: #243167;
+    }
+  }
 }
 
 .pricing-card__category {

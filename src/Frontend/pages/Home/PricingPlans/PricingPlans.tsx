@@ -1,14 +1,23 @@
+import { useDarkMode } from "../../../hooks/useDarkMode";
 import { pricingCardData } from "../../../mocks/pricingPlans";
 import { PricingCard } from "./PricingCard";
 
 function PricingPlans() {
+  const { isDarkMode } = useDarkMode();
+
   return (
     <section
       className="container pricing-plans flex flex-col gap-2 py-12"
       id="pricing-plans"
     >
       <article className="text-center lg:col-span-3">
-        <p className="text-lg uppercase mb-2">Elige tu nivel de seguridad</p>
+        <p
+          className={`${
+            isDarkMode ? "text-white/80" : "text-neutral-800"
+          } text-lg uppercase mb-2`}
+        >
+          Elige tu nivel de seguridad
+        </p>
         <h2 className="md:w-9/12 text-3xl xl:text-5xl font-bold mb-12 mx-auto">
           Planes de protección diseñados para cada necesidad.
         </h2>
