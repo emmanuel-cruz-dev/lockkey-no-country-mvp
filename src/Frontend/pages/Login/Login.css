@@ -1,0 +1,29 @@
+.login {
+  min-height: 37rem;
+}
+
+.bannerLogin {
+  background-image: url(../../../assets/images/login-banner.jpg);
+  background-size: cover;
+  background-position: center;
+  max-height: 660px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100rem;
+}
+
+.planes {
+  max-width: 12%;
+  left: 450px;
+  transform: rotate(-0.05turn);
+  top: 10px;
+  height: auto;
+  z-index: 1;
+  filter: drop-shadow(0 0 10px rgba(35, 35, 35, 0.197));
+}
+
+.LoginBoyBanner {
+  max-width: 80%;
+  height: auto;
+}

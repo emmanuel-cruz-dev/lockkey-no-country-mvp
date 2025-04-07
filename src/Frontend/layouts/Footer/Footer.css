@@ -1,0 +1,38 @@
+.footer__title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer__list li {
+  font-size: 1.1em;
+  color: var(--text-gray);
+  margin-bottom: 0.5rem;
+}
+
+.footer__list li svg {
+  color: var(--purple-vivid-color);
+}
+
+.footer__navbar li {
+  list-style: disc;
+  margin-left: 1.25rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer__navbar li:hover {
+  color: var(--accent-lime-color);
+}
+
+.footer__navbar li::marker {
+  color: var(--accent-lime-color);
+}
+
+.footer__link {
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.footer__link:hover {
+  transform: scale(1.05);
+  color: var(--accent-lime-color);
+}

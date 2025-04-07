@@ -1,0 +1,28 @@
+.register {
+  min-height: 37rem;
+}
+
+.bannerLogin {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.laptopRegister {
+  max-width: 25%;
+  height: auto;
+  bottom: 5px;
+  transform: translateX(-450px);
+  z-index: 1;
+}
+
+.circleRegister {
+  max-width: 41rem;
+  height: auto;
+  z-index: -1;
+  position: absolute;
+  top: 50px;
+  right: 160px;
+  rotate: 90deg;
+}

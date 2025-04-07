@@ -1,0 +1,31 @@
+.pricing-card__container {
+  position: relative;
+  border: 3px solid transparent;
+  background-color: var(--background-white-fade);
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+  box-shadow: 8px 8px 16px rgba(136, 146, 176, 0.8),
+    -8px -8px 16px rgba(255, 255, 255, 0.9);
+}
+
+.pricing-card__category {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: var(--accent-lime-color);
+  font-size: 1.15em;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.pricing-card__container:hover {
+  border: 3px solid var(--background-black);
+  background-color: var(--background-white);
+}
+
+.pricing-card__container:hover .pricing-card__category {
+  color: var(--text-white);
+  background-color: var(--background-black);
+}

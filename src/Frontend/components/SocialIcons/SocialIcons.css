@@ -1,0 +1,9 @@
+.social-icons__container li a {
+  display: block;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.social-icons__container li a:hover {
+  color: var(--text-black);
+  background-color: var(--accent-lime-color);
+}

@@ -1,0 +1,20 @@
+.form {
+  border-radius: 1rem;
+  background-color: var(--purple-fade-color);
+}
+
+.form input,
+.form select,
+.form textarea {
+  border-radius: 0.5rem;
+  opacity: 0.85;
+  outline: none;
+}
+
+.form select {
+  color: #9e9cbc;
+}
+
+.form select option {
+  color: var(--text-black);
+}
