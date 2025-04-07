@@ -69,7 +69,9 @@ const Login = () => {
       <img
         src={LoginBanner}
         alt=""
-        className="bannerLogin absolute object-cover min-h-screen h-full top-0 z-[-1]"
+        className={`bannerLogin absolute object-cover min-h-screen h-full top-0 z-[-1] ${
+          isDarkMode ? "opacity-20" : ""
+        }`}
       />
       <img
         src={Planes}
@@ -79,7 +81,9 @@ const Login = () => {
       <img
         src={LoginBoyBanner}
         alt=""
-        className="LoginBoyBanner absolute hidden md:block"
+        className={`LoginBoyBanner absolute hidden md:block ${
+          isDarkMode ? "opacity-70" : ""
+        }`}
       />
       <div
         className={`relative w-full max-w-md rounded-lg ${
