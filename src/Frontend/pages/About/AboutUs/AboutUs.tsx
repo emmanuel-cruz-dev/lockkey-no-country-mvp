@@ -12,21 +12,27 @@ function AboutUs() {
       <article className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-8">
         <article className="grid grid-cols-2 gap-8 mx-auto">
           <img
-            className="col-span-2 rounded-xl overflow-hidden"
+            className={`col-span-2 rounded-xl overflow-hidden box-shadow__item ${
+              isDarkMode ? "dark__box-shadow__item" : ""
+            }`}
             src={AboutImg1}
             alt="Una mujer sosteniendo un celular frente a una notebook."
             width={540}
             height={335}
           />
           <img
-            className="hidden md:block rounded-xl overflow-hidden"
+            className={`hidden md:block rounded-xl overflow-hidden box-shadow__item ${
+              isDarkMode ? "dark__box-shadow__item" : ""
+            }`}
             src={AboutImg2}
             alt="Una mujer vestida de traje sosteniendo un celular que le ilumina la cara."
             width={255}
             height={251}
           />
           <img
-            className="hidden md:block rounded-xl overflow-hidden"
+            className={`hidden md:block rounded-xl overflow-hidden box-shadow__item ${
+              isDarkMode ? "dark__box-shadow__item" : ""
+            }`}
             src={AboutImg3}
             alt="Una chica con una campera con la capucha puesta, sosteniendo una notebook."
             width={255}

@@ -75,8 +75,8 @@ function WhyChooseUs() {
         </article>
         <aside className="order-1 md:order-none grid grid-cols-3 grid-rows-7 gap-6 mx-auto">
           <figure
-            className={`row-start-3 row-span-2 rounded-xl overflow-hidden ${
-              isDarkMode ? "dark__box-shadow__item" : "box-shadow__item"
+            className={`row-start-3 row-span-2 rounded-xl overflow-hidden box-shadow__item ${
+              isDarkMode ? "dark__box-shadow__item" : ""
             }`}
           >
             <img
@@ -88,8 +88,8 @@ function WhyChooseUs() {
             />
           </figure>
           <figure
-            className={`col-span-2 row-span-4 rounded-xl overflow-hidden ${
-              isDarkMode ? "dark__box-shadow__item" : "box-shadow__item"
+            className={`col-span-2 row-span-4 rounded-xl overflow-hidden box-shadow__item ${
+              isDarkMode ? "dark__box-shadow__item" : ""
             }`}
           >
             <img
@@ -101,8 +101,8 @@ function WhyChooseUs() {
             />
           </figure>
           <figure
-            className={`col-span-2 row-span-3  rounded-xl overflow-hidden ${
-              isDarkMode ? "dark__box-shadow__item" : "box-shadow__item"
+            className={`col-span-2 row-span-3  rounded-xl overflow-hidden box-shadow__item ${
+              isDarkMode ? "dark__box-shadow__item" : ""
             }`}
           >
             <img
