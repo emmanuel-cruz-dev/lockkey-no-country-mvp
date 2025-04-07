@@ -6,25 +6,33 @@ import Footer from "./layouts/Footer/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton";
 import Loading from "./components/Loading/Loading";
 import PasswordModal from "./components/PasswordModal/PasswordModal";
-import NotesModal from "./components/NotesModal/NotesModal"; 
+import NotesModal from "./components/NotesModal/NotesModal";
 import { ModalProvider, useModal } from "./Store/ModalContext";
 import ImportPasswordModal from "./components/ImportPassword/ImportPassword";
 
 const Contact = lazy(() => import("./pages/Contact/Contact/Contact"));
 const Features = lazy(() => import("./pages/Home/Features/Features"));
 const Hero = lazy(() => import("./pages/Home/Hero/Hero"));
-const PricingPlans = lazy(() => import("./pages/Home/PricingPlans/PricingPlans"));
-const Testimonials = lazy(() => import("./pages/Home/Testimonials/Testimonials"));
+const PricingPlans = lazy(
+  () => import("./pages/Home/PricingPlans/PricingPlans")
+);
+const Testimonials = lazy(
+  () => import("./pages/Home/Testimonials/Testimonials")
+);
 const WhatWeDo = lazy(() => import("./pages/Home/WhatWeDo/WhatWeDo"));
 const WhoWeAre = lazy(() => import("./pages/Home/WhoWeAre/WhoWeAre"));
 const AboutUs = lazy(() => import("./pages/About/AboutUs/AboutUs"));
-const OurServices = lazy(() => import("./pages/OurServices/OurServices/OurServices"));
+const OurServices = lazy(
+  () => import("./pages/OurServices/OurServices/OurServices")
+);
 const Register = lazy(() => import("./pages/Register/Register"));
 const Login = lazy(() => import("./pages/Login/Login"));
 const Panel = lazy(() => import("./pages/Panel/Panel"));
 const OurTeam = lazy(() => import("./pages/About/OurTeam/OurTeam"));
 const FAQs = lazy(() => import("./pages/OurServices/FAQs/FAQs"));
-const WhyChooseUs = lazy(() => import("./pages/Contact/WhyChooseUs/WhyChooseUs"));
+const WhyChooseUs = lazy(
+  () => import("./pages/Contact/WhyChooseUs/WhyChooseUs")
+);
 const TalkBanner = lazy(() => import("./pages/Home/TalkBanner/TalkBanner"));
 
 const Home = () => (
@@ -98,7 +106,7 @@ function App() {
       </Routes>
       <ScrollToTopButton />
       <Footer />
-      
+
       <ModalContainer />
     </ModalProvider>
   );

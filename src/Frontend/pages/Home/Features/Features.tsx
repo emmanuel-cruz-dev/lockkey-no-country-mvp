@@ -1,11 +1,18 @@
 import { FeaturedCard } from "./FeaturedCard";
 import { featuresItems } from "../../../mocks/features";
+import { useDarkMode } from "../../../hooks/useDarkMode";
 
 function Features() {
+  const { isDarkMode } = useDarkMode();
+
   return (
     <section className="features container py-12" id="features">
       <article className="flex flex-col items-center">
-        <p className="text-lg uppercase mb-2">
+        <p
+          className={`${
+            isDarkMode ? "text-white/80" : "text-neutral-800"
+          } text-lg uppercase mb-2`}
+        >
           Simplifica tu seguridad digital
         </p>
         <h2 className="text-center md:w-9/12 text-3xl xl:text-5xl font-bold mb-12 mx-auto">

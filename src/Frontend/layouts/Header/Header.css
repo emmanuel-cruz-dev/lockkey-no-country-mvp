@@ -4,6 +4,7 @@
 
   &.dark__header {
     background-color: var(--dark-mode-background);
+    box-shadow: 0 12px 20px rgba(16, 16, 16, 0.8);
   }
 }
 

@@ -64,3 +64,8 @@ export interface AccordionProps {
   title: string;
   content: string;
 }
+
+export interface DarkModeContextProps {
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+}

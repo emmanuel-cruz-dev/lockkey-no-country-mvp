@@ -1,9 +1,5 @@
 import { createContext, FC, useEffect, useState } from "react";
-
-interface DarkModeContextProps {
-  isDarkMode: boolean;
-  toggleDarkMode: () => void;
-}
+import { DarkModeContextProps } from "../Store/types";
 
 export const DarkModeContext = createContext<DarkModeContextProps | undefined>(
   undefined
