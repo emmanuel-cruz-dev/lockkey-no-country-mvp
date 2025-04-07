@@ -142,7 +142,7 @@ const Register = () => {
   }, [passwordScore]);
 
   return (
-    <section className="register flex items-center justify-center min-h-[37rem] relative">
+    <section className="register flex items-center justify-center min-h-[37rem] -mt-8 relative">
       <img
         src={LoginBanner}
         alt="Fondo de login"
