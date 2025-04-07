@@ -30,7 +30,7 @@ export const Carousel: FC<CarouselProps> = ({ testimonials }) => {
               <MdStar />
               <MdStar />
             </div>
-            <p className="md:text-2xl font-semibold w-5/6 mx-auto mb-4">
+            <p className="md:text-2xl text-black font-semibold w-5/6 mx-auto mb-4">
               "{testimonial.review}"
             </p>
             <figure className="max-w-20 shadow-lg shadow-black/30 rounded-full overflow-hidden mx-auto mb-4">
@@ -44,7 +44,9 @@ export const Carousel: FC<CarouselProps> = ({ testimonials }) => {
               />
             </figure>
             <div>
-              <h3 className="font-bold text-xl">{testimonial.name}</h3>
+              <h3 className="font-bold text-xl text-black">
+                {testimonial.name}
+              </h3>
               <h4 className="mb-10 text-neutral-700">{testimonial.position}</h4>
             </div>
           </SwiperSlide>

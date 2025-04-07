@@ -73,6 +73,10 @@ body {
 .box-shadow__item {
   box-shadow: 8px 8px 16px rgba(136, 146, 176, 0.8),
     -8px -8px 16px rgba(255, 255, 255, 0.9);
+
+  &.dark__box-shadow__item {
+    box-shadow: 8px 8px 16px #08090f, -8px -8px 16px #242d48;
+  }
 }
 
 .custom-drop-shadow {
