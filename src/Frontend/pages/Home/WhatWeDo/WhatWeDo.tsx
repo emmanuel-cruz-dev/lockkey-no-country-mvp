@@ -1,7 +1,10 @@
 import WhatWeDoImg from "../../../../assets/what-we-do-banner.avif";
+import { useDarkMode } from "../../../hooks/useDarkMode";
 import { ShieldItem } from "./ShieldItem";
 
 function WhatWeDo() {
+  const { isDarkMode } = useDarkMode();
+
   return (
     <section
       className="container what-we-do grid grid-cols-1 lg:grid-cols-5 justify-center items-center gap-2 py-12"
@@ -9,7 +12,9 @@ function WhatWeDo() {
     >
       <figure className="w-2/3 md:max-w-72 xl:max-w-96 mx-auto lg:col-span-2 lg:ml-0">
         <img
-          className="w-full object-cover custom-drop-shadow"
+          className={`w-full object-cover custom-drop-shadow ${
+            isDarkMode ? "dark__drop-shadow" : ""
+          }`}
           src={WhatWeDoImg}
           alt="Icono de un mundo con líneas de conexión que salen de él."
           width={507}
@@ -18,12 +23,22 @@ function WhatWeDo() {
         />
       </figure>
       <article className="text-center md:text-left lg:col-span-3">
-        <p className="text-lg uppercase mb-2">Nuestra misión</p>
+        <p
+          className={`${
+            isDarkMode ? "text-white/80" : "text-neutral-800"
+          } text-lg uppercase mb-2`}
+        >
+          Nuestra misión
+        </p>
         <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-5">
           Seguridad integral para una defensa digital{" "}
           <span className="text__purple-dark">sin límites</span>.
         </h2>
-        <p className="text-lg mb-5 text-neutral-600">
+        <p
+          className={`${
+            isDarkMode ? "text-white/70" : "text-neutral-600"
+          } text-lg mb-5`}
+        >
           Protegemos tu entorno digital con estrategias efectivas, brindando
           confianza y tranquilidad ante cualquier amenaza en línea.
         </p>

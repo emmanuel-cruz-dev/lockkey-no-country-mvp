@@ -13,7 +13,9 @@ export const FeaturedCard: FC<FeatureCardProps> = ({
     <article className="w-11/12 mx-auto md:w-auto">
       <figure className="max-w-36 mb-4 mx-auto">
         <img
-          className="w-full object-cover custom-drop-shadow"
+          className={`w-full object-cover custom-drop-shadow ${
+            isDarkMode ? "dark__drop-shadow" : ""
+          }`}
           src={img}
           alt={`Icono que alude a ${title}`}
           width={155}
