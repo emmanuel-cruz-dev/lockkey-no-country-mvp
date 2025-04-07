@@ -2,6 +2,10 @@
   width: 100vw;
   height: 100vh;
   background-color: var(--accent-lime-color);
+
+  &.dark__header__navbar {
+    background-color: var(--dark-mode-background);
+  }
 }
 
 .header__navbar ul {

@@ -54,7 +54,9 @@ function Header() {
             {isMenuOpen ? <MdClose /> : <MdMenu />}
           </button>
 
-          <DarkModeToggle />
+          <div className="z-10 flex items-center px-1 pl-2">
+            <DarkModeToggle />
+          </div>
 
           {isPanel ? (
             <button

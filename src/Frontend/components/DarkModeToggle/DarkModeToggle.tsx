@@ -5,7 +5,10 @@ function DarkModeToggle() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   return (
-    <button onClick={toggleDarkMode}>
+    <button
+      onClick={toggleDarkMode}
+      title={`${isDarkMode ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}`}
+    >
       {isDarkMode ? <IoSunnyOutline size={22} /> : <IoMoonOutline size={22} />}
     </button>
   );
