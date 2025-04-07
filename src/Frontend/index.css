@@ -31,6 +31,11 @@ html {
 body {
   background-color: var(--background-light);
   font-family: var(--primary-font-family);
+
+  &.dark {
+    background-color: #171d34;
+    color: #fff;
+  }
 }
 
 .no-scroll {

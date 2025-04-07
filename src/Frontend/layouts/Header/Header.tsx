@@ -4,6 +4,7 @@ import HeaderNavBar from "./HeaderNavBar";
 import "./Header.css";
 import { useNavMenu } from "../../hooks/useNavMenu";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import DarkModeToggle from "../../components/DarkModeToggle/DarkModeToggle";
 
 function Header() {
   const { isMenuOpen, handleClick } = useNavMenu();
@@ -12,12 +13,16 @@ function Header() {
   const isPanel = location.pathname === "/panel";
 
   const handleLogout = () => {
-    localStorage.removeItem("access_token"); 
-    navigate("/"); 
+    localStorage.removeItem("access_token");
+    navigate("/");
   };
 
   return (
-    <header className={`header p-4 md:px-10 md:py-5 text-[20px] font-[600] ${isPanel ? 'mb-1' : 'mb-8'}`}>
+    <header
+      className={`header p-4 md:px-10 md:py-5 text-[20px] font-[600] ${
+        isPanel ? "mb-1" : "mb-8"
+      }`}
+    >
       <div className="flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 z-10" title="Inicio">
           <img
@@ -44,6 +49,8 @@ function Header() {
           >
             {isMenuOpen ? <MdClose /> : <MdMenu />}
           </button>
+
+          <DarkModeToggle />
 
           {isPanel ? (
             <button
