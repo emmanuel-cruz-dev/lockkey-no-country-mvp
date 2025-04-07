@@ -1,16 +1,29 @@
 import { TeamCard } from "./TeamCard";
 import { teamMembers } from "../../../mocks/teamMembers";
+import { useDarkMode } from "../../../hooks/useDarkMode";
 
 function OurTeam() {
+  const { isDarkMode } = useDarkMode();
+
   return (
     <section className="container">
       <article className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-8">
         <article>
-          <h1 className="text-lg uppercase mb-2">Nuestro Equipo</h1>
+          <h1
+            className={`${
+              isDarkMode ? "text-white/80" : "text-neutral-800"
+            } text-lg uppercase mb-2`}
+          >
+            Nuestro Equipo
+          </h1>
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-5">
             Expertos Detrás de la Seguridad
           </h2>
-          <div className="text-lg text-neutral-600">
+          <div
+            className={`text-lg ${
+              isDarkMode ? "text-white/70" : "text-neutral-600"
+            }`}
+          >
             <p className="mb-4">
               En LockKey, contamos con un equipo de profesionales altamente
               capacitados y dedicados a proporcionar las mejores soluciones de

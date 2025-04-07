@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { TeamCardProps } from "../../../Store/types";
 import SocialIcons from "../../../components/SocialIcons/SocialIcons";
+import { useDarkMode } from "../../../hooks/useDarkMode";
 
 export const TeamCard: FC<TeamCardProps> = ({
   img,
@@ -10,9 +11,15 @@ export const TeamCard: FC<TeamCardProps> = ({
   github,
   portfolio,
 }) => {
+  const { isDarkMode } = useDarkMode();
+
   return (
     <article className="text-center">
-      <header className="box-shadow__item relative mb-8 rounded-lg">
+      <header
+        className={`box-shadow__item ${
+          isDarkMode ? "dark__box-shadow__item" : ""
+        } relative mb-8 rounded-lg`}
+      >
         <figure className="rounded-lg overflow-hidden">
           <img
             className="w-full object-cover"
@@ -23,7 +30,7 @@ export const TeamCard: FC<TeamCardProps> = ({
             loading="lazy"
           />
         </figure>
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
+        <div className="absolute text-black bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
           <SocialIcons
             borderRadius={true}
             linkedin={linkedin}
@@ -33,7 +40,13 @@ export const TeamCard: FC<TeamCardProps> = ({
         </div>
       </header>
       <h2 className="text-xl font-bold">{name}</h2>
-      <p className="uppercase text-neutral-600">{occupation}</p>
+      <p
+        className={`uppercase ${
+          isDarkMode ? "text-white/60" : "text-neutral-600"
+        }`}
+      >
+        {occupation}
+      </p>
     </article>
   );
 };

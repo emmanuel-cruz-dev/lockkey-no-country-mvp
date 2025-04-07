@@ -2,8 +2,11 @@ import AboutImg1 from "../../../../assets/about-page-img1.webp";
 import AboutImg2 from "../../../../assets/about-page-img2.webp";
 import AboutImg3 from "../../../../assets/about-page-img3.webp";
 import CheckIcon from "../../../components/CheckIcon/CheckIcon";
+import { useDarkMode } from "../../../hooks/useDarkMode";
 
 function AboutUs() {
+  const { isDarkMode } = useDarkMode();
+
   return (
     <section className="container">
       <article className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-8">
@@ -31,11 +34,21 @@ function AboutUs() {
           />
         </article>
         <aside>
-          <h1 className="text-lg uppercase mb-2">Sobre Nosotros</h1>
+          <h1
+            className={`${
+              isDarkMode ? "text-white/80" : "text-neutral-800"
+            } text-lg uppercase mb-2`}
+          >
+            Sobre Nosotros
+          </h1>
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-5">
             Centro de Atención de Seguridad 24/7{" "}
           </h2>
-          <div className="text-lg text-neutral-600 mb-6">
+          <div
+            className={`text-lg ${
+              isDarkMode ? "text-white/70" : "text-neutral-600"
+            } mb-8`}
+          >
             <p className="mb-2">
               En LockKey, nos dedicamos a proporcionar soluciones de gestión de
               contraseñas que son seguras, fáciles de usar y accesibles desde
@@ -49,7 +62,11 @@ function AboutUs() {
               seguridad, sino que también simplifica tu vida digital.
             </p>
           </div>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 [&>li]:flex [&>li]:gap-3 [&>li]:mb-3 text-neutral-600">
+          <ul
+            className={`grid grid-cols-1 sm:grid-cols-2 [&>li]:flex [&>li]:gap-3 [&>li]:mb-6 ${
+              isDarkMode ? "text-white/60" : "text-neutral-600"
+            }`}
+          >
             <li>
               <CheckIcon />
               Generación de Contraseñas
