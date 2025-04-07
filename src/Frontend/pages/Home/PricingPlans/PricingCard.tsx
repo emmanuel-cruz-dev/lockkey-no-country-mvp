@@ -24,7 +24,9 @@ export const PricingCard: FC<PricingCardProps> = ({
       <span className="pricing-card__category text-black">{category}</span>
       <figure className="max-w-40 flex justify-center mx-auto mb-4">
         <img
-          className="w-full object-cover custom-drop-shadow"
+          className={`w-full object-cover custom-drop-shadow ${
+            isDarkMode ? "dark__drop-shadow" : ""
+          }`}
           src={img}
           alt={`Imagen que representa el valor de el plan ${category} metaforicamente.`}
           width={390}
