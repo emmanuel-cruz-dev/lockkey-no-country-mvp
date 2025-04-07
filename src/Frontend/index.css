@@ -34,8 +34,8 @@ body {
   font-family: var(--primary-font-family);
 
   &.dark {
-    background-color: #171d34;
-    color: #fff;
+    background-color: var(--dark-mode-background);
+    color: var(--text-white);
   }
 }
 
