@@ -56,7 +56,7 @@ const About = () => (
 
 const Services = () => (
   <Suspense fallback={<Loading />}>
-    <OurServices />
+    {/* <OurServices /> */}
     <FAQs />
   </Suspense>
 );

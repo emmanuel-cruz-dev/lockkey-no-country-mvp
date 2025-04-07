@@ -1,11 +1,20 @@
 import { Accordion } from "../../../components/Accordion/Accordion";
+import { useDarkMode } from "../../../hooks/useDarkMode";
 import { accordionData } from "../../../mocks/accordionContent";
 
 function FAQs() {
+  const { isDarkMode } = useDarkMode();
+
   return (
     <section className="container FAQs py-12" id="FAQs">
       <article className="text-center">
-        <p className="text-lg uppercase mb-2">Preguntas Frecuentes</p>
+        <p
+          className={`${
+            isDarkMode ? "text-white/80" : "text-neutral-800"
+          } text-lg uppercase mb-2`}
+        >
+          Preguntas Frecuentes
+        </p>
         <h2 className="md:w-9/12 text-3xl xl:text-5xl font-bold mb-12 mx-auto">
           Respondemos las dudas más comunes.
         </h2>
