@@ -4,6 +4,7 @@ import LoginBanner from "../../../assets/Login.png";
 import LaptopRegister from "../../../assets/LaptopRegister.png";
 import CircleRegister from "../../../assets/CircleRegister.png";
 import "./Register.css";
+import { useDarkMode } from "../../hooks/useDarkMode";
 
 const initialState = { email: "", password: "", confirmPassword: "" };
 
@@ -33,6 +34,7 @@ const Register = () => {
   const [timeToCrack, setTimeToCrack] = useState("");
   const [apiError, setApiError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const { isDarkMode } = useDarkMode();
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -140,27 +142,35 @@ const Register = () => {
   }, [passwordScore]);
 
   return (
-    <div className="register flex items-center justify-center min-h-[37rem] relative">
+    <section className="register flex items-center justify-center min-h-[37rem] relative">
       <img
         src={LoginBanner}
         alt="Fondo de login"
-        className="bannerLogin absolute"
+        className={`bannerLogin absolute ${isDarkMode ? "opacity-20" : ""}`}
       />
       <img
         src={LaptopRegister}
         alt="Laptop Register"
-        className="absolute laptopRegister"
+        className={`absolute laptopRegister ${isDarkMode ? "opacity-60" : ""}`}
       />
       <img
         src={CircleRegister}
         alt="Circle Register"
-        className="absolute circleRegister"
+        className={`absolute circleRegister ${isDarkMode ? "opacity-60" : ""}`}
       />
-      <div className="relative w-full max-w-md rounded-lg bg-white p-6 shadow-md backdrop-blur-md bg-opacity-90 transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg">
+      <article
+        className={`relative ${
+          isDarkMode ? "dark-mode__background-color" : "bg-white"
+        } w-full max-w-md rounded-lg p-6 shadow-md backdrop-blur-md bg-opacity-90 transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg`}
+      >
         <h2 className="mb-4 text-center text-2xl font-semibold">Registro</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4 text-black">
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label
+              className={`block text-sm font-medium ${
+                isDarkMode ? "text-white/80" : "text-gray-700"
+              }`}
+            >
               Correo electrónico
             </label>
             <input
@@ -176,7 +186,11 @@ const Register = () => {
             )}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label
+              className={`block text-sm font-medium ${
+                isDarkMode ? "text-white/80" : "text-gray-700"
+              }`}
+            >
               Contraseña Maestra
             </label>
             <div className="relative">
@@ -241,12 +255,20 @@ const Register = () => {
             ></div>
           </div>
           {timeToCrack && (
-            <p className="text-gray-600 text-sm mt-1">
+            <p
+              className={`${
+                isDarkMode ? "text-white/60" : "text-gray-600"
+              } text-sm mt-1`}
+            >
               ⏳ Tiempo estimado para descifrar: <strong>{timeToCrack}</strong>
             </p>
           )}
           {suggestions.length > 0 && (
-            <ul className="mt-2 text-sm text-gray-600">
+            <ul
+              className={`mt-2 text-sm ${
+                isDarkMode ? "text-white/60" : "text-gray-600"
+              }`}
+            >
               {suggestions.map((s, i) => (
                 <li key={i}>• {s}</li>
               ))}
@@ -255,7 +277,11 @@ const Register = () => {
           {apiError && <p className="text-red-500 text-sm mt-1">{apiError}</p>}
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label
+              className={`block text-sm font-medium ${
+                isDarkMode ? "text-white/80" : "text-gray-700"
+              }`}
+            >
               Confirmar contraseña Maestra
             </label>
             <input
@@ -267,16 +293,25 @@ const Register = () => {
               required
             />
           </div>
-          <p className="mt-4 text-center text-sm text-gray-600">
+          <p
+            className={`mt-4 text-center text-sm ${
+              isDarkMode ? "text-white/60" : "text-gray-600"
+            }`}
+          >
             ¿Ya tienes una cuenta?
-            <Link to="/login" className="text-blue-600 hover:underline">
+            <Link
+              to="/login"
+              className={`${
+                isDarkMode ? "text-blue-400" : "text-blue-600"
+              } hover:underline`}
+            >
               {" "}
               Inicia sesión aquí
             </Link>
           </p>
           <button
             type="submit"
-            className="btn__primary btn__lime w-full"
+            className="btn__primary btn__lime w-full text-black cursor-pointer"
             disabled={!state.password || passwordScore < 3}
           >
             Regístrate
@@ -287,8 +322,8 @@ const Register = () => {
             </p>
           )}
         </form>
-      </div>
-    </div>
+      </article>
+    </section>
   );
 };
 
