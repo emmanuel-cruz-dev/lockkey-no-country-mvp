@@ -66,13 +66,15 @@ const Login = () => {
 
   return (
     <section className="login flex items-center justify-center h-full min-h-screen relative -mt-8 pt-8 group px-4">
-      <img
-        src={LoginBanner}
-        alt=""
-        className={`bannerLogin absolute object-cover min-h-screen h-full top-0 z-[-1] ${
-          isDarkMode ? "opacity-20" : ""
-        }`}
-      />
+      <figure className="absolute top-0 left-0 h-full w-full z-[-1]">
+        <img
+          src={LoginBanner}
+          alt=""
+          className={`bannerLogin w-full h-full object-cover ${
+            isDarkMode ? "opacity-20" : ""
+          }`}
+        />
+      </figure>
       <img
         src={Planes}
         alt=""
