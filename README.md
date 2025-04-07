@@ -9,11 +9,11 @@ LockKey is a secure and efficient password manager designed to facilitate the re
 
 # 👥 Developers
 
-| | |
-|:---:|:---:|
-| <img src="./public/nataly-castaneda.webp" width="300" height="300" alt="Nataly Castañeda"> | <img src="./public/emmanuel-cruz.webp" width="300" height="300" alt="Emmanuel Cruz"> |
-| **Nataly Castañeda** | **Emmanuel Cruz** |
-| **Fullstack** | **Frontend** |
+|                                                                                                                                                                                                                                                                                                                      |                                                                                                                                                                                                                                                                                                                                |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                                                              <img src="./public/nataly-castaneda.webp" width="300" height="280" alt="Nataly Castañeda">                                                                                                              |                                                                                                                      <img src="./public/emmanuel-cruz.webp" width="300" height="280" alt="Emmanuel Cruz">                                                                                                                      |
+|                                                                                                                                                 **Nataly Castañeda**                                                                                                                                                 |                                                                                                                                                       **Emmanuel Cruz**                                                                                                                                                        |
+|                                                                                                                                                    **Fullstack**                                                                                                                                                     |                                                                                                                                                          **Frontend**                                                                                                                                                          |
 | [![GitHub](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/nath1710) [![LinkedIn](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nataly-castaneda/) | [![GitHub](https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/emmanuel-cruz-dev) [![LinkedIn](https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emmanuel-cruz-dev/) |
 
 ## 🔒 Description
@@ -23,6 +23,7 @@ LockKey allows users to generate, store, and manage passwords securely, using ad
 ## 🚀 Technologies Used
 
 ### Frontend
+
 <div style="text-align: left;">
   <img src="https://img.shields.io/badge/Vite-%E2%9C%94-blue?logo=vite&logoColor=white" alt="Vite">
   <img src="https://img.shields.io/badge/React-%E2%9C%94-blue?logo=react&logoColor=white" alt="React">
@@ -30,6 +31,7 @@ LockKey allows users to generate, store, and manage passwords securely, using ad
 </div>
 
 ### Backend
+
 <div style="text-align: left;">
   <img src="https://img.shields.io/badge/Python-%E2%9C%94-yellow?logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/Flask-%E2%9C%94-black?logo=flask&logoColor=white" alt="Flask">
@@ -45,42 +47,49 @@ LockKey allows users to generate, store, and manage passwords securely, using ad
 - Credential organization by categories.
 - Protection against brute force attacks and activity monitoring.
 
- ## Instalación
-1. Clona el repositorio:  
+## Instalación
+
+1. Clona el repositorio:
    ```bash
    git clone https://github.com/tu-repositorio.git
    ```
-2. Instala las dependencias:  
+2. Instala las dependencias:
    ```bash
-   npm install   # Frontend  
+   npm install   # Frontend
    pip install -r requirements.txt   # Backend
    ```
 3. Configura las variables de entorno
-4. Inicia la aplicación:  
+4. Inicia la aplicación:
    ```bash
-   npm run dev   # Frontend con Vite  
+   npm run dev   # Frontend con Vite
    python app.py   # Backend
    ```
 
 ## Contribución
+
 Si deseas contribuir a LockKey, por favor sigue las mejores prácticas de desarrollo y abre un Pull Request con tus cambios.
 
 ## Installation
-1. Clone the repository:  
+
+1. Clone the repository:
    ````bash
    git clone https://github.com/tu-repositorio.git
    ```
-2. Install the dependencies:  
+   ````
+2. Install the dependencies:
    ````bash
-   npm install # Frontend  
+   npm install # Frontend
    pip install -r requirements.txt # Backend
    ```
+   ````
 3. Configure the environment variables
-4. Start the application:  
+4. Start the application:
    ````bash
-   npm run dev # Frontend with Vite  
+   npm run dev # Frontend with Vite
    python app.py # Backend
    ```
+   ````
 
 ## Contribute
+
 If you wish to contribute to LockKey, please follow development best practices and open a Pull Request with your changes.
