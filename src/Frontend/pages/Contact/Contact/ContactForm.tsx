@@ -1,13 +1,17 @@
+import { useDarkMode } from "../../../hooks/useDarkMode";
 import { useFormInput } from "../../../hooks/useFormInput";
 import "./ContactForm.css";
 
 export function ContactForm() {
   const { errors, handleBlur, handleFocus } = useFormInput();
+  const { isDarkMode } = useDarkMode();
 
   return (
     <form
       method="post"
-      className="box-shadow__item form grid grid-cols-1 md:grid-cols-2 gap-6 lg:w-5/6 p-6 lg:py-16 lg:px-28 mx-auto"
+      className={`box-shadow__item ${
+        isDarkMode ? "dark__box-shadow__item" : ""
+      } text-black form grid grid-cols-1 md:grid-cols-2 gap-6 lg:w-5/6 p-6 lg:py-16 lg:px-28 mx-auto`}
     >
       <div className="relative">
         <input
