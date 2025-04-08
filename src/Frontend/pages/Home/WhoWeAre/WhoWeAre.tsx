@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import WhoWeAreImg from "../../../../assets/who-we-are-banner.avif";
 import { useDarkMode } from "../../../hooks/useDarkMode";
 import { CounterItem } from "./CounterItem";
 
 function WhoWeAre() {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   return (
     <section
@@ -16,27 +18,35 @@ function WhoWeAre() {
             isDarkMode ? "text-white/80" : "text-neutral-800"
           } text-lg uppercase mb-2`}
         >
-          Quiénes somos
+          {t("pages.home.whoWeAre.paragraph")}
         </p>
         <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-5">
-          Protegiendo{" "}
-          <span className="text__purple-dark">tu seguridad digital</span> con
-          dedicación, tecnología y confianza
+          {t("pages.home.whoWeAre.title1")}{" "}
+          <span className="text__purple-dark">
+            {t("pages.home.whoWeAre.titleSpan")}
+          </span>{" "}
+          {t("pages.home.whoWeAre.title2")}
         </h2>
         <p
           className={`${
             isDarkMode ? "text-white/70" : "text-neutral-700"
           } text-lg mb-5`}
         >
-          Somos un equipo comprometido con la ciberseguridad, ofreciendo
-          soluciones innovadoras para proteger información valiosa. Nuestra
-          misión es garantizar la tranquilidad digital de usuarios y empresas
-          con tecnología avanzada y eficiente.
+          {t("pages.home.whoWeAre.description")}
         </p>
         <footer className="flex flex-col md:flex-row gap-8">
-          <CounterItem count="2K" text="Reseñas positivas" />
-          <CounterItem count="17M" text="Usuarios protegidos" />
-          <CounterItem count="18K" text="Empresas afiliadas" />
+          <CounterItem
+            count="2K"
+            text={t("pages.home.whoWeAre.counterItem1")}
+          />
+          <CounterItem
+            count="17M"
+            text={t("pages.home.whoWeAre.counterItem2")}
+          />
+          <CounterItem
+            count="18K"
+            text={t("pages.home.whoWeAre.counterItem3")}
+          />
         </footer>
       </article>
       <figure className="order-1 md:order-2 w-2/3 md:w-80 lg:w-96 mx-auto md:mr-0">

@@ -51,6 +51,16 @@
             "paragraph": "View your passwords from anywhere and on any device to access your accounts whenever you need."
           }
         }
+      },
+      "whoWeAre": {
+        "paragraph": "Who we are",
+        "title1": "Protecting",
+        "titleSpan": "your digital security",
+        "title2": "with dedication, technology, and trust.",
+        "description": "We are a team committed to cybersecurity, offering innovative solutions to protect valuable information. Our mission is to ensure the digital peace of mind of users and businesses with advanced and efficient technology.",
+        "counterItem1": "Positive Reviews",
+        "counterItem2": "Protected Users",
+        "counterItem3": "Affiliated Companies"
       }
     }
   }
