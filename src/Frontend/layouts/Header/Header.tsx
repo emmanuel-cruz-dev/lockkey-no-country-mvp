@@ -65,7 +65,7 @@ function Header() {
             {isMenuOpen ? <MdClose /> : <MdMenu />}
           </button>
 
-          <div className="z-10 flex items-center px-1 pl-2">
+          <div className="z-10 flex items-center gap-2 pl-2">
             <DarkModeToggle />
             <LanguageSwitcher />
           </div>

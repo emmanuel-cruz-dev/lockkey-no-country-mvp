@@ -10,7 +10,8 @@
       "logIn": "Log In",
       "logOut": "Log Out",
       "darkModeButton": "Switch to light mode",
-      "lightModeButton": "Switch to dark mode"
+      "lightModeButton": "Switch to dark mode",
+      "switchLanguage": "Switch to Spanish"
     },
     "footer": {}
   },

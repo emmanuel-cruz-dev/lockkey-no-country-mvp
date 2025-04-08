@@ -1,30 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const LanguageSwitcher: React.FC = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
+  const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-    localStorage.setItem("language", lng); // Guarda la preferencia del usuario
+  const changeLanguage = () => {
+    const newLanguage = currentLanguage === "es" ? "en" : "es";
+    i18n.changeLanguage(newLanguage);
+    setCurrentLanguage(newLanguage);
+    // i18n.changeLanguage(lng);
+    // localStorage.setItem("language", lng); // Guarda la preferencia del usuario
   };
 
   return (
-    <div>
-      <button
-        onClick={() => changeLanguage("en")}
-        className={`p-2 ${i18n.language === "en" ? "font-bold" : ""}`}
-      >
-        En
-      </button>
-      |
-      <button
-        onClick={() => changeLanguage("es")}
-        className={`p-2 ${i18n.language === "es" ? "font-bold" : ""}`}
-      >
-        Es
-      </button>
-    </div>
+    <button
+      onClick={() => changeLanguage()}
+      className="text-[18px]"
+      title={t("layout.header.switchLanguage")}
+    >
+      {currentLanguage === "es" ? "EN" : "ES"}
+    </button>
   );
 };
 

@@ -10,7 +10,8 @@
       "logIn": "Abrir Sesión",
       "logOut": "Cerrar Sesión",
       "darkModeButton": "Cambiar a modo claro",
-      "lightModeButton": "Cambiar a modo oscuro"
+      "lightModeButton": "Cambiar a modo oscuro",
+      "switchLanguage": "Cambiar a Inglés"
     },
     "footer": {}
   },
