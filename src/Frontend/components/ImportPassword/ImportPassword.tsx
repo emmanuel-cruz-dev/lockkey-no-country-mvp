@@ -1,3 +1,5 @@
+import { useDarkMode } from "../../hooks/useDarkMode";
+
 const ImportPasswordModal = ({
   isOpen,
   onClose,
@@ -5,14 +7,24 @@ const ImportPasswordModal = ({
   isOpen: boolean;
   onClose: () => void;
 }) => {
+  const { isDarkMode } = useDarkMode();
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[9999]">
-      <div className="bg-white w-[500px] p-6 rounded-lg shadow-lg relative">
+    <article className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[9999]">
+      <div
+        className={`${
+          isDarkMode ? "dark-mode__background-color" : "bg-white"
+        } w-[500px] p-6 rounded-lg shadow-lg relative`}
+      >
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+          className={`${
+            isDarkMode
+              ? "text-white/70 hover:text-white"
+              : "text-gray-500 hover:text-gray-700"
+          } absolute top-2 right-2`}
           aria-label="Cerrar"
         >
           <svg
@@ -31,22 +43,36 @@ const ImportPasswordModal = ({
           </svg>
         </button>
 
-        <h2 className="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">
+        <h2
+          className={`${
+            isDarkMode ? "text-white/80" : "text-gray-800"
+          } text-lg font-semibold  border-b pb-2 mb-4`}
+        >
           Importar contraseñas
         </h2>
 
         <div className="space-y-3">
           <div>
-            <label className="block text-gray-700 text-sm font-medium">
+            <label
+              className={`${
+                isDarkMode ? "text-white/70" : "text-gray-700"
+              } block text-sm font-medium`}
+            >
               Selecciona el archivo:
             </label>
             <input
               type="file"
-              className="w-full border rounded p-2 text-gray-800"
+              className={`${
+                isDarkMode ? "text-white/80" : "text-gray-800"
+              } w-full border rounded p-2 cursor-pointer`}
             />
           </div>
           <div>
-            <label className="block text-gray-700 text-sm font-medium">
+            <label
+              className={`${
+                isDarkMode ? "text-white/70" : "text-gray-700"
+              } block text-sm font-medium`}
+            >
               Formato del archivo:
             </label>
             <select className="w-full border rounded p-2 text-gray-800">
@@ -63,12 +89,12 @@ const ImportPasswordModal = ({
           >
             Cancelar
           </button>
-          <button className="px-4 py-2 btn__primary btn__lime rounded transition-colors">
+          <button className="text-black px-4 py-2 btn__primary btn__lime rounded transition-colors">
             Importar
           </button>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

@@ -72,7 +72,7 @@ const PasswordModal = ({
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[9999]">
+    <article className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[9999]">
       <div className="bg-white w-[500px] p-6 rounded-lg shadow-lg relative">
         <button
           onClick={onClose}
@@ -251,7 +251,7 @@ const PasswordModal = ({
           </div>
         </form>
       </div>
-    </div>
+    </article>
   );
 };
 

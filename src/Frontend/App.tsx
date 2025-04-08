@@ -73,12 +73,21 @@ const ModalContainer = () => {
 
   return (
     <>
-      {isModalOpen && modalType === "password" && (
+      {/* Prueba */}
+      {/* {isModalOpen && modalType === "notes" && (
         <PasswordModal isOpen={isModalOpen} onClose={closeModal} />
-      )}
+      )} */}
       {isModalOpen && modalType === "notes" && (
-        <NotesModal isOpen={isModalOpen} onClose={closeModal} />
+        <ImportPasswordModal isOpen={isModalOpen} onClose={closeModal} />
       )}
+
+      {/* Originales */}
+      {/* {isModalOpen && modalType === "password" && (
+        <PasswordModal isOpen={isModalOpen} onClose={closeModal} />
+      )} */}
+      {/* {isModalOpen && modalType === "notes" && (
+        <NotesModal isOpen={isModalOpen} onClose={closeModal} />
+      )} */}
       {isModalOpen && modalType === "importPassword" && (
         <ImportPasswordModal isOpen={isModalOpen} onClose={closeModal} />
       )}

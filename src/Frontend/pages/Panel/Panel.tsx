@@ -19,8 +19,6 @@ function Panel() {
   };
 
   const renderMainContent = () => {
-    const { isDarkMode } = useDarkMode();
-
     switch (activeButton) {
       case "Contraseñas":
         return <PasswordsVault />;
