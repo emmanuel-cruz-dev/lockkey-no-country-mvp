@@ -4,6 +4,7 @@ import "./PricingCard.css";
 import CheckIcon from "../../../components/CheckIcon/CheckIcon";
 import { Link } from "react-router-dom";
 import { useDarkMode } from "../../../hooks/useDarkMode";
+import { useTranslation } from "react-i18next";
 
 export const PricingCard: FC<PricingCardProps> = ({
   category,
@@ -12,6 +13,7 @@ export const PricingCard: FC<PricingCardProps> = ({
   list,
 }) => {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   return (
     <Link
@@ -41,7 +43,7 @@ export const PricingCard: FC<PricingCardProps> = ({
             isDarkMode ? "text-white/80" : "text-neutral-600"
           }`}
         >
-          / Al mes
+          / {t("pages.home.pricingPlans.perMonth")}
         </p>
       </div>
       <div className="text-left">

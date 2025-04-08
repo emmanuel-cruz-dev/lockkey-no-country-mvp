@@ -37,9 +37,9 @@ const TalkBanner = lazy(() => import("./pages/Home/TalkBanner/TalkBanner"));
 
 const Home = () => (
   <Suspense fallback={<Loading />}>
-    {/* <Hero /> */}
-    {/* <Features /> */}
-    {/* <WhoWeAre /> */}
+    <Hero />
+    <Features />
+    <WhoWeAre />
     <WhatWeDo />
     <PricingPlans />
     <Testimonials />

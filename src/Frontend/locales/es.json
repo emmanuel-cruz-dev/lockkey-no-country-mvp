@@ -24,7 +24,7 @@
       "hero": {
         "title1": "Todos",
         "titleSpan": "tus inicios de sesión",
-        "title2": "en un solo lugar",
+        "title2": "en un solo lugar.",
         "description": "Simplifique su vida digital con un gestor de contraseñas que crea, guarda y rellena contraseñas seguras automáticamente.",
         "startButton": "Empieza Hoy",
         "contactButton": "Contáctanos",
@@ -83,6 +83,11 @@
           "title": "Gestión de Accesos",
           "description": "Control seguro de credenciales y almacenamiento de datos sensibles."
         }
+      },
+      "pricingPlans": {
+        "paragraph": "Elige tu nivel de seguridad",
+        "title": "Planes de protección diseñados para cada necesidad.",
+        "perMonth": "Al mes"
       }
     }
   }

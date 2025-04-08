@@ -24,7 +24,7 @@
       "hero": {
         "title1": "All",
         "titleSpan": "your logins",
-        "title2": "in one trusted place",
+        "title2": "in one trusted place.",
         "description": "Simplify your digital life with a password manager that automatically creates, saves, and fills strong passwords.",
         "startButton": "Start Today",
         "contactButton": "Contact Us",
@@ -83,6 +83,11 @@
           "title": "Access Management",
           "description": "Secure credential control and storage of sensitive data."
         }
+      },
+      "pricingPlans": {
+        "paragraph": "Choose your security level",
+        "title": "Protection plans designed for every need.",
+        "perMonth": "Per month"
       }
     }
   }

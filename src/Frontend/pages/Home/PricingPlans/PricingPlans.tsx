@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { useDarkMode } from "../../../hooks/useDarkMode";
 import { pricingCardData } from "../../../mocks/pricingPlans";
 import { PricingCard } from "./PricingCard";
 
 function PricingPlans() {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   return (
     <section
@@ -16,10 +18,10 @@ function PricingPlans() {
             isDarkMode ? "text-white/80" : "text-neutral-800"
           } text-lg uppercase mb-2`}
         >
-          Elige tu nivel de seguridad
+          {t("pages.home.pricingPlans.paragraph")}
         </p>
         <h2 className="md:w-9/12 text-3xl xl:text-5xl font-bold mb-12 mx-auto">
-          Planes de protección diseñados para cada necesidad.
+          {t("pages.home.pricingPlans.title")}
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-12">
