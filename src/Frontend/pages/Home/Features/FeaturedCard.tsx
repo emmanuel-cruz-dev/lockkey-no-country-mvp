@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { FeatureCardProps } from "../../../Store/types";
 import { useDarkMode } from "../../../hooks/useDarkMode";
+import { useTranslation } from "react-i18next";
 
 export const FeaturedCard: FC<FeatureCardProps> = ({
   img,
@@ -8,6 +9,7 @@ export const FeaturedCard: FC<FeatureCardProps> = ({
   paragraph,
 }) => {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   return (
     <article className="w-11/12 mx-auto md:w-auto">
@@ -28,14 +30,14 @@ export const FeaturedCard: FC<FeatureCardProps> = ({
           isDarkMode ? "text-white/90" : "text-neutral-900"
         } text-2xl font-semibold mb-4`}
       >
-        {title}
+        {t(`${title}`)}
       </h3>
       <p
         className={`${
           isDarkMode ? "text-white/70" : "text-neutral-700"
         } text-lg`}
       >
-        {paragraph}
+        {t(`${paragraph}`)}
       </p>
     </article>
   );

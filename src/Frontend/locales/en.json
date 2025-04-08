@@ -29,6 +29,28 @@
         "startButton": "Start Today",
         "contactButton": "Contact Us",
         "paragraph": "Free trial for all available plans. No credit card required."
+      },
+      "features": {
+        "paragraph": "Simplify your digital security",
+        "title": "Manage your passwords easily, without complications or risks.",
+        "cards": {
+          "item1": {
+            "title": "Discover the power of automation",
+            "paragraph": "Create, save, and fill passwords automatically, so you can focus on what really matters."
+          },
+          "item2": {
+            "title": "Share more easily",
+            "paragraph": "With one click, you can share passwords with colleagues or family members. Collaborating or granting access has never been easier."
+          },
+          "item3": {
+            "title": "Avoid weak passwords",
+            "paragraph": "Our manager generates strong passwords for all your accounts and saves them so you don't have to memorize them."
+          },
+          "item4": {
+            "title": "Access from anywhere",
+            "paragraph": "View your passwords from anywhere and on any device to access your accounts whenever you need."
+          }
+        }
       }
     }
   }

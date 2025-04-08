@@ -29,6 +29,28 @@
         "startButton": "Empieza Hoy",
         "contactButton": "Contáctanos",
         "paragraph": "Prueba gratuita para todos los planes disponibles. Sin tarjeta de crédito."
+      },
+      "features": {
+        "paragraph": "Simplifica tu seguridad digital",
+        "title": "Gestiona tus contraseñas con facilidad, sin complicaciones ni riesgos.",
+        "cards": {
+          "item1": {
+            "title": "Descubra el poder de la automatización",
+            "paragraph": "Cree, guarde y rellene las contraseñas automáticamente, y dedique su atención a lo que realmente importa."
+          },
+          "item2": {
+            "title": "Comparta más fácilmente",
+            "paragraph": "Con un clic puede compartir contraseñas con compañeros de trabajo o familiares. Nunca había sido tan fácil colaborar o dar acceso."
+          },
+          "item3": {
+            "title": "Evite contraseñas débiles",
+            "paragraph": "Nuestro gestor genera contraseñas seguras para todas sus cuentas y las guarda para que no tenga que memorizarlas."
+          },
+          "item4": {
+            "title": "Accede desde cualquier lugar",
+            "paragraph": "Consulte sus contraseñas desde cualquier sitio y en cualquier dispositivo para entrar en sus cuentas siempre que lo necesite."
+          }
+        }
       }
     }
   }
