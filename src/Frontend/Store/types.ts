@@ -69,3 +69,14 @@ export interface DarkModeContextProps {
   isDarkMode: boolean;
   toggleDarkMode: () => void;
 }
+
+export interface PasswordProps {
+  id: number;
+  url: string;
+  name: string;
+  folder: string;
+  username: string;
+  password: string;
+  notes: string;
+  created_at: string;
+}

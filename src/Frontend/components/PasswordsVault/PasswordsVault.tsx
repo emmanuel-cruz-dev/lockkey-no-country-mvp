@@ -1,18 +1,10 @@
 import { useEffect, useState } from "react";
-
-interface Password {
-  id: number;
-  url: string;
-  name: string;
-  folder: string;
-  username: string;
-  password: string;
-  notes: string;
-  created_at: string;
-}
+import { useDarkMode } from "../../hooks/useDarkMode";
+import { PasswordProps } from "../../Store/types";
 
 const PasswordsVault = () => {
-  const [passwords, setPasswords] = useState<Password[]>([]);
+  const [passwords, setPasswords] = useState<PasswordProps[]>([]);
+  const { isDarkMode } = useDarkMode();
 
   useEffect(() => {
     const fetchPasswords = async () => {
@@ -44,17 +36,29 @@ const PasswordsVault = () => {
   }, []);
 
   return (
-    <div className="flex-1 p-6 relative z-10">
+    <article className="flex-1 p-6 relative z-10">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-2xl font-semibold text-gray-800">
+        <h1
+          className={`${
+            isDarkMode ? "text-white/90" : "text-gray-800"
+          } text-2xl font-semibold`}
+        >
           Tus Contraseñas
         </h1>
-        <p className="mt-2 text-gray-600">
+        <p className={`${isDarkMode ? "text-white/70" : "text-gray-600"} mt-2`}>
           Aquí puedes ver y gestionar tus contraseñas guardadas.
         </p>
 
-        <div className="mt-6 bg-white shadow-md rounded-lg p-5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg backdrop-blur-md bg-opacity-90">
-          <h2 className="text-lg font-semibold text-gray-800">
+        <div
+          className={`${
+            isDarkMode ? "dark-mode__background-color" : "bg-white"
+          } mt-6 shadow-md rounded-lg p-5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg backdrop-blur-md bg-opacity-90`}
+        >
+          <h2
+            className={`${
+              isDarkMode ? "text-white/90" : "text-gray-800"
+            } text-lg font-semibold`}
+          >
             Contraseñas Guardadas
           </h2>
           <ul className="mt-4 space-y-3">
@@ -64,10 +68,28 @@ const PasswordsVault = () => {
                 className="flex justify-between items-center p-3 bg-gray-50 rounded-lg"
               >
                 <div>
-                  <p className="text-gray-800 font-medium">{password.name}</p>
-                  <p className="text-gray-600 text-sm">{password.username}</p>
+                  <p
+                    className={`${
+                      isDarkMode ? "text-white/90" : "text-gray-800"
+                    } font-medium`}
+                  >
+                    {password.name}
+                  </p>
+                  <p
+                    className={`${
+                      isDarkMode ? "text-white/70" : "text-gray-600"
+                    } text-sm`}
+                  >
+                    {password.username}
+                  </p>
                 </div>
-                <button className="text-gray-500 hover:text-gray-700">
+                <button
+                  className={`${
+                    isDarkMode
+                      ? "text-white/60 hover:text-white/70"
+                      : "text-gray-500 hover:text-gray-700"
+                  } `}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -94,7 +116,7 @@ const PasswordsVault = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

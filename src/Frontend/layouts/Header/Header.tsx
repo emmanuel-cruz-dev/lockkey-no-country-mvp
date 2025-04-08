@@ -61,7 +61,7 @@ function Header() {
           {isPanel ? (
             <button
               onClick={handleLogout}
-              className="text-3xl z-10 text-black hover:text-[--purple-vivid-color] transition-colors duration-300"
+              className="text-3xl z-10 hover:text-[--purple-vivid-color] transition-colors duration-300"
               title="Cerrar Sesión"
             >
               <MdPowerSettingsNew />
