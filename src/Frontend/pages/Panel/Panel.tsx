@@ -3,6 +3,7 @@ import { useModal } from "./../../Store/ModalContext";
 import PasswordsVault from "./../../components/PasswordsVault/PasswordsVault";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import "./Panel.css";
+import SharingCenter from "../../components/SharingCenter/SharingCenter";
 
 function Panel() {
   const [activeButton, setActiveButton] = useState<string>(
@@ -20,6 +21,8 @@ function Panel() {
 
   const renderMainContent = () => {
     switch (activeButton) {
+      case "Centro de uso compartido":
+        return <SharingCenter />;
       case "Contraseñas":
         return <PasswordsVault />;
       case "Notas":
@@ -113,12 +116,10 @@ function Panel() {
 
   return (
     <section className="flex min-h-screen relative -mt-1">
-      {/* <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-80"></div> */}
-
       <aside
         className={`${
           isDarkMode ? "dark-mode__background-color" : "bg-white"
-        } w-64 xl:w-80 p-4 shadow-md backdrop-blur-md bg-opacity-90 transition-transform duration-300 hover:shadow-lg relative`}
+        } w-64 xl:w-80 pt-6 p-4 shadow-md backdrop-blur-md bg-opacity-90 transition-transform duration-300 hover:shadow-lg relative`}
       >
         <h2
           className={`${
@@ -214,10 +215,9 @@ function Panel() {
       >
         {renderMainContent()}
       </div>
-      {/* {renderMainContent()} */}
 
-      {/* <div className="absolute bottom-0 right-0 w-64 h-64 bg-lime-300 rounded-full opacity-20 -mr-16 -mb-16 blur-2xl"></div>
-      <div className="absolute top-0 left-1/2 w-32 h-32 bg-blue-300 rounded-full opacity-20 -mt-16 blur-xl"></div> */}
+      <div className="z-[-1] absolute bottom-0 right-0 w-64 h-64 bg-lime-300 rounded-full opacity-20 -mr-16 -mb-16 blur-2xl"></div>
+      <div className="z-[-1] absolute top-0 -right-16 lg:right-12 w-32 h-32 bg-blue-300 rounded-full opacity-20 -mt-16 blur-xl"></div>
     </section>
   );
 }
