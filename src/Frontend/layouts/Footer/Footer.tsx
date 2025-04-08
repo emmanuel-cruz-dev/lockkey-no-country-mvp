@@ -86,10 +86,10 @@ function Footer() {
       <article className="flex justify-between items-center p-6 lg:px-10">
         <a
           className="text-4xl footer__link"
-          href="https://github.com/No-Country-simulation/equipo-c24-70-ft-webapp"
+          href="https://github.com/No-Country-simulation/equipo-c24-70-ft-webapp/tree/frontend"
           target="_blank"
           rel="noopener noreferrer"
-          title="Repositorio de GitHub"
+          title="Repositorio de GitHub en No Country"
         >
           <FaGithub />
         </a>
