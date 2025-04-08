@@ -61,6 +61,28 @@
         "counterItem1": "Reseñas positivas",
         "counterItem2": "Usuarios protegidos",
         "counterItem3": "Empresas afiliadas"
+      },
+      "whatWeDo": {
+        "paragraph": "Nuestra misión",
+        "title": "Seguridad integral para una defensa digital",
+        "titleSpan": "sin límites",
+        "description": "Protegemos tu entorno digital con estrategias efectivas, brindando confianza y tranquilidad ante cualquier amenaza en línea.",
+        "shieldItem1": {
+          "title": "Defensa Cibernética",
+          "description": "Protección avanzada contra amenazas digitales y ataques informáticos."
+        },
+        "shieldItem2": {
+          "title": "Seguridad en Redes",
+          "description": "Blindamos tu conexión con protocolos seguros y encriptación robusta."
+        },
+        "shieldItem3": {
+          "title": "Protección Web",
+          "description": "Resguardamos tu sitio de accesos no autorizados y vulnerabilidades."
+        },
+        "shieldItem4": {
+          "title": "Gestión de Accesos",
+          "description": "Control seguro de credenciales y almacenamiento de datos sensibles."
+        }
       }
     }
   }

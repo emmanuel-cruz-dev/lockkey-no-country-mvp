@@ -39,7 +39,7 @@ const Home = () => (
   <Suspense fallback={<Loading />}>
     {/* <Hero /> */}
     {/* <Features /> */}
-    <WhoWeAre />
+    {/* <WhoWeAre /> */}
     <WhatWeDo />
     <PricingPlans />
     <Testimonials />

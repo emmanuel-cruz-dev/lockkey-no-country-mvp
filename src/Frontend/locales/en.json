@@ -61,6 +61,28 @@
         "counterItem1": "Positive Reviews",
         "counterItem2": "Protected Users",
         "counterItem3": "Affiliated Companies"
+      },
+      "whatWeDo": {
+        "paragraph": "Our mission",
+        "title": "Comprehensive security for digital defense",
+        "titleSpan": "without limits",
+        "description": "We protect your digital environment with effective strategies, providing confidence and peace of mind against any online threat.",
+        "shieldItem1": {
+          "title": "Cyber Defense",
+          "description": "Advanced protection against digital threats and cyberattacks."
+        },
+        "shieldItem2": {
+          "title": "Network Security",
+          "description": "We protect your connection with secure protocols and strong encryption."
+        },
+        "shieldItem3": {
+          "title": "Web Protection",
+          "description": "We protect your site from unauthorized access and vulnerabilities."
+        },
+        "shieldItem4": {
+          "title": "Access Management",
+          "description": "Secure credential control and storage of sensitive data."
+        }
       }
     }
   }

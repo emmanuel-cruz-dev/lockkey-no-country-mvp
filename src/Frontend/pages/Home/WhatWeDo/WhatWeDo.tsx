@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import WhatWeDoImg from "../../../../assets/what-we-do-banner.avif";
 import { useDarkMode } from "../../../hooks/useDarkMode";
 import { ShieldItem } from "./ShieldItem";
 
 function WhatWeDo() {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   return (
     <section
@@ -28,36 +30,38 @@ function WhatWeDo() {
             isDarkMode ? "text-white/80" : "text-neutral-800"
           } text-lg uppercase mb-2`}
         >
-          Nuestra misión
+          {t("pages.home.whatWeDo.paragraph")}
         </p>
         <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-5">
-          Seguridad integral para una defensa digital{" "}
-          <span className="text__purple-dark">sin límites</span>.
+          {t("pages.home.whatWeDo.title")}{" "}
+          <span className="text__purple-dark">
+            {t("pages.home.whatWeDo.titleSpan")}
+          </span>
+          .
         </h2>
         <p
           className={`${
             isDarkMode ? "text-white/70" : "text-neutral-600"
           } text-lg mb-5`}
         >
-          Protegemos tu entorno digital con estrategias efectivas, brindando
-          confianza y tranquilidad ante cualquier amenaza en línea.
+          {t("pages.home.whatWeDo.description")}
         </p>
         <footer className="grid grid-cols-1 sm:grid-cols-2 gap-3 gap-y-6">
           <ShieldItem
-            title="Defensa Cibernética"
-            text="Protección avanzada contra amenazas digitales y ataques informáticos."
+            title={t("pages.home.whatWeDo.shieldItem1.title")}
+            text={t("pages.home.whatWeDo.shieldItem1.description")}
           />
           <ShieldItem
-            title="Seguridad en Redes"
-            text="Blindamos tu conexión con protocolos seguros y encriptación robusta."
+            title={t("pages.home.whatWeDo.shieldItem2.title")}
+            text={t("pages.home.whatWeDo.shieldItem2.description")}
           />
           <ShieldItem
-            title="Protección Web"
-            text="Resguardamos tu sitio de accesos no autorizados y vulnerabilidades."
+            title={t("pages.home.whatWeDo.shieldItem3.title")}
+            text={t("pages.home.whatWeDo.shieldItem3.description")}
           />
           <ShieldItem
-            title="Gestión de Accesos"
-            text="Control seguro de credenciales y almacenamiento de datos sensibles."
+            title={t("pages.home.whatWeDo.shieldItem4.title")}
+            text={t("pages.home.whatWeDo.shieldItem4.description")}
           />
         </footer>
       </article>
