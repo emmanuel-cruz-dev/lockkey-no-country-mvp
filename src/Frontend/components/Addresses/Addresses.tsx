@@ -11,7 +11,7 @@ function Addresses() {
             isDarkMode ? "text-white/90" : "text-gray-800"
           } text-2xl font-semibold`}
         >
-          Tus direcciones
+          Tus Direcciones
         </h1>
         <p className={`${isDarkMode ? "text-white/70" : "text-gray-600"} mt-2`}>
           Aquí puedes ver y administrar tus direcciones guardadas para

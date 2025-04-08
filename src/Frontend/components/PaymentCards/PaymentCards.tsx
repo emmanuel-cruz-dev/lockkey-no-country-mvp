@@ -1,6 +1,6 @@
 import { useDarkMode } from "../../hooks/useDarkMode";
 
-function SharingCenter() {
+function PaymentCards() {
   const { isDarkMode } = useDarkMode();
 
   return (
@@ -11,11 +11,11 @@ function SharingCenter() {
             isDarkMode ? "text-white/90" : "text-gray-800"
           } text-2xl font-semibold`}
         >
-          Comparte de Forma Segura
+          Tus Tarjetas de Pago
         </h1>
         <p className={`${isDarkMode ? "text-white/70" : "text-gray-600"} mt-2`}>
-          Aquí puedes gestionar los elementos que has compartido o que otros han
-          compartido contigo.
+          Aquí puedes añadir, editar o eliminar las tarjetas de débito o crédito
+          que utilizas.
         </p>
 
         <div
@@ -28,7 +28,7 @@ function SharingCenter() {
               isDarkMode ? "text-white/90" : "text-gray-800"
             } text-lg font-semibold`}
           >
-            Elementos Compartidos
+            Tarjetas Guardadas
           </h2>
         </div>
       </div>
@@ -36,4 +36,4 @@ function SharingCenter() {
   );
 }
 
-export default SharingCenter;
+export default PaymentCards;

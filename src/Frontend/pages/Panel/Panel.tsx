@@ -5,6 +5,8 @@ import { useDarkMode } from "../../hooks/useDarkMode";
 import "./Panel.css";
 import SharingCenter from "../../components/SharingCenter/SharingCenter";
 import Addresses from "../../components/Addresses/Addresses";
+import PaymentCards from "../../components/PaymentCards/PaymentCards";
+import BankAccounts from "../../components/BankAccounts/BankAccounts";
 
 function Panel() {
   const [activeButton, setActiveButton] = useState<string>(
@@ -30,6 +32,10 @@ function Panel() {
         return null;
       case "Direcciones":
         return <Addresses />;
+      case "Tarjetas de pago":
+        return <PaymentCards />;
+      case "Cuentas bancarias":
+        return <BankAccounts />;
       default:
         return (
           <main className="flex-1 p-6 relative z-10">
