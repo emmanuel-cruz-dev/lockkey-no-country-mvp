@@ -7,6 +7,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import DarkModeToggle from "../../components/DarkModeToggle/DarkModeToggle";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import LanguageSwitcher from "../../components/LanguageSwitcher/LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 function Header() {
   const { isMenuOpen, handleClick } = useNavMenu();
@@ -14,6 +15,7 @@ function Header() {
   const navigate = useNavigate();
   const isPanel = location.pathname === "/panel";
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   const handleLogout = () => {
     localStorage.removeItem("access_token");
@@ -29,7 +31,11 @@ function Header() {
       }`}
     >
       <div className="flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-2 z-10" title="Inicio">
+        <Link
+          to="/"
+          className="flex items-center gap-2 z-10"
+          title={t("layout.header.home")}
+        >
           <img
             className="max-w-12 bg-white md:bg-[#cff500] p-1 rounded-full"
             src={LogoIcon}
@@ -50,7 +56,11 @@ function Header() {
           <button
             className="md:hidden text-3xl z-10"
             onClick={handleClick}
-            title={`${isMenuOpen ? "Cerrar Menú" : "Abrir Menú"}`}
+            title={
+              isMenuOpen
+                ? `${t("layout.header.closeMenu")}`
+                : `${t("layout.header.openMenu")}`
+            }
           >
             {isMenuOpen ? <MdClose /> : <MdMenu />}
           </button>
@@ -64,7 +74,7 @@ function Header() {
             <button
               onClick={handleLogout}
               className="text-3xl z-10 hover:text-[--purple-vivid-color] transition-colors duration-300"
-              title="Cerrar Sesión"
+              title={t("layout.header.logOut")}
             >
               <MdPowerSettingsNew />
             </button>
@@ -72,7 +82,7 @@ function Header() {
             <Link
               to="/login"
               className="text-3xl hover:opacity-75 z-10"
-              title="Iniciar Sesión"
+              title={t("layout.header.logIn")}
             >
               <MdPerson />
             </Link>

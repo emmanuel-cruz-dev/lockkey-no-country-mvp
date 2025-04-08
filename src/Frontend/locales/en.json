@@ -4,7 +4,13 @@
       "home": "Home",
       "about": "About Us",
       "services": "Services",
-      "contact": "Contact"
+      "contact": "Contact",
+      "openMenu": "Open Menu",
+      "closeMenu": "Close Menu",
+      "logIn": "Log In",
+      "logOut": "Log Out",
+      "darkModeButton": "Switch to light mode",
+      "lightModeButton": "Switch to dark mode"
     },
     "footer": {}
   },

@@ -15,15 +15,12 @@ const HeaderNavBar: FC<HeaderNavBarProps> = ({ handleClick }) => {
     >
       <ul>
         <li onClick={handleClick}>
-          {/* <Link to="/">Inicio</Link> */}
           <Link to="/">{t("layout.header.home")}</Link>
         </li>
         <li onClick={handleClick}>
-          {/* <Link to="/about">Sobre Nosotros</Link> */}
           <Link to="/about">{t("layout.header.about")}</Link>
         </li>
         <li onClick={handleClick}>
-          {/* <Link to="/services">Servicios</Link> */}
           <Link to="/services">{t("layout.header.services")}</Link>
         </li>
         <li

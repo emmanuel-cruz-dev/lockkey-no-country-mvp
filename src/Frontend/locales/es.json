@@ -4,7 +4,13 @@
       "home": "Inicio",
       "about": "Sobre Nosotros",
       "services": "Servicios",
-      "contact": "Contacto"
+      "contact": "Contacto",
+      "openMenu": "Abrir Menú",
+      "closeMenu": "Cerrar Menú",
+      "logIn": "Abrir Sesión",
+      "logOut": "Cerrar Sesión",
+      "darkModeButton": "Cambiar a modo claro",
+      "lightModeButton": "Cambiar a modo oscuro"
     },
     "footer": {}
   },
