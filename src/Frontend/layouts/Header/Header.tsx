@@ -6,6 +6,7 @@ import { useNavMenu } from "../../hooks/useNavMenu";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import DarkModeToggle from "../../components/DarkModeToggle/DarkModeToggle";
 import { useDarkMode } from "../../hooks/useDarkMode";
+import LanguageSwitcher from "../../components/LanguageSwitcher/LanguageSwitcher";
 
 function Header() {
   const { isMenuOpen, handleClick } = useNavMenu();
@@ -56,6 +57,7 @@ function Header() {
 
           <div className="z-10 flex items-center px-1 pl-2">
             <DarkModeToggle />
+            <LanguageSwitcher />
           </div>
 
           {isPanel ? (

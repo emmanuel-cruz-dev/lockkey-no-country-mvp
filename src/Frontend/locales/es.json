@@ -1,7 +1,16 @@
 {
-  "welcome": "¡Bienvenido a nuestra aplicación!",
-  "login": {
+  "layout": {
+    "header": {
+      "home": "Inicio",
+      "about": "Sobre Nosotros",
+      "services": "Servicios",
+      "contact": "Contacto"
+    },
+    "footer": {}
+  },
+  "components": {
     "title": "Iniciar Sesión",
     "button": "Entrar"
-  }
+  },
+  "pages": {}
 }

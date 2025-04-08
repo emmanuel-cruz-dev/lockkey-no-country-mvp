@@ -1,7 +1,16 @@
 {
-  "welcome": "Welcome to our application!",
-  "login": {
-    "title": "Login",
-    "button": "Sign In"
-  }
+  "layout": {
+    "header": {
+      "home": "Home",
+      "about": "About Us",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "footer": {}
+  },
+  "components": {
+    "title": "Log In",
+    "button": "Enter"
+  },
+  "pages": {}
 }
