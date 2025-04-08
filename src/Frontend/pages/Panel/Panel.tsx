@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { useModal } from "./../../Store/ModalContext";
 import PasswordsVault from "./../../components/PasswordsVault/PasswordsVault";
+import { useDarkMode } from "../../hooks/useDarkMode";
+import "./Panel.css";
 
-const Panel = () => {
+function Panel() {
   const [activeButton, setActiveButton] = useState<string>(
     "Todos los elementos"
   );
   const { openModal } = useModal();
+  const { isDarkMode } = useDarkMode();
 
   const handleButtonClick = (buttonName: string) => {
     setActiveButton(buttonName);
@@ -16,6 +19,8 @@ const Panel = () => {
   };
 
   const renderMainContent = () => {
+    const { isDarkMode } = useDarkMode();
+
     switch (activeButton) {
       case "Contraseñas":
         return <PasswordsVault />;
@@ -25,14 +30,28 @@ const Panel = () => {
         return (
           <main className="flex-1 p-6 relative z-10">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-2xl font-semibold text-gray-800">
+              <h1
+                className={`${
+                  isDarkMode ? "text-white/90" : "text-gray-800"
+                } text-2xl font-semibold`}
+              >
                 ¡Bienvenida a tu panel!
               </h1>
-              <p className="mt-2 text-gray-600">
+              <p
+                className={`${
+                  isDarkMode ? "text-white/60" : "text-gray-600"
+                } mt-2`}
+              >
                 Aquí puedes gestionar tus contraseñas, notas y otros elementos.
               </p>
 
-              <div className="mt-6 bg-white shadow-md rounded-lg p-5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg backdrop-blur-md bg-opacity-90">
+              <div
+                className={`${
+                  isDarkMode
+                    ? "dark-mode__background-color [&>h2]:text-white/90 [&>p]:text-white/70"
+                    : "bg-white"
+                } mt-6 shadow-md rounded-lg p-5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg backdrop-blur-md bg-opacity-90`}
+              >
                 <h2 className="text-lg font-semibold text-gray-800">
                   Añadir nueva contraseña
                 </h2>
@@ -40,14 +59,20 @@ const Panel = () => {
                   Guarda tus credenciales de forma segura.
                 </p>
                 <button
-                  className="btn__primary btn__lime"
+                  className="mt-4 btn__primary btn__lime text-black"
                   onClick={() => openModal("password")}
                 >
                   Añadir Contraseña
                 </button>
               </div>
 
-              <div className="mt-4 bg-white shadow-md rounded-lg p-5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg backdrop-blur-md bg-opacity-90">
+              <div
+                className={`${
+                  isDarkMode
+                    ? "dark-mode__background-color [&>h2]:text-white/90 [&>p]:text-white/70"
+                    : "bg-white"
+                } mt-4 shadow-md rounded-lg p-5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg backdrop-blur-md bg-opacity-90`}
+              >
                 <h2 className="text-lg font-semibold text-gray-800">
                   Importar contraseñas
                 </h2>
@@ -55,14 +80,20 @@ const Panel = () => {
                   Trae tus contraseñas desde otro servicio.
                 </p>
                 <button
-                  className="mt-4 btn__primary btn__lime"
+                  className="mt-4 btn__primary btn__lime text-black"
                   onClick={() => openModal("importPassword")}
                 >
                   Importar
                 </button>
               </div>
 
-              <div className="mt-4 bg-white shadow-md rounded-lg p-5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg backdrop-blur-md bg-opacity-90">
+              <div
+                className={`${
+                  isDarkMode
+                    ? "dark-mode__background-color [&>h2]:text-white/90 [&>p]:text-white/70"
+                    : "bg-white"
+                } mt-4 shadow-md rounded-lg p-5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg backdrop-blur-md bg-opacity-90`}
+              >
                 <h2 className="text-lg font-semibold text-gray-800">
                   Añadir nota segura
                 </h2>
@@ -70,7 +101,7 @@ const Panel = () => {
                   Crea Notas seguras a las que nadie tendra acceso.
                 </p>
                 <button
-                  className="mt-4 btn__primary btn__lime"
+                  className="mt-4 btn__primary btn__lime text-black"
                   onClick={() => openModal("notes")}
                 >
                   Crear
@@ -83,18 +114,30 @@ const Panel = () => {
   };
 
   return (
-    <div className="flex h-screen relative">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-80"></div>
+    <section className="flex min-h-screen relative -mt-1">
+      {/* <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-80"></div> */}
 
-      <aside className="w-64 bg-white p-4 shadow-md backdrop-blur-md bg-opacity-90 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg relative z-10">
-        <h2 className="text-xl font-semibold mb-6 text-center text-gray-800">
+      <aside
+        className={`${
+          isDarkMode ? "dark-mode__background-color" : "bg-white"
+        } w-64 xl:w-80 p-4 shadow-md backdrop-blur-md bg-opacity-90 transition-transform duration-300 hover:shadow-lg relative`}
+      >
+        <h2
+          className={`${
+            isDarkMode ? "text-white/80" : "text-gray-800"
+          } text-xl font-semibold mb-6 text-center `}
+        >
           Panel
         </h2>
-        <nav className="space-y-3">
+        <nav
+          className={`${
+            isDarkMode ? "nav__panel-button__container" : ""
+          } space-y-3`}
+        >
           <button
             className={`w-full text-left py-2 px-4 rounded transition-colors duration-200 ${
               activeButton === "Todos los elementos"
-                ? "bg-black text-white"
+                ? "bg-black text-white active"
                 : "hover:bg-gray-100 text-gray-700"
             }`}
             onClick={() => handleButtonClick("Todos los elementos")}
@@ -104,7 +147,7 @@ const Panel = () => {
           <button
             className={`w-full text-left py-2 px-4 rounded transition-colors duration-200 ${
               activeButton === "Centro de uso compartido"
-                ? "bg-black text-white"
+                ? "bg-black text-white active"
                 : "hover:bg-gray-100 text-gray-700"
             }`}
             onClick={() => handleButtonClick("Centro de uso compartido")}
@@ -114,7 +157,7 @@ const Panel = () => {
           <button
             className={`w-full text-left py-2 px-4 rounded transition-colors duration-200 ${
               activeButton === "Contraseñas"
-                ? "bg-black text-white"
+                ? "bg-black text-white active"
                 : "hover:bg-gray-100 text-gray-700"
             }`}
             onClick={() => handleButtonClick("Contraseñas")}
@@ -124,7 +167,7 @@ const Panel = () => {
           <button
             className={`w-full text-left py-2 px-4 rounded transition-colors duration-200 ${
               activeButton === "Notas"
-                ? "bg-black text-white"
+                ? "bg-black text-white active"
                 : "hover:bg-gray-100 text-gray-700"
             }`}
             onClick={() => handleButtonClick("Notas")}
@@ -134,7 +177,7 @@ const Panel = () => {
           <button
             className={`w-full text-left py-2 px-4 rounded transition-colors duration-200 ${
               activeButton === "Direcciones"
-                ? "bg-black text-white"
+                ? "bg-black text-white active"
                 : "hover:bg-gray-100 text-gray-700"
             }`}
             onClick={() => handleButtonClick("Direcciones")}
@@ -144,7 +187,7 @@ const Panel = () => {
           <button
             className={`w-full text-left py-2 px-4 rounded transition-colors duration-200 ${
               activeButton === "Tarjetas de pago"
-                ? "bg-black text-white"
+                ? "bg-black text-white active"
                 : "hover:bg-gray-100 text-gray-700"
             }`}
             onClick={() => handleButtonClick("Tarjetas de pago")}
@@ -154,7 +197,7 @@ const Panel = () => {
           <button
             className={`w-full text-left py-2 px-4 rounded transition-colors duration-200 ${
               activeButton === "Cuentas bancarias"
-                ? "bg-black text-white"
+                ? "bg-black text-white active"
                 : "hover:bg-gray-100 text-gray-700"
             }`}
             onClick={() => handleButtonClick("Cuentas bancarias")}
@@ -164,12 +207,21 @@ const Panel = () => {
         </nav>
       </aside>
 
-      {renderMainContent()}
+      <div
+        className={`${
+          isDarkMode
+            ? "from-blue-50/5 to-purple-50/5"
+            : "from-blue-200/10 to-purple-200/10"
+        } w-full bg-gradient-to-br`}
+      >
+        {renderMainContent()}
+      </div>
+      {/* {renderMainContent()} */}
 
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-lime-300 rounded-full opacity-20 -mr-16 -mb-16 blur-2xl"></div>
-      <div className="absolute top-0 left-1/2 w-32 h-32 bg-blue-300 rounded-full opacity-20 -mt-16 blur-xl"></div>
-    </div>
+      {/* <div className="absolute bottom-0 right-0 w-64 h-64 bg-lime-300 rounded-full opacity-20 -mr-16 -mb-16 blur-2xl"></div>
+      <div className="absolute top-0 left-1/2 w-32 h-32 bg-blue-300 rounded-full opacity-20 -mt-16 blur-xl"></div> */}
+    </section>
   );
-};
+}
 
 export default Panel;

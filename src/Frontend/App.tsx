@@ -87,7 +87,8 @@ const ModalContainer = () => {
 };
 
 function App() {
-  const isAuthenticated = !!localStorage.getItem("access_token");
+  //const isAuthenticated = !!localStorage.getItem("access_token");
+  const isAuthenticated = true;
 
   return (
     <ModalProvider>

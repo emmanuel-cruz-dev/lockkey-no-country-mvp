@@ -1,0 +1,7 @@
+.nav__panel-button__container button {
+  color: rgb(255 255 255 / 0.8);
+}
+
+.nav__panel-button__container button:hover:not(.active) {
+  color: #374151;
+}

@@ -23,7 +23,7 @@ function Header() {
     <header
       className={`header ${
         isDarkMode ? "dark__header" : ""
-      } p-4 md:px-10 md:py-5 text-[20px] font-[600] ${
+      } p-4 md:px-10 md:py-5 text-[20px] font-[600] z-10 ${
         isPanel ? "mb-1" : "mb-8"
       }`}
     >

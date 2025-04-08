@@ -19,7 +19,7 @@ const reducer = (state: typeof initialState, action: Action) => {
   }
 };
 
-const Login = () => {
+function Login() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const navigate = useNavigate();
   const { isDarkMode } = useDarkMode();
@@ -96,7 +96,7 @@ const Login = () => {
         <h2 className="mb-4 text-center text-2xl font-semibold">
           Inicio de sesión
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4 text-black">
           <div>
             <label
               className={`block text-sm font-medium ${
@@ -157,6 +157,6 @@ const Login = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Login;
