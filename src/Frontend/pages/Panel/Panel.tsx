@@ -4,6 +4,7 @@ import PasswordsVault from "./../../components/PasswordsVault/PasswordsVault";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import "./Panel.css";
 import SharingCenter from "../../components/SharingCenter/SharingCenter";
+import Addresses from "../../components/Addresses/Addresses";
 
 function Panel() {
   const [activeButton, setActiveButton] = useState<string>(
@@ -27,6 +28,8 @@ function Panel() {
         return <PasswordsVault />;
       case "Notas":
         return null;
+      case "Direcciones":
+        return <Addresses />;
       default:
         return (
           <main className="flex-1 p-6 relative z-10">
