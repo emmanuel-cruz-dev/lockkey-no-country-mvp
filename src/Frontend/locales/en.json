@@ -19,5 +19,17 @@
     "title": "Log In",
     "button": "Enter"
   },
-  "pages": {}
+  "pages": {
+    "home": {
+      "hero": {
+        "title1": "All",
+        "titleSpan": "your logins",
+        "title2": "in one trusted place",
+        "description": "Simplify your digital life with a password manager that automatically creates, saves, and fills strong passwords.",
+        "startButton": "Start Today",
+        "contactButton": "Contact Us",
+        "paragraph": "Free trial for all available plans. No credit card required."
+      }
+    }
+  }
 }

@@ -19,5 +19,17 @@
     "title": "Iniciar Sesión",
     "button": "Entrar"
   },
-  "pages": {}
+  "pages": {
+    "home": {
+      "hero": {
+        "title1": "Todos",
+        "titleSpan": "tus inicios de sesión",
+        "title2": "en un solo lugar",
+        "description": "Simplifique su vida digital con un gestor de contraseñas que crea, guarda y rellena contraseñas seguras automáticamente.",
+        "startButton": "Empieza Hoy",
+        "contactButton": "Contáctanos",
+        "paragraph": "Prueba gratuita para todos los planes disponibles. Sin tarjeta de crédito."
+      }
+    }
+  }
 }

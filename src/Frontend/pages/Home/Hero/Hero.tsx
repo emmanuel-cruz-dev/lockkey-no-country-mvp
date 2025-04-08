@@ -3,9 +3,11 @@ import CircleImg from "../../../../assets/circle-background-img.avif";
 import GradientImg from "../../../../assets/gradient-background-img.avif";
 import { Link } from "react-router-dom";
 import { useDarkMode } from "../../../hooks/useDarkMode";
+import { useTranslation } from "react-i18next";
 
 function Hero() {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   return (
     <main
@@ -14,26 +16,28 @@ function Hero() {
     >
       <section className="order-2 md:order-1">
         <h1 className="text-3xl md:text-5xl xl:text-6xl font-bold mb-6">
-          Todos tus <span className="text__purple-dark">inicios de sesión</span>{" "}
-          en un solo lugar
+          {t("pages.home.hero.title1")}{" "}
+          <span className="text__purple-dark">
+            {t("pages.home.hero.titleSpan")}
+          </span>{" "}
+          {t("pages.home.hero.title2")}
         </h1>
         <p
           className={`text-xl font-[400] leading-[33px] mb-6 ${
             isDarkMode ? "text-white/80" : "text-neutral-700"
           }`}
         >
-          Simplifique su vida digital con un gestor de contraseñas que crea,
-          guarda y rellena contraseñas seguras automáticamente.
+          {t("pages.home.hero.description")}
         </p>
         <div className="flex gap-4 mb-5">
           <Link to="/login" className="btn__primary btn__lime text-black">
-            Empieza Hoy
+            {t("pages.home.hero.startButton")}
           </Link>
           <Link
             to="/contact"
             className={`btn__primary ${isDarkMode ? "border-white" : ""}`}
           >
-            Contáctanos
+            {t("pages.home.hero.contactButton")}
           </Link>
         </div>
         <p
@@ -41,8 +45,7 @@ function Hero() {
             isDarkMode ? "text-white/60" : "text-neutral-600"
           }`}
         >
-          Prueba gratuita para todos los planes disponibles. Sin tarjeta de
-          crédito.
+          {t("pages.home.hero.paragraph")}
         </p>
       </section>
       <figure className="order-1 md:order-2 w-2/3 md:w-80 lg:w-96 mx-auto md:mr-0">
