@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useModal } from "./../../Store/ModalContext";
+import { useDarkMode } from "../../hooks/useDarkMode";
 
 const PasswordModal = ({
   isOpen,
@@ -11,6 +12,7 @@ const PasswordModal = ({
   const { modalData } = useModal();
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const { isDarkMode } = useDarkMode();
 
   const [url, setUrl] = useState(modalData?.url || "");
   const [name, setName] = useState(modalData?.name || "");
@@ -73,11 +75,20 @@ const PasswordModal = ({
 
   return (
     <article className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[9999]">
-      <div className="bg-white w-[500px] p-6 rounded-lg shadow-lg relative">
+      <div
+        className={`${
+          isDarkMode ? "dark-mode__background-color" : "bg-white"
+        } w-[500px] p-6 rounded-lg shadow-lg relative`}
+      >
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+          className={`${
+            isDarkMode
+              ? "text-white/70 hover:text-white"
+              : "text-gray-500 hover:text-gray-700"
+          } absolute top-2 right-2`}
           aria-label="Cerrar"
+          title="Cerrar"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +106,11 @@ const PasswordModal = ({
           </svg>
         </button>
 
-        <h2 className="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">
+        <h2
+          className={`${
+            isDarkMode ? "text-white/90" : "text-gray-800"
+          } text-lg font-semibold border-b pb-2 mb-4`}
+        >
           {modalData?.editMode ? "Editar contraseña" : "Añadir contraseña"}
         </h2>
 
@@ -108,7 +123,11 @@ const PasswordModal = ({
         <form onSubmit={handleSubmit}>
           <div className="space-y-3">
             <div>
-              <label className="block text-gray-700 text-sm font-medium">
+              <label
+                className={`${
+                  isDarkMode ? "text-white/70" : "text-gray-700"
+                } block text-sm font-medium`}
+              >
                 URL:
               </label>
               <input
@@ -121,7 +140,11 @@ const PasswordModal = ({
             </div>
             <div className="flex gap-2">
               <div className="w-2/3">
-                <label className="block text-gray-700 text-sm font-medium">
+                <label
+                  className={`${
+                    isDarkMode ? "text-white/70" : "text-gray-700"
+                  } block text-sm font-medium`}
+                >
                   Nombre:
                 </label>
                 <input
@@ -133,7 +156,11 @@ const PasswordModal = ({
                 />
               </div>
               <div className="w-1/3">
-                <label className="block text-gray-700 text-sm font-medium">
+                <label
+                  className={`${
+                    isDarkMode ? "text-white/70" : "text-gray-700"
+                  } block text-sm font-medium`}
+                >
                   Carpeta:
                 </label>
                 <input
@@ -146,7 +173,11 @@ const PasswordModal = ({
             </div>
             <div className="flex gap-2">
               <div className="w-1/2">
-                <label className="block text-gray-700 text-sm font-medium">
+                <label
+                  className={`${
+                    isDarkMode ? "text-white/70" : "text-gray-700"
+                  } block text-sm font-medium`}
+                >
                   Nombre de usuario:
                 </label>
                 <input
@@ -158,7 +189,11 @@ const PasswordModal = ({
                 />
               </div>
               <div className="w-1/2">
-                <label className="block text-gray-700 text-sm font-medium">
+                <label
+                  className={`${
+                    isDarkMode ? "text-white/70" : "text-gray-700"
+                  } block text-sm font-medium`}
+                >
                   Contraseña del sitio:
                 </label>
                 <div className="relative">
@@ -223,7 +258,11 @@ const PasswordModal = ({
               </div>
             </div>
             <div>
-              <label className="block text-gray-700 text-sm font-medium">
+              <label
+                className={`${
+                  isDarkMode ? "text-white/70" : "text-gray-700"
+                } block text-sm font-medium`}
+              >
                 Notas:
               </label>
               <textarea
@@ -244,7 +283,7 @@ const PasswordModal = ({
             </button>
             <button
               type="submit"
-              className="px-4 py-2 btn__primary btn__lime rounded transition-colors"
+              className="text-black px-4 py-2 btn__primary btn__lime rounded transition-colors"
             >
               {modalData?.editMode ? "Actualizar" : "Guardar"}
             </button>
