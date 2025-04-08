@@ -127,8 +127,8 @@ function Panel() {
     <section className="flex min-h-screen relative -mt-1">
       <aside
         className={`${
-          isDarkMode ? "dark-mode__background-color" : "bg-white"
-        } w-64 xl:w-80 pt-6 p-4 shadow-md backdrop-blur-md bg-opacity-90 transition-transform duration-300 hover:shadow-lg relative`}
+          isDarkMode ? "bg-[#171d34]" : "bg-white"
+        } w-64 xl:w-80 pt-6 p-4 shadow-md backdrop-blur-md bg-opacity-10 hover:shadow-lg relative`}
       >
         <h2
           className={`${

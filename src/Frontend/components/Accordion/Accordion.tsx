@@ -19,7 +19,7 @@ export const Accordion: FC<AccordionProps> = ({ id, title, content }) => {
         }  transition-colors`}
       >
         <span className="font-semibold">{title}</span>
-        <span className="background__accent-lime rounded-full p-2">
+        <span className="background__accent-lime text-black rounded-full p-2">
           {activeIndex === id ? <FaChevronUp /> : <FaChevronDown />}
         </span>
       </button>
