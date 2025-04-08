@@ -1,3 +1,4 @@
+import { useDarkMode } from "../../hooks/useDarkMode";
 import { useModal } from "./../../Store/ModalContext";
 
 const NotesModal = ({
@@ -8,16 +9,26 @@ const NotesModal = ({
   onClose: () => void;
 }) => {
   const { modalData } = useModal();
+  const { isDarkMode } = useDarkMode();
 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[9999]">
-      <div className="bg-white w-[500px] p-6 rounded-lg shadow-lg relative">
+    <article className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[9999]">
+      <div
+        className={`${
+          isDarkMode ? "dark-mode__background-color" : "bg-white"
+        } w-[500px] p-6 rounded-lg shadow-lg relative`}
+      >
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+          className={`${
+            isDarkMode
+              ? "text-white/80 hover:text-white"
+              : "text-gray-500 hover:text-gray-700"
+          } absolute top-2 right-2`}
           aria-label="Cerrar"
+          title="Cerrar"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -35,13 +46,21 @@ const NotesModal = ({
           </svg>
         </button>
 
-        <h2 className="text-lg font-semibold text-gray-800 border-b pb-2 mb-4">
+        <h2
+          className={`${
+            isDarkMode ? "text-white/80" : "text-gray-800"
+          } text-lg font-semibold border-b pb-2 mb-4`}
+        >
           {modalData?.editMode ? "Editar nota" : "Añadir nota segura"}
         </h2>
 
         <div className="space-y-3">
           <div>
-            <label className="block text-gray-700 text-sm font-medium">
+            <label
+              className={`${
+                isDarkMode ? "text-white/70" : "text-gray-700"
+              } block text-sm font-medium`}
+            >
               Nombre:
             </label>
             <input
@@ -51,7 +70,11 @@ const NotesModal = ({
             />
           </div>
           <div>
-            <label className="block text-gray-700 text-sm font-medium">
+            <label
+              className={`${
+                isDarkMode ? "text-white/70" : "text-gray-700"
+              } block text-sm font-medium`}
+            >
               Carpeta:
             </label>
             <div className="relative">
@@ -84,11 +107,19 @@ const NotesModal = ({
 
           <div className="pt-2">
             <details>
-              <summary className="text-gray-700 text-sm font-medium cursor-pointer">
+              <summary
+                className={`${
+                  isDarkMode ? "text-white/70" : "text-gray-700"
+                } text-sm font-medium cursor-pointer`}
+              >
                 Configuración avanzada:
               </summary>
               <div className="pt-2">
-                <button className="flex items-center gap-2 text-gray-700 text-sm hover:text-gray-900 p-2 rounded hover:bg-gray-100">
+                <button
+                  className={`${
+                    isDarkMode ? "text-white/70" : "text-gray-700 "
+                  } hover:text-gray-900 flex items-center gap-2 text-sm p-2 rounded hover:bg-gray-100`}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -111,7 +142,7 @@ const NotesModal = ({
 
           <div>
             <textarea
-              className="w-full border rounded p-2 text-gray-800 h-64"
+              className="w-full border rounded p-2 text-gray-800 h-auto"
               defaultValue={modalData?.content || ""}
               placeholder="Escribe tu nota aquí..."
             ></textarea>
@@ -123,6 +154,7 @@ const NotesModal = ({
             <button
               className="p-1 text-gray-500 hover:text-gray-700 rounded-full hover:bg-gray-100"
               aria-label="Marcar como favorito"
+              title="Marcar como favorito"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -142,6 +174,7 @@ const NotesModal = ({
             <button
               className="p-1 text-gray-500 hover:text-gray-700 rounded-full hover:bg-gray-100"
               aria-label="Refrescar"
+              title="Refrescar"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -165,12 +198,12 @@ const NotesModal = ({
           >
             Cancelar
           </button>
-          <button className="px-4 py-2 btn__primary btn__lime rounded transition-colors">
+          <button className="px-4 py-2 btn__primary btn__lime text-black rounded transition-colors">
             {modalData?.editMode ? "Actualizar" : "Guardar"}
           </button>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
