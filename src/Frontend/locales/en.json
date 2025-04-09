@@ -189,7 +189,40 @@
           }
         }
       },
-      "FAQs": {}
+      "FAQs": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "We answer the most common questions",
+        "accordionList": {
+          "item1": {
+            "title": "What happens if I forget my master password?",
+            "content": "For security reasons, we do not store your master password. However, you can set recovery options if you lose it."
+          },
+          "item2": {
+            "title": "How do I know if any of my passwords have been compromised?",
+            "content": "Our system has a security alert feature that notifies you if any of your credentials have appeared in data breaches."
+          },
+          "item3": {
+            "title": "Can the manager generate strong passwords?",
+            "content": "Yes, we have a password generator that creates strong, unique combinations to protect your accounts."
+          },
+          "item4": {
+            "title": "How does LockKey securely store passwords?",
+            "content": "Our vault protects the data on your trusted device using zero-knowledge encryption. Your device locally encrypts and scrambles your passwords before sending them to LockKey's servers. The next time you need to log in, LockKey will return your encrypted passwords, which will be decoded by your trusted device."
+          },
+          "item5": {
+            "title": "Does LockKey have access to my passwords?",
+            "content": "No, our zero-knowledge security model ensures your data is always yours. LockKey has no visibility or access to your master passwords or anything you store in your vault, such as credentials, credit cards, addresses, or secure notes."
+          },
+          "item6": {
+            "title": "How does LockKey encryption work?",
+            "content": "LockKey is based on a zero-knowledge security model that ensures you are the only person who knows the master password to access your vault. Thanks to 256-bit AES encryption and the PBKDF2 derivation function with secure hashing (SHA256) and salting, your master password is never stored on our servers in plain text. This ensures that only you know it."
+          },
+          "item7": {
+            "title": "What is the safest place to store my passwords?",
+            "content": "The safest place to store your keys is a password manager, as they securely store your login credentials in an encrypted vault, ensuring that only you have access to them."
+          }
+        }
+      }
     },
     "panel": {},
     "register": {}

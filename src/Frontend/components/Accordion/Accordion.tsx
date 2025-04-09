@@ -3,10 +3,12 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { AccordionProps } from "../../Store/types";
 import { useActiveIndex } from "../../hooks/useActiveIndex";
 import { useDarkMode } from "../../hooks/useDarkMode";
+import { useTranslation } from "react-i18next";
 
 export const Accordion: FC<AccordionProps> = ({ id, title, content }) => {
   const { activeIndex, toggleSection } = useActiveIndex();
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   return (
     <div key={id} className="text-left">
@@ -18,7 +20,10 @@ export const Accordion: FC<AccordionProps> = ({ id, title, content }) => {
             : "bg-white hover:bg-gray-50"
         }  transition-colors`}
       >
-        <span className="font-semibold">{title}</span>
+        <span className="font-semibold">
+          {/* {title} */}
+          {t(`${title}`)}
+        </span>
         <span className="background__accent-lime text-black rounded-full p-2">
           {activeIndex === id ? <FaChevronUp /> : <FaChevronDown />}
         </span>
@@ -31,7 +36,8 @@ export const Accordion: FC<AccordionProps> = ({ id, title, content }) => {
               : "bg-gray-50 text-gray-700"
           } transition-all duration-300 ease-in-out`}
         >
-          {content}
+          {/* {content} */}
+          {t(`${content}`)}
         </div>
       )}
     </div>

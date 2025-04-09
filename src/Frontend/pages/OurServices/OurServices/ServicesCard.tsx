@@ -36,7 +36,6 @@ export const ServicesCard: FC<ServicesCardProps> = ({
           }`}
         >
           {t(`${paragraph}`)}
-          {/* {paragraph} */}
         </p>
       </div>
     </article>

@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { Accordion } from "../../../components/Accordion/Accordion";
 import { useDarkMode } from "../../../hooks/useDarkMode";
-import { accordionData } from "../../../mocks/accordionContent";
+import { accordionData } from "../../../mocks/accordionData";
 
 function FAQs() {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   return (
     <section className="container FAQs py-12" id="FAQs">
@@ -13,10 +15,10 @@ function FAQs() {
             isDarkMode ? "text-white/80" : "text-neutral-800"
           } text-lg uppercase mb-2`}
         >
-          Preguntas Frecuentes
+          {t("pages.ourServices.FAQs.title")}
         </p>
         <h2 className="md:w-9/12 text-3xl xl:text-5xl font-bold mb-12 mx-auto">
-          Respondemos las dudas más comunes.
+          {t("pages.ourServices.FAQs.subtitle")}
         </h2>
         <div className="flex flex-wrap -mx-2">
           <article className="w-full md:w-1/2 px-2">
