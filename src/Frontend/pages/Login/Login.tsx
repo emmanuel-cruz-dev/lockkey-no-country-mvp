@@ -1,68 +1,14 @@
-import { useReducer } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LoginBanner from "../../../assets/Login.png";
 import LoginBoyBanner from "../../../assets/LoginBoy.png";
 import Planes from "../../../assets/planes.png";
 import "./Login.css";
 import { useDarkMode } from "../../hooks/useDarkMode";
-
-const initialState = { email: "", password: "", confirmPassword: "" };
-
-type Action = { type: "SET_FIELD"; field: string; value: string };
-
-const reducer = (state: typeof initialState, action: Action) => {
-  switch (action.type) {
-    case "SET_FIELD":
-      return { ...state, [action.field]: action.value };
-    default:
-      return state;
-  }
-};
+import useLogin from "../../hooks/useLogin";
 
 function Login() {
-  const [state, dispatch] = useReducer(reducer, initialState);
-  const navigate = useNavigate();
   const { isDarkMode } = useDarkMode();
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch({
-      type: "SET_FIELD",
-      field: e.target.name,
-      value: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch(
-        `${import.meta.env.VITE_BACKEND_URL}/login`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email: state.email,
-            password: state.password,
-          }),
-        }
-      );
-
-      const data = await response.json();
-
-      if (response.ok) {
-        localStorage.setItem("access_token", data.access_token);
-        navigate("/panel");
-      } else {
-        alert(data.error || "Error al iniciar sesión");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("Error al conectar con el servidor");
-    }
-  };
+  const { state, handleChange, handleSubmit } = useLogin();
 
   return (
     <section className="login flex items-center justify-center h-full min-h-screen relative -mt-8 pt-8 group px-4">

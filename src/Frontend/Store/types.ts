@@ -80,3 +80,5 @@ export interface PasswordProps {
   notes: string;
   created_at: string;
 }
+
+export type Action = { type: "SET_FIELD"; field: string; value: string };

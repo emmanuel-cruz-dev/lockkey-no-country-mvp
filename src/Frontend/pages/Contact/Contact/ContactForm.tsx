@@ -29,7 +29,6 @@ export function ContactForm() {
         />
         {errors[`${t("pages.contact.contactForm.name")}`] && (
           <p className="absolute left-0 -bottom-5 text-red-500 text-sm">
-            {/* {errors.nombre} */}
             {errors[`${t("pages.contact.contactForm.name")}`]}
           </p>
         )}

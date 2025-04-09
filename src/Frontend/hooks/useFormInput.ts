@@ -14,7 +14,6 @@ export function useFormInput() {
     if (!value) {
       setErrors((prevErrors) => ({
         ...prevErrors,
-        // [name]: `El ${name} es obligatorio.`,
         [name]: `${name} ${t("pages.contact.contactForm.required")}`,
       }));
     }
