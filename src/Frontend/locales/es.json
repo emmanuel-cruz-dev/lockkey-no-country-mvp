@@ -53,7 +53,24 @@
         "frontend": "Desarrollador Frontend"
       }
     },
-    "contact": {},
+    "contact": {
+      "whyChooseUs": {
+        "title": "Por qué Elegirnos",
+        "subtitle": "Tu Seguridad es Nuestra Prioridad",
+        "paragraph1": "En LockKey, entendemos la importancia de mantener tus datos seguros. Nuestro gestor de contraseñas está diseñado para ofrecerte la máxima seguridad y facilidad de uso.",
+        "paragraph2": "Elegirnos significa optar por una solución que no solo protege tus contraseñas, sino que también simplifica tu vida digital. Con características avanzadas y un enfoque en la seguridad, somos la mejor opción para gestionar tus contraseñas.",
+        "paragraph3": "Nuestro compromiso es brindarte un servicio confiable y seguro, respaldado por un equipo de expertos en seguridad.",
+        "itemsList": {
+          "item1": "Cifrado de Nivel Bancario",
+          "item2": "Fácil de Usar",
+          "item3": "Acceso desde Cualquier Lugar",
+          "item4": "Soporte 24/7",
+          "item5": "Autocompletado Seguro",
+          "item6": "Generador de Contraseñas"
+        }
+      },
+      "contact": {}
+    },
     "home": {
       "hero": {
         "title1": "Todos",

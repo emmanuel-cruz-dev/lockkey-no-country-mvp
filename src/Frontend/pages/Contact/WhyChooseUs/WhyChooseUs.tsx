@@ -3,9 +3,11 @@ import AboutImg1 from "../../../../assets/why-choose-us-img1.webp";
 import AboutImg2 from "../../../../assets/why-choose-us-img2.webp";
 import AboutImg3 from "../../../../assets/why-choose-us-img3.webp";
 import { useDarkMode } from "../../../hooks/useDarkMode";
+import { useTranslation } from "react-i18next";
 
 function WhyChooseUs() {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   return (
     <section className="container" id="why-choose-us">
@@ -16,31 +18,19 @@ function WhyChooseUs() {
               isDarkMode ? "text-white/80" : "text-neutral-800"
             } text-lg uppercase mb-2`}
           >
-            Por qué elegirnos
+            {t("pages.contact.whyChooseUs.title")}
           </h1>
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-5">
-            Tu Seguridad es Nuestra Prioridad
+            {t("pages.contact.whyChooseUs.subtitle")}
           </h2>
           <div
             className={`text-lg ${
               isDarkMode ? "text-white/70" : "text-neutral-600"
             } mb-8`}
           >
-            <p className="mb-2">
-              En LockKey, entendemos la importancia de mantener tus datos
-              seguros. Nuestro gestor de contraseñas está diseñado para
-              ofrecerte la máxima seguridad y facilidad de uso.
-            </p>
-            <p className="mb-2">
-              Elegirnos significa optar por una solución que no solo protege tus
-              contraseñas, sino que también simplifica tu vida digital. Con
-              características avanzadas y un enfoque en la seguridad, somos la
-              mejor opción para gestionar tus contraseñas.
-            </p>
-            <p>
-              Nuestro compromiso es brindarte un servicio confiable y seguro,
-              respaldado por un equipo de expertos en seguridad.
-            </p>
+            <p className="mb-2">{t("pages.contact.whyChooseUs.paragraph1")}</p>
+            <p className="mb-2">{t("pages.contact.whyChooseUs.paragraph2")}</p>
+            <p>{t("pages.contact.whyChooseUs.paragraph3")}</p>
           </div>
           <ul
             className={`grid grid-cols-1 sm:grid-cols-2 [&>li]:flex [&>li]:gap-3 [&>li]:mb-6 ${
@@ -49,27 +39,27 @@ function WhyChooseUs() {
           >
             <li>
               <CheckIcon />
-              Cifrado de Nivel Bancario
+              {t("pages.contact.whyChooseUs.itemsList.item1")}
             </li>
             <li>
               <CheckIcon />
-              Fácil de Usar
+              {t("pages.contact.whyChooseUs.itemsList.item2")}
             </li>
             <li>
               <CheckIcon />
-              Acceso desde Cualquier Lugar
+              {t("pages.contact.whyChooseUs.itemsList.item3")}
             </li>
             <li>
               <CheckIcon />
-              Soporte 24/7
+              {t("pages.contact.whyChooseUs.itemsList.item4")}
             </li>
             <li>
               <CheckIcon />
-              Autocompletado Seguro
+              {t("pages.contact.whyChooseUs.itemsList.item5")}
             </li>
             <li>
               <CheckIcon />
-              Generador de Contraseñas
+              {t("pages.contact.whyChooseUs.itemsList.item6")}
             </li>
           </ul>
         </article>

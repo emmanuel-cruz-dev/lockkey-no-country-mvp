@@ -53,7 +53,24 @@
         "frontend": "Frontend Developer"
       }
     },
-    "contact": {},
+    "contact": {
+      "whyChooseUs": {
+        "title": "Why Choose Us",
+        "subtitle": "Your Security is Our Priority",
+        "paragraph1": "At LockKey, we understand the importance of keeping your data secure. Our password manager is designed to offer you maximum security and ease of use.",
+        "paragraph2": "Choosing us means opting for a solution that not only protects your passwords but also simplifies your digital life. With advanced features and a focus on security, we are the best choice for managing your passwords.",
+        "paragraph3": "Our commitment is to provide you with a reliable and secure service, backed by a team of security experts.",
+        "itemsList": {
+          "item1": "Bank-Grade Encryption",
+          "item2": "Easy to Use",
+          "item3": "Access from Anywhere",
+          "item4": "24/7 Support",
+          "item5": "Secure Autofill",
+          "item6": "Password Generator"
+        }
+      },
+      "contact": {}
+    },
     "home": {
       "hero": {
         "title1": "All",

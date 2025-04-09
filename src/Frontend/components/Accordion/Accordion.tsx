@@ -20,10 +20,7 @@ export const Accordion: FC<AccordionProps> = ({ id, title, content }) => {
             : "bg-white hover:bg-gray-50"
         }  transition-colors`}
       >
-        <span className="font-semibold">
-          {/* {title} */}
-          {t(`${title}`)}
-        </span>
+        <span className="font-semibold">{t(`${title}`)}</span>
         <span className="background__accent-lime text-black rounded-full p-2">
           {activeIndex === id ? <FaChevronUp /> : <FaChevronDown />}
         </span>
@@ -36,7 +33,6 @@ export const Accordion: FC<AccordionProps> = ({ id, title, content }) => {
               : "bg-gray-50 text-gray-700"
           } transition-all duration-300 ease-in-out`}
         >
-          {/* {content} */}
           {t(`${content}`)}
         </div>
       )}
