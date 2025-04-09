@@ -69,7 +69,10 @@
           "item6": "Password Generator"
         }
       },
-      "contact": {}
+      "contact": {
+        "title": "Start Now",
+        "subtitle": "Send us a message"
+      }
     },
     "home": {
       "hero": {

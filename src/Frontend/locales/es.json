@@ -69,7 +69,10 @@
           "item6": "Generador de Contraseñas"
         }
       },
-      "contact": {}
+      "contact": {
+        "title": "Empieza Ahora",
+        "subtitle": "Envíanos un mensaje"
+      }
     },
     "home": {
       "hero": {
