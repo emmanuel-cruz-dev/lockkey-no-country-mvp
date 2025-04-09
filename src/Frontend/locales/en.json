@@ -170,7 +170,13 @@
       }
     },
     "login": {},
-    "ourServices": {},
+    "ourServices": {
+      "ourServices": {
+        "title": "Our Services",
+        "subtitle": "Security and Control at Your Fingertips"
+      },
+      "FAQs": {}
+    },
     "panel": {},
     "register": {}
   }

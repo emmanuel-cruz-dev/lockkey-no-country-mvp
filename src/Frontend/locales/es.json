@@ -170,7 +170,13 @@
       }
     },
     "login": {},
-    "ourServices": {},
+    "ourServices": {
+      "ourServices": {
+        "title": "Nuestros Servicios",
+        "subtitle": "Seguridad y Control a tu Alcance"
+      },
+      "FAQs": {}
+    },
     "panel": {},
     "register": {}
   }
