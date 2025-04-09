@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
 import QuoteImg from "../../../../assets/quote-img.avif";
 import { testimonials } from "../../../mocks/testimonials";
 import { Carousel } from "./Carousel";
 
 function Testimonials() {
+  const { t } = useTranslation();
+
   return (
     <section
       className="testimonials relative background__accent-lime py-16"
@@ -10,7 +13,7 @@ function Testimonials() {
     >
       <article>
         <h2 className="text-center font-semibold text-lg md:text-2xl mb-8 text-neutral-700 px-6">
-          Nuestro valor en palabras de quienes más importan
+          {t("pages.home.testimonials.title")}
         </h2>
         <Carousel testimonials={testimonials} />
       </article>

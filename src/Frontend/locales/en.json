@@ -106,6 +106,29 @@
           "item3": "Security dashboard",
           "item4": "24/7 technical support"
         }
+      },
+      "testimonials": {
+        "title": "Our value in the words of those who matter most",
+        "userItem1": {
+          "position": "CTO at TechSecure",
+          "review": "This password manager has revolutionized our company's security. Its ease of use and advanced encryption give us the peace of mind we need to protect our critical information."
+        },
+        "userItem2": {
+          "position": "IT Director at DataShield",
+          "review": "We finally found a reliable password management solution. The integration with our tools and the security it offers are unmatched. Recommended for any serious company."
+        },
+        "userItem3": {
+          "position": "CEO at CyberSafe Solutions",
+          "review": "LockKey's protection and simplicity have exceeded our expectations. Now our team can efficiently manage credentials without compromising security. Excellent tool!"
+        },
+        "userItem4": {
+          "position": "Infrastructure Manager at CloudProtect",
+          "review": "Since implementing LockKey, we've eliminated unnecessary risks in key management. Access auditing and advanced encryption give us protection that really makes a difference."
+        },
+        "userItem5": {
+          "position": "Cybersecurity Specialist at SecureNet",
+          "review": "We've tested several password managers, but LockKey is the only one that meets our demanding security standards. The encryption is top-notch, and the user experience is impeccable."
+        }
       }
     }
   }

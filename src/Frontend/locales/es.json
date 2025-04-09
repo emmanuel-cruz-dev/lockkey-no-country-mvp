@@ -106,6 +106,29 @@
           "item3": "Panel de seguridad",
           "item4": "Asistencia técnica 24/7"
         }
+      },
+      "testimonials": {
+        "title": "Nuestro valor en palabras de quienes más importan",
+        "userItem1": {
+          "position": "CTO en TechSecure",
+          "review": "Este gestor de contraseñas ha revolucionado la seguridad de nuestra empresa. Su facilidad de uso y cifrado avanzado nos brindan la tranquilidad que necesitamos para proteger nuestra información crítica."
+        },
+        "userItem2": {
+          "position": "Director de TI en DataShield",
+          "review": "Finalmente encontramos una solución confiable para la gestión de contraseñas. La integración con nuestras herramientas y la seguridad que ofrece son inigualables. Recomendado para cualquier empresa seria."
+        },
+        "userItem3": {
+          "position": "CEO en CyberSafe Solutions",
+          "review": "La protección y simplicidad de LockKey ha superado nuestras expectativas. Ahora nuestro equipo puede gestionar credenciales de manera eficiente sin comprometer la seguridad. ¡Excelente herramienta!"
+        },
+        "userItem4": {
+          "position": "Gerente de Infraestructura en CloudProtect",
+          "review": "Desde que implementamos LockKey, hemos eliminado riesgos innecesarios en la administración de claves. La auditoría de accesos y la encriptación avanzada nos dan una protección que realmente marca la diferencia."
+        },
+        "userItem5": {
+          "position": "Especialista en Ciberseguridad en SecureNet",
+          "review": "Hemos probado varios gestores de contraseñas, pero LockKey es el único que cumple con nuestros exigentes estándares de seguridad. La encriptación es de primer nivel y la experiencia de usuario es impecable."
+        }
       }
     }
   }

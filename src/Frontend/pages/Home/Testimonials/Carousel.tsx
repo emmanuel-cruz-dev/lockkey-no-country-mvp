@@ -5,8 +5,11 @@ import "swiper/swiper-bundle.css";
 import "./Carousel.css";
 import { FC } from "react";
 import { CarouselProps } from "../../../Store/types";
+import { useTranslation } from "react-i18next";
 
 export const Carousel: FC<CarouselProps> = ({ testimonials }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="w-full max-w-4xl mx-auto">
       <Swiper
@@ -31,7 +34,7 @@ export const Carousel: FC<CarouselProps> = ({ testimonials }) => {
               <MdStar />
             </div>
             <p className="md:text-2xl text-black font-semibold w-5/6 mx-auto mb-4">
-              "{testimonial.review}"
+              "{t(`${testimonial.review}`)}"
             </p>
             <figure className="max-w-20 shadow-lg shadow-black/30 rounded-full overflow-hidden mx-auto mb-4">
               <img
@@ -47,7 +50,9 @@ export const Carousel: FC<CarouselProps> = ({ testimonials }) => {
               <h3 className="font-bold text-xl text-black">
                 {testimonial.name}
               </h3>
-              <h4 className="mb-10 text-neutral-700">{testimonial.position}</h4>
+              <h4 className="mb-10 text-neutral-700">
+                {t(`${testimonial.position}`)}
+              </h4>
             </div>
           </SwiperSlide>
         ))}
