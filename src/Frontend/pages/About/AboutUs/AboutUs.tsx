@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import AboutImg1 from "../../../../assets/about-page-img1.webp";
 import AboutImg2 from "../../../../assets/about-page-img2.webp";
 import AboutImg3 from "../../../../assets/about-page-img3.webp";
@@ -6,6 +7,7 @@ import { useDarkMode } from "../../../hooks/useDarkMode";
 
 function AboutUs() {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   return (
     <section className="container">
@@ -45,28 +47,18 @@ function AboutUs() {
               isDarkMode ? "text-white/80" : "text-neutral-800"
             } text-lg uppercase mb-2`}
           >
-            Sobre Nosotros
+            {t("pages.about.aboutUs.title")}
           </h1>
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-5">
-            Centro de Atención de Seguridad 24/7{" "}
+            {t("pages.about.aboutUs.subtitle")}
           </h2>
           <div
             className={`text-lg ${
               isDarkMode ? "text-white/70" : "text-neutral-600"
             } mb-8`}
           >
-            <p className="mb-2">
-              En LockKey, nos dedicamos a proporcionar soluciones de gestión de
-              contraseñas que son seguras, fáciles de usar y accesibles desde
-              cualquier lugar. Nuestro objetivo es proteger tu información
-              personal y profesional con la tecnología más avanzada.
-            </p>
-            <p>
-              Con nuestro gestor de contraseñas, puedes generar, almacenar y
-              autocompletar contraseñas seguras para todas tus cuentas en línea.
-              Nos esforzamos por ofrecer un servicio que no solo mejora tu
-              seguridad, sino que también simplifica tu vida digital.
-            </p>
+            <p className="mb-2">{t("pages.about.aboutUs.paragraph1")}</p>
+            <p>{t("pages.about.aboutUs.paragraph2")}</p>
           </div>
           <ul
             className={`grid grid-cols-1 sm:grid-cols-2 [&>li]:flex [&>li]:gap-3 [&>li]:mb-6 ${
@@ -75,35 +67,35 @@ function AboutUs() {
           >
             <li>
               <CheckIcon />
-              Generación de Contraseñas
+              {t("pages.about.aboutUs.itemsList.item1")}
             </li>
             <li>
               <CheckIcon />
-              Almacenamiento Encriptado
+              {t("pages.about.aboutUs.itemsList.item2")}
             </li>
             <li>
               <CheckIcon />
-              Autocompletado de Contraseñas
+              {t("pages.about.aboutUs.itemsList.item3")}
             </li>
             <li>
               <CheckIcon />
-              Acceso Multiplataforma
+              {t("pages.about.aboutUs.itemsList.item4")}
             </li>
             <li>
               <CheckIcon />
-              Contraseñas Compartidas
+              {t("pages.about.aboutUs.itemsList.item5")}
             </li>
             <li>
               <CheckIcon />
-              Autenticación de Dos Factores
+              {t("pages.about.aboutUs.itemsList.item6")}
             </li>
             <li>
               <CheckIcon />
-              Monitoreo de Seguridad
+              {t("pages.about.aboutUs.itemsList.item7")}
             </li>
             <li>
               <CheckIcon />
-              Soporte 24/7
+              {t("pages.about.aboutUs.itemsList.item8")}
             </li>
           </ul>
         </aside>

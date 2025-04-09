@@ -27,6 +27,26 @@
     "scrollButton": "Ir arriba"
   },
   "pages": {
+    "about": {
+      "aboutUs": {
+        "title": "Sobre nosotros",
+        "subtitle": "Centro de Atención de Seguridad 24/7",
+        "paragraph1": "En LockKey, nos dedicamos a proporcionar soluciones de gestión de contraseñas que son seguras, fáciles de usar y accesibles desde cualquier lugar. Nuestro objetivo es proteger tu información personal y profesional con la tecnología más avanzada.",
+        "paragraph2": "Con nuestro gestor de contraseñas, puedes generar, almacenar y autocompletar contraseñas seguras para todas tus cuentas en línea. Nos esforzamos por ofrecer un servicio que no solo mejora tu seguridad, sino que también simplifica tu vida digital.",
+        "itemsList": {
+          "item1": "Generación de Contraseñas",
+          "item2": "Almacenamiento Encriptado",
+          "item3": "Autocompletado de Contraseñas",
+          "item4": "Acceso Multiplataforma",
+          "item5": "Contraseñas Compartidas",
+          "item6": "Autenticación de Dos Factores",
+          "item7": "Monitorio de Seguridad",
+          "item8": "Soporte 24/7"
+        }
+      },
+      "ourTeam": {}
+    },
+    "contact": {},
     "home": {
       "hero": {
         "title1": "Todos",
@@ -141,6 +161,10 @@
         "title": "Administra y protege tus contraseñas de forma sencilla y segura.",
         "button": "Empezar ahora"
       }
-    }
+    },
+    "login": {},
+    "ourServices": {},
+    "panel": {},
+    "register": {}
   }
 }

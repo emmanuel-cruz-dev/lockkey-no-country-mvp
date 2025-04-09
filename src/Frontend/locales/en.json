@@ -27,6 +27,25 @@
     "scrollButton": "Go top"
   },
   "pages": {
+    "about": {
+      "aboutUs": {
+        "title": "About Us",
+        "subtitle": "24/7 Security Help Center",
+        "paragraph1": "At LockKey, we're dedicated to providing password management solutions that are secure, easy to use, and accessible from anywhere. Our goal is to protect your personal and professional information with the most advanced technology.",
+        "paragraph2": "With our password manager, you can generate, store, and autofill strong passwords for all your online accounts. We strive to provide a service that not only improves your security but also simplifies your digital life.",
+        "itemsList": {
+          "item1": "Password Generation",
+          "item2": "Encrypted Storage",
+          "item3": "Password Autofill",
+          "item4": "Cross-Platform Access",
+          "item5": "Shared Passwords",
+          "item6": "Two-Factor Authentication",
+          "item7": "Security Monitoring",
+          "item8": "24/7 Support"
+        }
+      }
+    },
+    "contact": {},
     "home": {
       "hero": {
         "title1": "All",
@@ -141,6 +160,10 @@
         "title": "Manage and protect your passwords easily and securely.",
         "button": "Start now"
       }
-    }
+    },
+    "login": {},
+    "ourServices": {},
+    "panel": {},
+    "register": {}
   }
 }
