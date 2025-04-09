@@ -43,7 +43,7 @@ const Home = () => (
     <WhatWeDo /> */}
     {/* <PricingPlans /> */}
     {/* <Testimonials /> */}
-    <TalkBanner />
+    {/* <TalkBanner /> */}
   </Suspense>
 );
 

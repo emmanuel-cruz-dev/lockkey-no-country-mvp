@@ -3,8 +3,11 @@ import { FaGithub, FaPhone, FaEnvelope, FaMapMarker } from "react-icons/fa";
 import "./Footer.css";
 import SocialIcons from "../../components/SocialIcons/SocialIcons";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer bg-black text-white" id="footer">
       <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-9 gap-y-6 gap-2 xl:gap-6 py-20 border-b border-neutral-700 px-6 sm:px-8 lg:px-10">
@@ -23,30 +26,31 @@ function Footer() {
             </h2>
           </div>
           <p className="mb-3 text-neutral-400">
-            La seguridad de tus datos es nuestra prioridad. Simplifica y protege
-            tus accesos con una gestión segura, eficiente y sin complicaciones.
+            {t("layout.footer.paragraph")}
           </p>
           <SocialIcons borderRadius={false} />
         </article>
         <article className="xl:col-span-2">
-          <h2 className="footer__title">Navegación</h2>
+          <h2 className="footer__title">{t("layout.footer.navigation")}</h2>
           <ul className="footer__list footer__navbar">
             <li>
-              <Link to="/">Inicio</Link>
+              <Link to="/">{t("layout.header.home")}</Link>
             </li>
             <li>
-              <Link to="/about">Sobre Nosotros</Link>
+              <Link to="/about">{t("layout.header.about")}</Link>
             </li>
             <li>
-              <Link to="/services">Servicios</Link>
+              <Link to="/services">{t("layout.header.services")}</Link>
             </li>
             <li>
-              <Link to="/contact">Contacto</Link>
+              <Link to="/contact">{t("layout.header.contact")}</Link>
             </li>
           </ul>
         </article>
         <article className="xl:col-span-2">
-          <h2 className="footer__title">Datos de Contacto</h2>
+          <h2 className="footer__title">
+            {t("layout.footer.contactInformation")}
+          </h2>
           <ul className="footer__list [&>li]:flex [&>li]:gap-3 [&>li]:items-center">
             <li>
               <FaPhone />
@@ -70,7 +74,7 @@ function Footer() {
               name="email"
               id="email"
               type="email"
-              placeholder="Correo electrónico"
+              placeholder={t("layout.footer.email")}
               autoComplete="email"
               required
             />
@@ -78,7 +82,7 @@ function Footer() {
               className="btn__primary btn__secondary text-black"
               type="submit"
             >
-              Enviar
+              {t("layout.footer.sendButton")}
             </button>
           </form>
         </article>
@@ -89,12 +93,12 @@ function Footer() {
           href="https://github.com/No-Country-simulation/equipo-c24-70-ft-webapp/tree/frontend"
           target="_blank"
           rel="noopener noreferrer"
-          title="Repositorio de GitHub en No Country"
+          title={t("layout.footer.repository")}
         >
           <FaGithub />
         </a>
         <p className="text-neutral-400 text-center w-2/3 md:w-auto">
-          LockKey copyright © 2025. Todos los derechos reservados.
+          LockKey copyright © 2025. {t("layout.footer.copyright")}
         </p>
         <span className="w-8"></span>
       </article>

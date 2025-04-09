@@ -13,7 +13,15 @@
       "lightModeButton": "Cambiar a modo oscuro",
       "switchLanguage": "Cambiar a Inglés"
     },
-    "footer": {}
+    "footer": {
+      "paragraph": "La seguridad de tus datos es nuestra prioridad. Simplifica y protege tus accesos con una gestión segura, eficiente y sin complicaciones.",
+      "navigation": "Navegación",
+      "contactInformation": "Datos de Contacto",
+      "email": "Correo electrónico",
+      "sendButton": "Enviar",
+      "repository": "Repositorio de GitHub en No Country",
+      "copyright": "Todos los derechos reservados."
+    }
   },
   "components": {
     "title": "Iniciar Sesión",

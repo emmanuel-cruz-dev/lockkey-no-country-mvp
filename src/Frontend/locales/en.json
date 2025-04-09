@@ -13,7 +13,15 @@
       "lightModeButton": "Switch to dark mode",
       "switchLanguage": "Switch to Spanish"
     },
-    "footer": {}
+    "footer": {
+      "paragraph": "The security of your data is our priority. Simplify and protect your access with secure, efficient, and hassle-free management.",
+      "navigation": "Navigation",
+      "contactInformation": "Contact Information",
+      "email": "Email",
+      "sendButton": "Send",
+      "repository": "GitHub repository in No Country",
+      "copyright": "All rights reserved."
+    }
   },
   "components": {
     "title": "Log In",
