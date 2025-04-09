@@ -87,7 +87,25 @@
       "pricingPlans": {
         "paragraph": "Choose your security level",
         "title": "Protection plans designed for every need.",
-        "perMonth": "Per month"
+        "perMonth": "Per month",
+        "itemList1": {
+          "item1": "10-day trial",
+          "item2": "Shared folders",
+          "item3": "Malware removal",
+          "item4": "Scan every 8 hours"
+        },
+        "itemList2": {
+          "item1": "1GB of storage",
+          "item2": "Sharing",
+          "item3": "Multi-device access",
+          "item4": "Scan every 1 hour"
+        },
+        "itemList3": {
+          "item1": "Unlimited passwords",
+          "item2": "Unlimited users",
+          "item3": "Security dashboard",
+          "item4": "24/7 technical support"
+        }
       }
     }
   }

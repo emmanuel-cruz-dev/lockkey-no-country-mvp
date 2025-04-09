@@ -55,7 +55,7 @@ export const PricingCard: FC<PricingCardProps> = ({
           {list.map((item: string, index: number) => (
             <li key={index}>
               <CheckIcon />
-              <p>{item}</p>
+              <p>{t(`${item}`)}</p>
             </li>
           ))}
         </ul>

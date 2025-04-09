@@ -5,10 +5,10 @@ export const pricingCardData = [
     img: "/plan-personal.avif",
     price: 120,
     list: [
-      "10 días de prueba",
-      "Carpetas compartidas",
-      "Eliminación de Malware",
-      "Escaneo cada 08 Hrs",
+      "pages.home.pricingPlans.itemList1.item1",
+      "pages.home.pricingPlans.itemList1.item2",
+      "pages.home.pricingPlans.itemList1.item3",
+      "pages.home.pricingPlans.itemList1.item4",
     ],
   },
   {
@@ -17,10 +17,10 @@ export const pricingCardData = [
     img: "/plan-business.avif",
     price: 180,
     list: [
-      "1GB de almacenamiento",
-      "Uso compartido",
-      "Acceso a multiples dispositivos",
-      "Escaneo cada 1 Hr",
+      "pages.home.pricingPlans.itemList2.item1",
+      "pages.home.pricingPlans.itemList2.item2",
+      "pages.home.pricingPlans.itemList2.item3",
+      "pages.home.pricingPlans.itemList2.item4",
     ],
   },
   {
@@ -29,10 +29,10 @@ export const pricingCardData = [
     img: "/plan-premium.avif",
     price: 200,
     list: [
-      "Sin límite de contraseñas",
-      "Usuarios ilimitados",
-      "Panel de seguridad",
-      "Asistencia técnica 24/7",
+      "pages.home.pricingPlans.itemList3.item1",
+      "pages.home.pricingPlans.itemList3.item2",
+      "pages.home.pricingPlans.itemList3.item3",
+      "pages.home.pricingPlans.itemList3.item4",
     ],
   },
 ];

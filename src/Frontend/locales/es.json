@@ -87,7 +87,25 @@
       "pricingPlans": {
         "paragraph": "Elige tu nivel de seguridad",
         "title": "Planes de protección diseñados para cada necesidad.",
-        "perMonth": "Al mes"
+        "perMonth": "Al mes",
+        "itemList1": {
+          "item1": "10 días de prueba",
+          "item2": "Carpetas compartidas",
+          "item3": "Eliminación de Malware",
+          "item4": "Escaneo cada 8 Hrs"
+        },
+        "itemList2": {
+          "item1": "1GB de almacenamiento",
+          "item2": "Uso compartido",
+          "item3": "Acceso a multiples dispositivos",
+          "item4": "Escaneo cada 1 Hr"
+        },
+        "itemList3": {
+          "item1": "Sin límite de contraseñas",
+          "item2": "Usuarios ilimitados",
+          "item3": "Panel de seguridad",
+          "item4": "Asistencia técnica 24/7"
+        }
       }
     }
   }
