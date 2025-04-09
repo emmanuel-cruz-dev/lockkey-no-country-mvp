@@ -24,8 +24,7 @@
     }
   },
   "components": {
-    "title": "Log In",
-    "button": "Enter"
+    "scrollButton": "Go top"
   },
   "pages": {
     "home": {

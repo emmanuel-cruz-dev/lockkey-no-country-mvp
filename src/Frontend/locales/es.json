@@ -24,8 +24,7 @@
     }
   },
   "components": {
-    "title": "Iniciar Sesión",
-    "button": "Entrar"
+    "scrollButton": "Ir arriba"
   },
   "pages": {
     "home": {
