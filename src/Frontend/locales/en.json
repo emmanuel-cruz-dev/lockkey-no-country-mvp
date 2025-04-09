@@ -43,6 +43,14 @@
           "item7": "Security Monitoring",
           "item8": "24/7 Support"
         }
+      },
+      "ourTeam": {
+        "title": "Our Team",
+        "subtitle": "Experts Behind the Security",
+        "paragraph1": "At LockKey, we have a team of highly trained professionals dedicated to providing the best password management solutions. Our team is comprised of security experts, developers, and customer support specialists.",
+        "paragraph2": "Each member of our team brings extensive experience and knowledge in their respective fields, ensuring our products and services are of the highest quality. We strive to stay at the forefront of technology and security best practices.",
+        "fullstack": "Fullstack Developer",
+        "frontend": "Frontend Developer"
       }
     },
     "contact": {},

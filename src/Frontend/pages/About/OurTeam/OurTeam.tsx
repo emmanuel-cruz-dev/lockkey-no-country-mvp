@@ -1,9 +1,11 @@
 import { TeamCard } from "./TeamCard";
 import { teamMembers } from "../../../mocks/teamMembers";
 import { useDarkMode } from "../../../hooks/useDarkMode";
+import { useTranslation } from "react-i18next";
 
 function OurTeam() {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   return (
     <section className="container">
@@ -14,30 +16,18 @@ function OurTeam() {
               isDarkMode ? "text-white/80" : "text-neutral-800"
             } text-lg uppercase mb-2`}
           >
-            Nuestro Equipo
+            {t("pages.about.ourTeam.title")}
           </h1>
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-5">
-            Expertos Detrás de la Seguridad
+            {t("pages.about.ourTeam.subtitle")}
           </h2>
           <div
             className={`text-lg ${
               isDarkMode ? "text-white/70" : "text-neutral-600"
             }`}
           >
-            <p className="mb-4">
-              En LockKey, contamos con un equipo de profesionales altamente
-              capacitados y dedicados a proporcionar las mejores soluciones de
-              gestión de contraseñas. Nuestro equipo está compuesto por expertos
-              en seguridad, desarrolladores y especialistas en soporte al
-              cliente.
-            </p>
-            <p className="mb-4">
-              Cada miembro de nuestro equipo aporta una vasta experiencia y
-              conocimientos en sus respectivos campos, asegurando que nuestros
-              productos y servicios sean de la más alta calidad. Nos esforzamos
-              por mantenernos a la vanguardia de la tecnología y las mejores
-              prácticas de seguridad.
-            </p>
+            <p className="mb-4">{t("pages.about.ourTeam.paragraph1")}</p>
+            <p className="mb-4">{t("pages.about.ourTeam.paragraph2")}</p>
           </div>
         </article>
         <aside className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 mx-auto">

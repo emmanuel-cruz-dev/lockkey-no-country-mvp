@@ -2,6 +2,7 @@ import { FC } from "react";
 import { TeamCardProps } from "../../../Store/types";
 import SocialIcons from "../../../components/SocialIcons/SocialIcons";
 import { useDarkMode } from "../../../hooks/useDarkMode";
+import { useTranslation } from "react-i18next";
 
 export const TeamCard: FC<TeamCardProps> = ({
   img,
@@ -12,6 +13,7 @@ export const TeamCard: FC<TeamCardProps> = ({
   portfolio,
 }) => {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   return (
     <article className="text-center">
@@ -45,7 +47,7 @@ export const TeamCard: FC<TeamCardProps> = ({
           isDarkMode ? "text-white/60" : "text-neutral-600"
         }`}
       >
-        {occupation}
+        {t(`${occupation}`)}
       </p>
     </article>
   );
