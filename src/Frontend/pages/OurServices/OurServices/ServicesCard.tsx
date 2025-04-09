@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { ServicesCardProps } from "../../../Store/types";
 import { useDarkMode } from "../../../hooks/useDarkMode";
+import { useTranslation } from "react-i18next";
 
 export const ServicesCard: FC<ServicesCardProps> = ({
   title,
@@ -8,6 +9,7 @@ export const ServicesCard: FC<ServicesCardProps> = ({
   paragraph,
 }) => {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   return (
     <article
@@ -27,13 +29,14 @@ export const ServicesCard: FC<ServicesCardProps> = ({
         />
       </figure>
       <div className="mb-4">
-        <h2 className="text-xl font-bold mb-4">{title}</h2>
+        <h2 className="text-xl font-bold mb-4">{t(`${title}`)}</h2>
         <p
           className={`text-lg ${
             isDarkMode ? "text-white/70" : "text-neutral-700"
           }`}
         >
-          {paragraph}
+          {t(`${paragraph}`)}
+          {/* {paragraph} */}
         </p>
       </div>
     </article>

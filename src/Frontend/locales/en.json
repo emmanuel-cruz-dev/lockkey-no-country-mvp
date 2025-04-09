@@ -173,7 +173,21 @@
     "ourServices": {
       "ourServices": {
         "title": "Our Services",
-        "subtitle": "Security and Control at Your Fingertips"
+        "subtitle": "Security and Control at Your Fingertips",
+        "itemsList": {
+          "item1": {
+            "title": "Secure Storage",
+            "paragraph": "Your passwords are stored with military-grade encryption, protecting your information from unauthorized access."
+          },
+          "item2": {
+            "title": "Breach Alert",
+            "paragraph": "Get notified if any of your passwords have been compromised and update them immediately."
+          },
+          "item3": {
+            "title": "Fast Autofill",
+            "paragraph": "Access your accounts instantly with our secure, hassle-free autofill."
+          }
+        }
       },
       "FAQs": {}
     },
