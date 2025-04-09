@@ -72,6 +72,26 @@
       "contact": {
         "title": "Start Now",
         "subtitle": "Send us a message"
+      },
+      "contactForm": {
+        "name": "First Name",
+        "lastName": "Last Name",
+        "land": "Country",
+        "country": {
+          "selectCountry": "Select your country*",
+          "brazil": "Brazil",
+          "spain": "Spain",
+          "mexico": "Mexico",
+          "panama": "Panama",
+          "peru": "Peru",
+          "dominicanRepublic": "Dominican Republic",
+          "other": "Other"
+        },
+        "email": "Email",
+        "phoneNumber": "Phone Number",
+        "message": "Message",
+        "sendButton": "Send",
+        "required": "is required."
       }
     },
     "home": {
