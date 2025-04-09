@@ -129,6 +129,10 @@
           "position": "Especialista en Ciberseguridad en SecureNet",
           "review": "Hemos probado varios gestores de contraseñas, pero LockKey es el único que cumple con nuestros exigentes estándares de seguridad. La encriptación es de primer nivel y la experiencia de usuario es impecable."
         }
+      },
+      "talkBanner": {
+        "title": "Administra y protege tus contraseñas de forma sencilla y segura.",
+        "button": "Empezar ahora"
       }
     }
   }

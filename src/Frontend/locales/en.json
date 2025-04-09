@@ -129,6 +129,10 @@
           "position": "Cybersecurity Specialist at SecureNet",
           "review": "We've tested several password managers, but LockKey is the only one that meets our demanding security standards. The encryption is top-notch, and the user experience is impeccable."
         }
+      },
+      "talkBanner": {
+        "title": "Manage and protect your passwords easily and securely.",
+        "button": "Start now"
       }
     }
   }
