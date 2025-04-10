@@ -1,15 +1,7 @@
 import { useReducer } from "react";
 import { useNavigate } from "react-router-dom";
-import { Action, initialState, InitialStateType } from "../Store/types";
-
-const reducer = (state: InitialStateType, action: Action) => {
-  switch (action.type) {
-    case "SET_FIELD":
-      return { ...state, [action.field]: action.value };
-    default:
-      return state;
-  }
-};
+import { initialState } from "../Store/types";
+import { reducer } from "../Store/reducer";
 
 const useLogin = () => {
   const [state, dispatch] = useReducer(reducer, initialState);

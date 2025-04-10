@@ -5,21 +5,8 @@ import LaptopRegister from "../../../assets/LaptopRegister.png";
 import CircleRegister from "../../../assets/CircleRegister.png";
 import "./Register.css";
 import { useDarkMode } from "../../hooks/useDarkMode";
-import {
-  Action,
-  Field,
-  initialState,
-  InitialStateType,
-} from "../../Store/types";
-
-const reducer = (state: InitialStateType, action: Action) => {
-  switch (action.type) {
-    case "SET_FIELD":
-      return { ...state, [action.field]: action.value };
-    default:
-      return state;
-  }
-};
+import { Field, initialState } from "../../Store/types";
+import { reducer } from "../../Store/reducer";
 
 const isValidEmail = (email: string) => {
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
