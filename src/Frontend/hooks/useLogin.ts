@@ -1,10 +1,8 @@
 import { useReducer } from "react";
 import { useNavigate } from "react-router-dom";
-import { Action } from "../Store/types";
+import { Action, initialState, InitialStateType } from "../Store/types";
 
-const initialState = { email: "", password: "", confirmPassword: "" };
-
-const reducer = (state: typeof initialState, action: Action) => {
+const reducer = (state: InitialStateType, action: Action) => {
   switch (action.type) {
     case "SET_FIELD":
       return { ...state, [action.field]: action.value };

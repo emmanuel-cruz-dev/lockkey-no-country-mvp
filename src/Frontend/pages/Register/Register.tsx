@@ -5,14 +5,14 @@ import LaptopRegister from "../../../assets/LaptopRegister.png";
 import CircleRegister from "../../../assets/CircleRegister.png";
 import "./Register.css";
 import { useDarkMode } from "../../hooks/useDarkMode";
+import {
+  Action,
+  Field,
+  initialState,
+  InitialStateType,
+} from "../../Store/types";
 
-const initialState = { email: "", password: "", confirmPassword: "" };
-
-type Field = "email" | "password" | "confirmPassword";
-
-type Action = { type: "SET_FIELD"; field: Field; value: string };
-
-const reducer = (state: typeof initialState, action: Action) => {
+const reducer = (state: InitialStateType, action: Action) => {
   switch (action.type) {
     case "SET_FIELD":
       return { ...state, [action.field]: action.value };
