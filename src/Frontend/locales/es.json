@@ -271,7 +271,16 @@
         }
       }
     },
-    "panel": {},
+    "panel": {
+      "dashboard": "Panel",
+      "allItems": "Todos los elementos",
+      "sharingCenter": "Centro de uso compartido",
+      "passwords": "Contraseñas",
+      "notes": "Notas",
+      "addresses": "Direcciones",
+      "paymentCards": "Tarjetas de pago",
+      "bankAccounts": "Cuentas bancarias"
+    },
     "register": {}
   }
 }

@@ -4,12 +4,10 @@ import PasswordsVault from "../../components/PasswordsVault/PasswordsVault";
 import PaymentCards from "../../components/PaymentCards/PaymentCards";
 import SharingCenter from "../../components/SharingCenter/SharingCenter";
 import { useDarkMode } from "../../hooks/useDarkMode";
-// import usePanel from "../../hooks/usePanel";
 import { useModal } from "../../Store/ModalContext";
 
 const RenderMainContent = (activeButton: string) => {
   const { isDarkMode } = useDarkMode();
-  // const { activeButton } = usePanel();
   const { openModal } = useModal();
 
   switch (activeButton) {

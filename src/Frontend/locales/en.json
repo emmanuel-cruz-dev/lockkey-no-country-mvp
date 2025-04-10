@@ -271,7 +271,16 @@
         }
       }
     },
-    "panel": {},
+    "panel": {
+      "dashboard": "Dashboard",
+      "allItems": "All Items",
+      "sharingCenter": "Sharing Center",
+      "passwords": "Passwords",
+      "notes": "Notes",
+      "addresses": "Addresses",
+      "paymentCards": "Payment Cards",
+      "bankAccounts": "Bank Accounts"
+    },
     "register": {}
   }
 }
