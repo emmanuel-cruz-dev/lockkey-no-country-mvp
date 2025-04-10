@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import useRegister from "../../hooks/useRegister";
+import { useTranslation } from "react-i18next";
 
 function RegisterForm() {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
   const {
     state,
     showPassword,
@@ -26,7 +28,7 @@ function RegisterForm() {
             isDarkMode ? "text-white/80" : "text-gray-700"
           }`}
         >
-          Correo electrónico
+          {t("pages.registration.registerForm.email")}
         </label>
         <input
           type="email"
@@ -46,7 +48,7 @@ function RegisterForm() {
             isDarkMode ? "text-white/80" : "text-gray-700"
           }`}
         >
-          Contraseña Maestra
+          {t("pages.registration.registerForm.masterPassword")}
         </label>
         <div className="relative">
           <input
@@ -112,10 +114,11 @@ function RegisterForm() {
       {timeToCrack && (
         <p
           className={`${
-            isDarkMode ? "text-white/60" : "text-gray-600"
+            isDarkMode ? "text-white/70" : "text-gray-600"
           } text-sm mt-1`}
         >
-          ⏳ Tiempo estimado para descifrar: <strong>{timeToCrack}</strong>
+          ⏳ {t("pages.registration.registerForm.decryptTime")}:{" "}
+          <strong>{timeToCrack}</strong>
         </p>
       )}
       {suggestions.length > 0 && (
@@ -137,7 +140,7 @@ function RegisterForm() {
             isDarkMode ? "text-white/80" : "text-gray-700"
           }`}
         >
-          Confirmar contraseña Maestra
+          {t("pages.registration.registerForm.confirmMasterPassword")}
         </label>
         <input
           type="password"
@@ -153,7 +156,7 @@ function RegisterForm() {
           isDarkMode ? "text-white/60" : "text-gray-600"
         }`}
       >
-        ¿Ya tienes una cuenta?
+        {t("pages.registration.registerForm.account")}
         <Link
           to="/login"
           className={`${
@@ -161,7 +164,7 @@ function RegisterForm() {
           } hover:underline`}
         >
           {" "}
-          Inicia sesión aquí
+          {t("pages.registration.registerForm.logHere")}
         </Link>
       </p>
       <button
@@ -169,11 +172,11 @@ function RegisterForm() {
         className="btn__primary btn__lime w-full text-black cursor-pointer"
         disabled={!state.password || passwordScore < 3}
       >
-        Regístrate
+        {t("pages.registration.registerForm.register")}
       </button>
       {passwordScore < 3 && (
         <p className="text-red-500 text-sm mt-1">
-          La contraseña es demasiado débil. Usa una más segura.
+          {t("pages.registration.registerForm.weakPassword")}
         </p>
       )}
     </form>

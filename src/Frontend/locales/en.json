@@ -302,8 +302,18 @@
         }
       }
     },
-    "register": {
-      "title": "Registration"
+    "registration": {
+      "title": "Registration",
+      "registerForm": {
+        "email": "Email",
+        "masterPassword": "Master Password",
+        "confirmMasterPassword": "Confirm Master Password",
+        "decryptTime": "Estimated time to decrypt",
+        "account": "Do you already have an account?",
+        "logHere": "Log in here",
+        "register": "Register",
+        "weakPassword": "The password is too weak. Use a stronger one."
+      }
     }
   }
 }

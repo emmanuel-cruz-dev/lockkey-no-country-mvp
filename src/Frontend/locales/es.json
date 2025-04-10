@@ -302,8 +302,18 @@
         }
       }
     },
-    "register": {
-      "title": "Registro"
+    "registration": {
+      "title": "Registro",
+      "registerForm": {
+        "email": "Correo Electrónico",
+        "masterPassword": "Contraseña Maestra",
+        "confirmMasterPassword": "Confirmar Contraseña Maestra",
+        "decryptTime": "Tiempo estimado para descifrar",
+        "account": "¿Ya tienes una cuenta?",
+        "logHere": "Inicia sesión aquí",
+        "register": "Regístrate",
+        "weakPassword": "La contraseña es demasiado débil. Usa una más segura."
+      }
     }
   }
 }
