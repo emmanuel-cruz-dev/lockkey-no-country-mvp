@@ -25,6 +25,8 @@
   },
   "components": {
     "scrollButton": "Ir arriba",
+    "name": "Nombre",
+    "folder": "Carpeta",
     "cancel": "Cancelar",
     "update": "Actualizar",
     "close": "Cerrar",
@@ -47,8 +49,6 @@
     },
     "notesModal": {
       "title": "Añadir nota segura",
-      "name": "Nombre",
-      "folder": "Carpeta",
       "editNote": "Editar nota",
       "addSecureNote": "Añadir nota segura",
       "textarea": "Escribe tu nota aquí...",
@@ -56,6 +56,14 @@
       "addAttachment": "Añadir archivo adjunto",
       "refresh": "Refrescar",
       "markFavorite": "Marcar como favorito"
+    },
+    "passwordModal": {
+      "title": "Añadir contraseña",
+      "userName": "Nombre del usuario",
+      "sitePassword": "Contraseña del sitio",
+      "hidePassword": "Ocultar contraseña",
+      "showPassword": "Mostrar contraseña",
+      "notes": "Notas"
     }
   },
   "pages": {

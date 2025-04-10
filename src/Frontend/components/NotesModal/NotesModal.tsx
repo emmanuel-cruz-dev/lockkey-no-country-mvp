@@ -61,7 +61,7 @@ const NotesModal: FC<ImportPasswordModalProps> = ({ isOpen, onClose }) => {
                 isDarkMode ? "text-white/70" : "text-gray-700"
               } block text-sm font-medium`}
             >
-              {t("components.notesModal.name")}:
+              {t("components.name")}:
             </label>
             <input
               type="text"
@@ -75,7 +75,7 @@ const NotesModal: FC<ImportPasswordModalProps> = ({ isOpen, onClose }) => {
                 isDarkMode ? "text-white/70" : "text-gray-700"
               } block text-sm font-medium`}
             >
-              {t("components.notesModal.folder")}:
+              {t("components.folder")}:
             </label>
             <div className="relative">
               <input

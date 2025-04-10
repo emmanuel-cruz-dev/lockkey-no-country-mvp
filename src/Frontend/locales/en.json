@@ -25,6 +25,8 @@
   },
   "components": {
     "scrollButton": "Go top",
+    "name": "Name",
+    "folder": "Folder",
     "cancel": "Cancel",
     "update": "Update",
     "close": "Close",
@@ -47,8 +49,6 @@
     },
     "notesModal": {
       "title": "Add secure note",
-      "name": "Name",
-      "folder": "Folder",
       "editNote": "Edit note",
       "addSecureNote": "Add secure note",
       "textarea": "Write your note here...",
@@ -56,6 +56,14 @@
       "addAttachment": "Add attachment",
       "refresh": "Refresh",
       "markFavorite": "Mark as favorite"
+    },
+    "passwordModal": {
+      "title": "Add Password",
+      "userName": "Username",
+      "sitePassword": "Site Password",
+      "hidePassword": "Hide password",
+      "showPassword": "Show password",
+      "notes": "Notes"
     }
   },
   "pages": {
