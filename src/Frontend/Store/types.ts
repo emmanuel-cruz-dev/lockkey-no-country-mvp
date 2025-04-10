@@ -90,3 +90,10 @@ export type Field = "email" | "password" | "confirmPassword";
 export const initialState = { email: "", password: "", confirmPassword: "" };
 
 export type InitialStateType = typeof initialState;
+
+export interface ContentArticleProps {
+  title: string;
+  subtitle: string;
+  button: string;
+  modalKey: string;
+}

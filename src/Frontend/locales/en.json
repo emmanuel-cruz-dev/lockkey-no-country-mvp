@@ -280,7 +280,10 @@
       "addresses": "Addresses",
       "paymentCards": "Payment Cards",
       "bankAccounts": "Bank Accounts",
-      "renderMainContent": {}
+      "mainContent": {
+        "title": "Welcome to your dashboard!",
+        "subtitle": "Here you can manage your passwords, notes, and other items."
+      }
     },
     "register": {}
   }

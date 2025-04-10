@@ -280,7 +280,10 @@
       "addresses": "Direcciones",
       "paymentCards": "Tarjetas de pago",
       "bankAccounts": "Cuentas bancarias",
-      "renderMainContent": {}
+      "mainContent": {
+        "title": "¡Bienvenida a tu panel!",
+        "subtitle": "Aquí puedes gestionar tus contraseñas, notas y otros elementos."
+      }
     },
     "register": {}
   }

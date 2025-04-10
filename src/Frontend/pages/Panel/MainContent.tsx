@@ -1,87 +1,46 @@
+import { useTranslation } from "react-i18next";
 import { useDarkMode } from "../../hooks/useDarkMode";
-import { useModal } from "../../Store/ModalContext";
+import ContentArticle from "./ContentArticle";
 
 function MainContent() {
   const { isDarkMode } = useDarkMode();
-  const { openModal } = useModal();
+  const { t } = useTranslation();
 
   return (
     <main className="flex-1 p-6 relative z-10">
-      <div className="max-w-4xl mx-auto">
+      <section className="max-w-4xl mx-auto">
         <h1
           className={`${
             isDarkMode ? "text-white/90" : "text-gray-800"
           } text-2xl font-semibold`}
         >
-          ¡Bienvenida a tu panel!
+          {t("pages.panel.mainContent.title")}
         </h1>
         <p className={`${isDarkMode ? "text-white/60" : "text-gray-600"} mt-2`}>
-          Aquí puedes gestionar tus contraseñas, notas y otros elementos.
+          {t("pages.panel.mainContent.subtitle")}
         </p>
 
-        <div
-          className={`${
-            isDarkMode
-              ? "dark-mode__background-color [&>h2]:text-white/90 [&>p]:text-white/70"
-              : "bg-white"
-          } mt-6 shadow-md rounded-lg p-5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg backdrop-blur-md bg-opacity-90`}
-        >
-          <h2 className="text-lg font-semibold text-gray-800">
-            Añadir nueva contraseña
-          </h2>
-          <p className="text-gray-600">
-            Guarda tus credenciales de forma segura.
-          </p>
-          <button
-            className="mt-4 btn__primary btn__lime text-black"
-            onClick={() => openModal("password")}
-          >
-            Añadir Contraseña
-          </button>
-        </div>
+        <ContentArticle
+          title="Añadir nueva contraseña"
+          subtitle="Guarda tus credenciales de forma segura."
+          modalKey="password"
+          button="Añadir Contraseña"
+        />
 
-        <div
-          className={`${
-            isDarkMode
-              ? "dark-mode__background-color [&>h2]:text-white/90 [&>p]:text-white/70"
-              : "bg-white"
-          } mt-4 shadow-md rounded-lg p-5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg backdrop-blur-md bg-opacity-90`}
-        >
-          <h2 className="text-lg font-semibold text-gray-800">
-            Importar contraseñas
-          </h2>
-          <p className="text-gray-600">
-            Trae tus contraseñas desde otro servicio.
-          </p>
-          <button
-            className="mt-4 btn__primary btn__lime text-black"
-            onClick={() => openModal("importPassword")}
-          >
-            Importar
-          </button>
-        </div>
+        <ContentArticle
+          title="Importar contraseñas"
+          subtitle="Trae tus contraseñas desde otro servicio."
+          modalKey="importPassword"
+          button="Importar"
+        />
 
-        <div
-          className={`${
-            isDarkMode
-              ? "dark-mode__background-color [&>h2]:text-white/90 [&>p]:text-white/70"
-              : "bg-white"
-          } mt-4 shadow-md rounded-lg p-5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg backdrop-blur-md bg-opacity-90`}
-        >
-          <h2 className="text-lg font-semibold text-gray-800">
-            Añadir nota segura
-          </h2>
-          <p className="text-gray-600">
-            Crea Notas seguras a las que nadie tendra acceso.
-          </p>
-          <button
-            className="mt-4 btn__primary btn__lime text-black"
-            onClick={() => openModal("notes")}
-          >
-            Crear
-          </button>
-        </div>
-      </div>
+        <ContentArticle
+          title="Añadir nota segura"
+          subtitle="Crea notas seguras a las que nadie tendra acceso."
+          modalKey="notes"
+          button="Crear"
+        />
+      </section>
     </main>
   );
 }
