@@ -279,7 +279,8 @@
       "notes": "Notes",
       "addresses": "Addresses",
       "paymentCards": "Payment Cards",
-      "bankAccounts": "Bank Accounts"
+      "bankAccounts": "Bank Accounts",
+      "renderMainContent": {}
     },
     "register": {}
   }

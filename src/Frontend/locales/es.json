@@ -279,7 +279,8 @@
       "notes": "Notas",
       "addresses": "Direcciones",
       "paymentCards": "Tarjetas de pago",
-      "bankAccounts": "Cuentas bancarias"
+      "bankAccounts": "Cuentas bancarias",
+      "renderMainContent": {}
     },
     "register": {}
   }
