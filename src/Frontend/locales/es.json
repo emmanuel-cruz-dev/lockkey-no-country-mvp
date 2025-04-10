@@ -209,7 +209,14 @@
         "button": "Empezar ahora"
       }
     },
-    "login": {},
+    "login": {
+      "title": "Inicio de sesión",
+      "email": "Correo electrónico*",
+      "password": "Contraseña*",
+      "account": "¿No tienes una cuenta",
+      "signUp": "Regístrate aquí",
+      "logButton": "Inicia sesión"
+    },
     "ourServices": {
       "ourServices": {
         "title": "Nuestros Servicios",

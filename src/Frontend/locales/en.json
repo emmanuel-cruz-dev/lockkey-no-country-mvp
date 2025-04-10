@@ -209,7 +209,14 @@
         "button": "Start now"
       }
     },
-    "login": {},
+    "login": {
+      "title": "Login",
+      "email": "Email*",
+      "password": "Password*",
+      "account": "Don't have an account?",
+      "signUp": "Register here",
+      "logButton": "Log in"
+    },
     "ourServices": {
       "ourServices": {
         "title": "Our Services",

@@ -5,10 +5,12 @@ import Planes from "../../../assets/planes.png";
 import "./Login.css";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import useLogin from "../../hooks/useLogin";
+import { useTranslation } from "react-i18next";
 
 function Login() {
   const { isDarkMode } = useDarkMode();
   const { state, handleChange, handleSubmit } = useLogin();
+  const { t } = useTranslation();
 
   return (
     <section className="login flex items-center justify-center h-full min-h-screen relative -mt-8 pt-8 group px-4">
@@ -40,7 +42,7 @@ function Login() {
       transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-lg`}
       >
         <h2 className="mb-4 text-center text-2xl font-semibold">
-          Inicio de sesión
+          {t("pages.login.title")}
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4 text-black">
           <div>
@@ -49,7 +51,7 @@ function Login() {
                 isDarkMode ? "text-white/80" : "text-gray-700"
               }`}
             >
-              Email*
+              {t("pages.login.email")}
             </label>
             <input
               type="email"
@@ -66,7 +68,7 @@ function Login() {
                 isDarkMode ? "text-white/80" : "text-gray-700"
               }`}
             >
-              Contraseña*
+              {t("pages.login.password")}
             </label>
             <input
               type="password"
@@ -82,22 +84,21 @@ function Login() {
               isDarkMode ? "text-white/80" : "text-gray-600"
             }`}
           >
-            ¿No tienes una cuenta?
+            {t("pages.login.account")}{" "}
             <Link
               to="/register"
               className={`text-blue-600 ${
                 isDarkMode ? "text-blue-400" : ""
               } hover:underline`}
             >
-              {" "}
-              Regístrate aquí
+              {t("pages.login.signUp")}
             </Link>
           </p>
           <button
             type="submit"
             className="btn__primary btn__lime w-full text-black"
           >
-            Inicia sesión
+            {t("pages.login.logButton")}
           </button>
         </form>
       </div>
