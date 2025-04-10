@@ -97,3 +97,8 @@ export interface ContentArticleProps {
   button: string;
   modalKey: string;
 }
+
+export interface ImportPasswordModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}

@@ -30,14 +30,14 @@ function MainContent() {
         <ContentArticle
           title={t("pages.panel.mainContent.articlesList.item2.title")}
           subtitle={t("pages.panel.mainContent.articlesList.item2.subtitle")}
-          modalKey="password"
+          modalKey="importPassword"
           button={t("pages.panel.mainContent.articlesList.item2.button")}
         />
 
         <ContentArticle
           title={t("pages.panel.mainContent.articlesList.item3.title")}
           subtitle={t("pages.panel.mainContent.articlesList.item3.subtitle")}
-          modalKey="password"
+          modalKey="notes"
           button={t("pages.panel.mainContent.articlesList.item3.button")}
         />
       </section>

@@ -1,11 +1,10 @@
+import { FC } from "react";
 import { useDarkMode } from "../../hooks/useDarkMode";
+import { ImportPasswordModalProps } from "../../Store/types";
 
-const ImportPasswordModal = ({
+const ImportPasswordModal: FC<ImportPasswordModalProps> = ({
   isOpen,
   onClose,
-}: {
-  isOpen: boolean;
-  onClose: () => void;
 }) => {
   const { isDarkMode } = useDarkMode();
 

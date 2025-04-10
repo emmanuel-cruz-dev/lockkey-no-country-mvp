@@ -1,13 +1,9 @@
+import { FC } from "react";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import { useModal } from "./../../Store/ModalContext";
+import { ImportPasswordModalProps } from "../../Store/types";
 
-const NotesModal = ({
-  isOpen,
-  onClose,
-}: {
-  isOpen: boolean;
-  onClose: () => void;
-}) => {
+const NotesModal: FC<ImportPasswordModalProps> = ({ isOpen, onClose }) => {
   const { modalData } = useModal();
   const { isDarkMode } = useDarkMode();
 
