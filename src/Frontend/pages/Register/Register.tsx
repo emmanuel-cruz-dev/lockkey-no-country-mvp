@@ -7,13 +7,9 @@ import "./Register.css";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import { Field, initialState } from "../../Store/types";
 import { reducer } from "../../Store/reducer";
+import { isValidEmail } from "../../utils/utils";
 
-const isValidEmail = (email: string) => {
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  return emailRegex.test(email);
-};
-
-const Register = () => {
+function Register() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [passwordScore, setPasswordScore] = useState(0);
   const [suggestions, setSuggestions] = useState<string[]>([]);
@@ -312,6 +308,6 @@ const Register = () => {
       </article>
     </section>
   );
-};
+}
 
 export default Register;
