@@ -4,9 +4,11 @@ import CircleRegister from "../../../assets/CircleRegister.png";
 import "./Register.css";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import RegisterForm from "./RegisterForm";
+import { useTranslation } from "react-i18next";
 
 function Register() {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   return (
     <section className="register flex items-center justify-center min-h-[37rem] -mt-8 relative">
@@ -30,7 +32,9 @@ function Register() {
           isDarkMode ? "dark-mode__background-color" : "bg-white"
         } w-full max-w-md rounded-lg p-6 shadow-md backdrop-blur-md bg-opacity-90 transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg`}
       >
-        <h2 className="mb-4 text-center text-2xl font-semibold">Registro</h2>
+        <h2 className="mb-4 text-center text-2xl font-semibold">
+          {t("pages.register.title")}
+        </h2>
 
         <RegisterForm />
       </article>

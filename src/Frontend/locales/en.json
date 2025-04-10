@@ -302,6 +302,8 @@
         }
       }
     },
-    "register": {}
+    "register": {
+      "title": "Registration"
+    }
   }
 }
