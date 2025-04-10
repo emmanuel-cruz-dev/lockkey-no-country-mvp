@@ -282,7 +282,24 @@
       "bankAccounts": "Bank Accounts",
       "mainContent": {
         "title": "Welcome to your dashboard!",
-        "subtitle": "Here you can manage your passwords, notes, and other items."
+        "subtitle": "Here you can manage your passwords, notes, and other items.",
+        "articlesList": {
+          "item1": {
+            "title": "Add new password",
+            "subtitle": "Save your credentials securely.",
+            "button": "Add Password"
+          },
+          "item2": {
+            "title": "Import passwords",
+            "subtitle": "Bring your passwords from another service.",
+            "button": "Import"
+          },
+          "item3": {
+            "title": "Add secure note",
+            "subtitle": "Create secure notes that no one will have access to.",
+            "button": "Create"
+          }
+        }
       }
     },
     "register": {}

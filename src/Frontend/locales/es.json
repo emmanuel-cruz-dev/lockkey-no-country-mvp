@@ -282,7 +282,24 @@
       "bankAccounts": "Cuentas bancarias",
       "mainContent": {
         "title": "¡Bienvenida a tu panel!",
-        "subtitle": "Aquí puedes gestionar tus contraseñas, notas y otros elementos."
+        "subtitle": "Aquí puedes gestionar tus contraseñas, notas y otros elementos.",
+        "articlesList": {
+          "item1": {
+            "title": "Añadir nueva contraseña",
+            "subtitle": "Guarda tus credenciales de forma segura.",
+            "button": "Añadir Contraseña"
+          },
+          "item2": {
+            "title": "Importar contraseñas",
+            "subtitle": "Trae tus contraseñas desde otro servicio.",
+            "button": "Importar"
+          },
+          "item3": {
+            "title": "Añadir nota segura",
+            "subtitle": "Crea notas seguras a las que nadie tendra acceso.",
+            "button": "Crear"
+          }
+        }
       }
     },
     "register": {}

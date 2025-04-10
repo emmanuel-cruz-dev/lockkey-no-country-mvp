@@ -21,24 +21,24 @@ function MainContent() {
         </p>
 
         <ContentArticle
-          title="Añadir nueva contraseña"
-          subtitle="Guarda tus credenciales de forma segura."
+          title={t("pages.panel.mainContent.articlesList.item1.title")}
+          subtitle={t("pages.panel.mainContent.articlesList.item1.subtitle")}
           modalKey="password"
-          button="Añadir Contraseña"
+          button={t("pages.panel.mainContent.articlesList.item1.button")}
         />
 
         <ContentArticle
-          title="Importar contraseñas"
-          subtitle="Trae tus contraseñas desde otro servicio."
-          modalKey="importPassword"
-          button="Importar"
+          title={t("pages.panel.mainContent.articlesList.item2.title")}
+          subtitle={t("pages.panel.mainContent.articlesList.item2.subtitle")}
+          modalKey="password"
+          button={t("pages.panel.mainContent.articlesList.item2.button")}
         />
 
         <ContentArticle
-          title="Añadir nota segura"
-          subtitle="Crea notas seguras a las que nadie tendra acceso."
-          modalKey="notes"
-          button="Crear"
+          title={t("pages.panel.mainContent.articlesList.item3.title")}
+          subtitle={t("pages.panel.mainContent.articlesList.item3.subtitle")}
+          modalKey="password"
+          button={t("pages.panel.mainContent.articlesList.item3.button")}
         />
       </section>
     </main>
