@@ -34,6 +34,14 @@
       "title": "Your Bank Accounts",
       "subtitle": "Here you can securely store and manage your bank account information.",
       "content": "Saved accounts"
+    },
+    "importPassword": {
+      "title": "Import passwords",
+      "selectFile": "Select file",
+      "fileFormat": "File format",
+      "cancel": "Cancel",
+      "import": "Import",
+      "close": "Close"
     }
   },
   "pages": {

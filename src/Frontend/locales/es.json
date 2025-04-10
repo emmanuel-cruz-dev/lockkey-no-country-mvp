@@ -34,6 +34,14 @@
       "title": "Tus Cuentas Bancarias",
       "subtitle": "Aquí puedes ver almacenar y gestionar la información de tus cuentas bancarias de forma segura.",
       "content": "Cuentas guardadas"
+    },
+    "importPassword": {
+      "title": "Importar contraseñas",
+      "selectFile": "Selecciona el archivo",
+      "fileFormat": "Formato del archivo",
+      "cancel": "Cancelar",
+      "import": "Importar",
+      "close": "Cerrar"
     }
   },
   "pages": {

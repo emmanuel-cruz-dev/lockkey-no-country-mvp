@@ -1,12 +1,14 @@
 import { FC } from "react";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import { ImportPasswordModalProps } from "../../Store/types";
+import { useTranslation } from "react-i18next";
 
 const ImportPasswordModal: FC<ImportPasswordModalProps> = ({
   isOpen,
   onClose,
 }) => {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   if (!isOpen) return null;
 
@@ -25,6 +27,7 @@ const ImportPasswordModal: FC<ImportPasswordModalProps> = ({
               : "text-gray-500 hover:text-gray-700"
           } absolute top-2 right-2`}
           aria-label="Cerrar"
+          title={t("components.importPassword.close")}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +50,7 @@ const ImportPasswordModal: FC<ImportPasswordModalProps> = ({
             isDarkMode ? "text-white/80" : "text-gray-800"
           } text-lg font-semibold  border-b pb-2 mb-4`}
         >
-          Importar contraseñas
+          {t("components.importPassword.title")}
         </h2>
 
         <div className="space-y-3">
@@ -57,7 +60,7 @@ const ImportPasswordModal: FC<ImportPasswordModalProps> = ({
                 isDarkMode ? "text-white/70" : "text-gray-700"
               } block text-sm font-medium`}
             >
-              Selecciona el archivo:
+              {t("components.importPassword.selectFile")}:
             </label>
             <input
               type="file"
@@ -72,7 +75,7 @@ const ImportPasswordModal: FC<ImportPasswordModalProps> = ({
                 isDarkMode ? "text-white/70" : "text-gray-700"
               } block text-sm font-medium`}
             >
-              Formato del archivo:
+              {t("components.importPassword.fileFormat")}:
             </label>
             <select className="w-full border rounded p-2 text-gray-800">
               <option value="csv">CSV</option>
@@ -86,10 +89,10 @@ const ImportPasswordModal: FC<ImportPasswordModalProps> = ({
             onClick={onClose}
             className="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded transition-colors"
           >
-            Cancelar
+            {t("components.importPassword.cancel")}
           </button>
           <button className="text-black px-4 py-2 btn__primary btn__lime rounded transition-colors">
-            Importar
+            {t("components.importPassword.import")}
           </button>
         </div>
       </div>
