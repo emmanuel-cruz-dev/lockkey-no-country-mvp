@@ -1,39 +1,9 @@
-import { useEffect, useState } from "react";
 import { useDarkMode } from "../../hooks/useDarkMode";
-import { PasswordProps } from "../../Store/types";
+import usePasswordVault from "../../hooks/usePasswordVault";
 
-const PasswordsVault = () => {
-  const [passwords, setPasswords] = useState<PasswordProps[]>([]);
+function PasswordsVault() {
   const { isDarkMode } = useDarkMode();
-
-  useEffect(() => {
-    const fetchPasswords = async () => {
-      try {
-        const response = await fetch(
-          `${import.meta.env.VITE_BACKEND_URL}/passwords`,
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${localStorage.getItem("access_token")}`,
-            },
-          }
-        );
-
-        if (!response.ok) {
-          throw new Error("Error al obtener las contraseñas");
-        }
-
-        const data = await response.json();
-        console.log("Datos recibidos del backend:", data);
-        setPasswords(data.passwords);
-      } catch (error) {
-        console.error("Error al obtener las contraseñas:", error);
-      }
-    };
-
-    fetchPasswords();
-  }, []);
+  const { passwords } = usePasswordVault();
 
   return (
     <article className="flex-1 p-6 relative z-10">
@@ -118,6 +88,6 @@ const PasswordsVault = () => {
       </div>
     </article>
   );
-};
+}
 
 export default PasswordsVault;
