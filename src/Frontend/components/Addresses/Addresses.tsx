@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import { useDarkMode } from "../../hooks/useDarkMode";
 
 function Addresses() {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   return (
     <article className="flex-1 p-6 relative z-10">
@@ -11,11 +13,10 @@ function Addresses() {
             isDarkMode ? "text-white/90" : "text-gray-800"
           } text-2xl font-semibold`}
         >
-          Tus Direcciones
+          {t("components.addresses.title")}
         </h1>
         <p className={`${isDarkMode ? "text-white/70" : "text-gray-600"} mt-2`}>
-          Aquí puedes ver y administrar tus direcciones guardadas para
-          autocompletado y envíos.
+          {t("components.addresses.subtitle")}
         </p>
 
         <div
@@ -28,7 +29,7 @@ function Addresses() {
               isDarkMode ? "text-white/90" : "text-gray-800"
             } text-lg font-semibold`}
           >
-            Direcciones Guardadas
+            {t("components.addresses.content")}
           </h2>
         </div>
       </div>

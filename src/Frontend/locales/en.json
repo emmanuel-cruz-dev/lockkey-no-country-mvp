@@ -24,7 +24,12 @@
     }
   },
   "components": {
-    "scrollButton": "Go top"
+    "scrollButton": "Go top",
+    "addresses": {
+      "title": "Your Addresses",
+      "subtitle": "Here you can view and manage your saved addresses for autocomplete and shipping.",
+      "content": "Saved addresses"
+    }
   },
   "pages": {
     "about": {

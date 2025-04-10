@@ -24,7 +24,12 @@
     }
   },
   "components": {
-    "scrollButton": "Ir arriba"
+    "scrollButton": "Ir arriba",
+    "addresses": {
+      "title": "Tud Direcciones",
+      "subtitle": "Aquí puedes ver y administrar tus direcciones guardadas para autocompletado y envíos.",
+      "content": "Direcciones guardadas"
+    }
   },
   "pages": {
     "about": {
@@ -211,7 +216,7 @@
     },
     "login": {
       "title": "Inicio de sesión",
-      "email": "Correo electrónico*",
+      "email": "Correo Electrónico*",
       "password": "Contraseña*",
       "account": "¿No tienes una cuenta",
       "signUp": "Regístrate aquí",
