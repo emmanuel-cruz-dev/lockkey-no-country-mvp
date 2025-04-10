@@ -1,77 +1,32 @@
-import { useState } from "react";
+import { FC } from "react";
 import { useModal } from "./../../Store/ModalContext";
 import { useDarkMode } from "../../hooks/useDarkMode";
+import { ImportPasswordModalProps } from "../../Store/types";
+import usePasswordModal from "../../hooks/usePasswordModal";
 
-const PasswordModal = ({
-  isOpen,
-  onClose,
-}: {
-  isOpen: boolean;
-  onClose: () => void;
-}) => {
-  const { modalData } = useModal();
-  const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+const PasswordModal: FC<ImportPasswordModalProps> = ({ isOpen, onClose }) => {
   const { isDarkMode } = useDarkMode();
-
-  const [url, setUrl] = useState(modalData?.url || "");
-  const [name, setName] = useState(modalData?.name || "");
-  const [folder, setFolder] = useState(modalData?.folder || "");
-  const [username, setUsername] = useState(modalData?.username || "");
-  const [password, setPassword] = useState(modalData?.password || "");
-  const [notes, setNotes] = useState(modalData?.notes || "");
+  const {
+    showPassword,
+    error,
+    url,
+    setUrl,
+    name,
+    folder,
+    setFolder,
+    username,
+    setUsername,
+    password,
+    setPassword,
+    setName,
+    notes,
+    setNotes,
+    togglePasswordVisibility,
+    handleSubmit,
+  } = usePasswordModal(onClose);
+  const { modalData } = useModal();
 
   if (!isOpen) return null;
-
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
-
-  const savePassword = async () => {
-    try {
-      setError(null);
-      const dataToSend = {
-        url: url || "",
-        name: name || "",
-        folder: folder || "",
-        username: username || "",
-        password: password || "",
-        notes: notes || "",
-      };
-
-      console.log("Datos a enviar:", dataToSend);
-
-      const response = await fetch(
-        `${import.meta.env.VITE_BACKEND_URL}/passwords`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${localStorage.getItem("access_token")}`,
-          },
-          body: JSON.stringify(dataToSend),
-        }
-      );
-
-      const responseData = await response.json();
-
-      if (!response.ok) {
-        console.error("Error del servidor:", responseData);
-        setError(responseData.error || "Error al guardar la contraseña");
-        throw new Error(responseData.error || "Error al guardar la contraseña");
-      }
-
-      console.log("Contraseña guardada:", responseData);
-      onClose();
-    } catch (error) {
-      console.error("Error al guardar la contraseña:", error);
-    }
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    savePassword();
-  };
 
   return (
     <article className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[9999]">
