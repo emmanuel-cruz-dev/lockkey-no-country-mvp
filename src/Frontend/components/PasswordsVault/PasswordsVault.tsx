@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import usePasswordVault from "../../hooks/usePasswordVault";
 
 function PasswordsVault() {
   const { isDarkMode } = useDarkMode();
   const { passwords } = usePasswordVault();
+  const { t } = useTranslation();
 
   return (
     <article className="flex-1 p-6 relative z-10">
@@ -13,10 +15,10 @@ function PasswordsVault() {
             isDarkMode ? "text-white/90" : "text-gray-800"
           } text-2xl font-semibold`}
         >
-          Tus Contraseñas
+          {t("components.passwordVault.title")}
         </h1>
         <p className={`${isDarkMode ? "text-white/70" : "text-gray-600"} mt-2`}>
-          Aquí puedes ver y gestionar tus contraseñas guardadas.
+          {t("components.passwordVault.subtitle")}
         </p>
 
         <div
@@ -29,7 +31,7 @@ function PasswordsVault() {
               isDarkMode ? "text-white/90" : "text-gray-800"
             } text-lg font-semibold`}
           >
-            Contraseñas Guardadas
+            {t("components.passwordVault.content")}
           </h2>
           <ul className="mt-4 space-y-3">
             {passwords.map((password) => (

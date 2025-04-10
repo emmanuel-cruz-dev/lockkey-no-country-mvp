@@ -64,6 +64,11 @@
       "hidePassword": "Hide password",
       "showPassword": "Show password",
       "notes": "Notes"
+    },
+    "passwordVault": {
+      "title": "Your Passwords",
+      "subtitle": "Here you can view and manage your saved passwords.",
+      "content": "Saved passwords"
     }
   },
   "pages": {

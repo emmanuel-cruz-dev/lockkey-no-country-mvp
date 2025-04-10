@@ -64,6 +64,11 @@
       "hidePassword": "Ocultar contraseña",
       "showPassword": "Mostrar contraseña",
       "notes": "Notas"
+    },
+    "passwordVault": {
+      "title": "Tus Contraseñas",
+      "subtitle": "Aquí puedes ver y gestionar tus contraseñas guardadas.",
+      "content": "Contraseñas guardadas"
     }
   },
   "pages": {
