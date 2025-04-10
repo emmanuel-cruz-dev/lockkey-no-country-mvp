@@ -27,7 +27,7 @@ const ImportPasswordModal: FC<ImportPasswordModalProps> = ({
               : "text-gray-500 hover:text-gray-700"
           } absolute top-2 right-2`}
           aria-label="Cerrar"
-          title={t("components.importPassword.close")}
+          title={t("components.close")}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,7 @@ const ImportPasswordModal: FC<ImportPasswordModalProps> = ({
             onClick={onClose}
             className="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded transition-colors"
           >
-            {t("components.importPassword.cancel")}
+            {t("components.cancel")}
           </button>
           <button className="text-black px-4 py-2 btn__primary btn__lime rounded transition-colors">
             {t("components.importPassword.import")}

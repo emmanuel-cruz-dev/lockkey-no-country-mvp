@@ -25,6 +25,10 @@
   },
   "components": {
     "scrollButton": "Ir arriba",
+    "cancel": "Cancelar",
+    "update": "Actualizar",
+    "close": "Cerrar",
+    "save": "Guardar",
     "addresses": {
       "title": "Tus Direcciones",
       "subtitle": "Aquí puedes ver y administrar tus direcciones guardadas para autocompletado y envíos.",
@@ -39,9 +43,19 @@
       "title": "Importar contraseñas",
       "selectFile": "Selecciona el archivo",
       "fileFormat": "Formato del archivo",
-      "cancel": "Cancelar",
-      "import": "Importar",
-      "close": "Cerrar"
+      "import": "Importar"
+    },
+    "notesModal": {
+      "title": "Añadir nota segura",
+      "name": "Nombre",
+      "folder": "Carpeta",
+      "editNote": "Editar nota",
+      "addSecureNote": "Añadir nota segura",
+      "textarea": "Escribe tu nota aquí...",
+      "advancedSettings": "Configuración avanzada",
+      "addAttachment": "Añadir archivo adjunto",
+      "refresh": "Refrescar",
+      "markFavorite": "Marcar como favorito"
     }
   },
   "pages": {

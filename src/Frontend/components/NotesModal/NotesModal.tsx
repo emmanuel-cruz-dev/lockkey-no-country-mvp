@@ -2,10 +2,12 @@ import { FC } from "react";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import { useModal } from "./../../Store/ModalContext";
 import { ImportPasswordModalProps } from "../../Store/types";
+import { useTranslation } from "react-i18next";
 
 const NotesModal: FC<ImportPasswordModalProps> = ({ isOpen, onClose }) => {
   const { modalData } = useModal();
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   if (!isOpen) return null;
 
@@ -24,7 +26,7 @@ const NotesModal: FC<ImportPasswordModalProps> = ({ isOpen, onClose }) => {
               : "text-gray-500 hover:text-gray-700"
           } absolute top-2 right-2`}
           aria-label="Cerrar"
-          title="Cerrar"
+          title={t("components.close")}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +49,9 @@ const NotesModal: FC<ImportPasswordModalProps> = ({ isOpen, onClose }) => {
             isDarkMode ? "text-white/80" : "text-gray-800"
           } text-lg font-semibold border-b pb-2 mb-4`}
         >
-          {modalData?.editMode ? "Editar nota" : "Añadir nota segura"}
+          {modalData?.editMode
+            ? t("components.notesModal.editNote")
+            : t("components.notesModal.addSecureNote")}
         </h2>
 
         <div className="space-y-3">
@@ -57,7 +61,7 @@ const NotesModal: FC<ImportPasswordModalProps> = ({ isOpen, onClose }) => {
                 isDarkMode ? "text-white/70" : "text-gray-700"
               } block text-sm font-medium`}
             >
-              Nombre:
+              {t("components.notesModal.name")}:
             </label>
             <input
               type="text"
@@ -71,7 +75,7 @@ const NotesModal: FC<ImportPasswordModalProps> = ({ isOpen, onClose }) => {
                 isDarkMode ? "text-white/70" : "text-gray-700"
               } block text-sm font-medium`}
             >
-              Carpeta:
+              {t("components.notesModal.folder")}:
             </label>
             <div className="relative">
               <input
@@ -108,7 +112,7 @@ const NotesModal: FC<ImportPasswordModalProps> = ({ isOpen, onClose }) => {
                   isDarkMode ? "text-white/70" : "text-gray-700"
                 } text-sm font-medium cursor-pointer`}
               >
-                Configuración avanzada:
+                {t("components.notesModal.advancedSettings")}:
               </summary>
               <div className="pt-2">
                 <button
@@ -130,7 +134,7 @@ const NotesModal: FC<ImportPasswordModalProps> = ({ isOpen, onClose }) => {
                       d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"
                     />
                   </svg>
-                  Añadir archivo adjunto
+                  {t("components.notesModal.addAttachment")}
                 </button>
               </div>
             </details>
@@ -140,7 +144,7 @@ const NotesModal: FC<ImportPasswordModalProps> = ({ isOpen, onClose }) => {
             <textarea
               className="w-full border rounded p-2 text-gray-800 h-auto"
               defaultValue={modalData?.content || ""}
-              placeholder="Escribe tu nota aquí..."
+              placeholder={t("components.notesModal.textarea")}
             ></textarea>
           </div>
         </div>
@@ -150,7 +154,7 @@ const NotesModal: FC<ImportPasswordModalProps> = ({ isOpen, onClose }) => {
             <button
               className="p-1 text-gray-500 hover:text-gray-700 rounded-full hover:bg-gray-100"
               aria-label="Marcar como favorito"
-              title="Marcar como favorito"
+              title={t("components.notesModal.markFavorite")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +174,7 @@ const NotesModal: FC<ImportPasswordModalProps> = ({ isOpen, onClose }) => {
             <button
               className="p-1 text-gray-500 hover:text-gray-700 rounded-full hover:bg-gray-100"
               aria-label="Refrescar"
-              title="Refrescar"
+              title={t("components.notesModal.refresh")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -192,10 +196,12 @@ const NotesModal: FC<ImportPasswordModalProps> = ({ isOpen, onClose }) => {
             onClick={onClose}
             className="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded transition-colors"
           >
-            Cancelar
+            {t("components.cancel")}
           </button>
           <button className="px-4 py-2 btn__primary btn__lime text-black rounded transition-colors">
-            {modalData?.editMode ? "Actualizar" : "Guardar"}
+            {modalData?.editMode
+              ? t("components.update")
+              : t("components.save")}
           </button>
         </div>
       </div>

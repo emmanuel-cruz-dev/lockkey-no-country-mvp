@@ -25,6 +25,10 @@
   },
   "components": {
     "scrollButton": "Go top",
+    "cancel": "Cancel",
+    "update": "Update",
+    "close": "Close",
+    "save": "Save",
     "addresses": {
       "title": "Your Addresses",
       "subtitle": "Here you can view and manage your saved addresses for autocomplete and shipping.",
@@ -39,9 +43,19 @@
       "title": "Import passwords",
       "selectFile": "Select file",
       "fileFormat": "File format",
-      "cancel": "Cancel",
-      "import": "Import",
-      "close": "Close"
+      "import": "Import"
+    },
+    "notesModal": {
+      "title": "Add secure note",
+      "name": "Name",
+      "folder": "Folder",
+      "editNote": "Edit note",
+      "addSecureNote": "Add secure note",
+      "textarea": "Write your note here...",
+      "advancedSettings": "Advanced settings",
+      "addAttachment": "Add attachment",
+      "refresh": "Refresh",
+      "markFavorite": "Mark as favorite"
     }
   },
   "pages": {
