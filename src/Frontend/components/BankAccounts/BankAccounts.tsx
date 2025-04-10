@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import { useDarkMode } from "../../hooks/useDarkMode";
 
 function BankAccounts() {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   return (
     <article className="flex-1 p-6 relative z-10">
@@ -11,11 +13,10 @@ function BankAccounts() {
             isDarkMode ? "text-white/90" : "text-gray-800"
           } text-2xl font-semibold`}
         >
-          Tus Cuentas Bancarias
+          {t("components.bankAccounts.title")}
         </h1>
         <p className={`${isDarkMode ? "text-white/70" : "text-gray-600"} mt-2`}>
-          Aquí puedes almacenar y gestionar la información de tus cuentas
-          bancarias de forma segura.
+          {t("components.bankAccounts.subtitle")}
         </p>
 
         <div
@@ -28,7 +29,7 @@ function BankAccounts() {
               isDarkMode ? "text-white/90" : "text-gray-800"
             } text-lg font-semibold`}
           >
-            Cuentas Guardadas
+            {t("components.bankAccounts.content")}
           </h2>
         </div>
       </div>

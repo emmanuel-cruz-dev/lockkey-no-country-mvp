@@ -29,6 +29,11 @@
       "title": "Your Addresses",
       "subtitle": "Here you can view and manage your saved addresses for autocomplete and shipping.",
       "content": "Saved addresses"
+    },
+    "bankAccounts": {
+      "title": "Your Bank Accounts",
+      "subtitle": "Here you can securely store and manage your bank account information.",
+      "content": "Saved accounts"
     }
   },
   "pages": {

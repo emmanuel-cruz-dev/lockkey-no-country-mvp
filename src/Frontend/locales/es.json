@@ -26,9 +26,14 @@
   "components": {
     "scrollButton": "Ir arriba",
     "addresses": {
-      "title": "Tud Direcciones",
+      "title": "Tus Direcciones",
       "subtitle": "Aquí puedes ver y administrar tus direcciones guardadas para autocompletado y envíos.",
       "content": "Direcciones guardadas"
+    },
+    "bankAccounts": {
+      "title": "Tus Cuentas Bancarias",
+      "subtitle": "Aquí puedes ver almacenar y gestionar la información de tus cuentas bancarias de forma segura.",
+      "content": "Cuentas guardadas"
     }
   },
   "pages": {
