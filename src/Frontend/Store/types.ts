@@ -32,7 +32,8 @@ export interface FeatureCardProps {
 }
 
 export interface CounterItemProps {
-  count: string;
+  count: number;
+  quantity: string;
   text: string;
 }
 

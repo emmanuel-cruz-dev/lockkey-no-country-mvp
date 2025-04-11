@@ -37,18 +37,21 @@ function WhoWeAre() {
             {t("pages.home.whoWeAre.description")}
           </p>
         </AnimatedComponent>
-        <AnimatedComponent delay={2}>
+        <AnimatedComponent>
           <footer className="flex flex-col md:flex-row gap-8">
             <CounterItem
-              count="2K"
+              count={16}
+              quantity="K"
               text={t("pages.home.whoWeAre.counterItem1")}
             />
             <CounterItem
-              count="17M"
+              count={18}
+              quantity="M"
               text={t("pages.home.whoWeAre.counterItem2")}
             />
             <CounterItem
-              count="18K"
+              count={23}
+              quantity="K"
               text={t("pages.home.whoWeAre.counterItem3")}
             />
           </footer>
