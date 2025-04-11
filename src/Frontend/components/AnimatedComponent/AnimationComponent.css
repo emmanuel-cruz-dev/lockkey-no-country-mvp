@@ -29,6 +29,9 @@
 .animated.slide.up {
   transform: translateY(3.2rem);
 }
+.animated.slide.down {
+  transform: translateY(-3.2rem);
+}
 .animated.slide.left {
   transform: translateX(5rem);
 }

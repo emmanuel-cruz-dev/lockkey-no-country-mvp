@@ -8,11 +8,11 @@ export interface GetAnimationClassesProps {
 }
 
 // funcion que trae las clases
-const getAnimationClasses: FC<GetAnimationClassesProps> = ({
+const getAnimationClasses = ({
   animation,
   direction,
   delay = 0,
-}) => {
+}: GetAnimationClassesProps): string => {
   const classes = ["animated", animation];
 
   if (animation === "slide" && direction) {
@@ -31,7 +31,7 @@ export interface UseAnimationProps {
   animation: string;
 }
 
-type UseAnimationReturn = RefObject<HTMLDivElement>;
+type UseAnimationReturn = RefObject<HTMLDivElement | null>;
 
 // el hook
 const useAnimation = ({
@@ -74,7 +74,7 @@ interface AnimatedComponentProps {
   threshold?: number;
   animation?: string;
   direction?: string;
-  delay: number;
+  delay?: number;
 }
 
 // el componente

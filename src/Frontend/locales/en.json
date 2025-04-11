@@ -162,7 +162,7 @@
       "hero": {
         "title1": "All",
         "titleSpan": "your logins",
-        "title2": "in one trusted place.",
+        "title2": "in one trusted place",
         "description": "Simplify your digital life with a password manager that automatically creates, saves, and fills strong passwords.",
         "startButton": "Start Today",
         "contactButton": "Contact Us",
@@ -170,7 +170,7 @@
       },
       "features": {
         "paragraph": "Simplify your digital security",
-        "title": "Manage your passwords easily, without complications or risks.",
+        "title": "Manage your passwords easily, without complications or risks",
         "cards": {
           "item1": {
             "title": "Discover the power of automation",

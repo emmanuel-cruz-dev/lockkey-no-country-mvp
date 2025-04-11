@@ -162,7 +162,7 @@
       "hero": {
         "title1": "Todos",
         "titleSpan": "tus inicios de sesión",
-        "title2": "en un solo lugar.",
+        "title2": "en un solo lugar",
         "description": "Simplifique su vida digital con un gestor de contraseñas que crea, guarda y rellena contraseñas seguras automáticamente.",
         "startButton": "Empieza Hoy",
         "contactButton": "Contáctanos",
@@ -170,7 +170,7 @@
       },
       "features": {
         "paragraph": "Simplifica tu seguridad digital",
-        "title": "Gestiona tus contraseñas con facilidad, sin complicaciones ni riesgos.",
+        "title": "Gestiona tus contraseñas con facilidad, sin complicaciones ni riesgos",
         "cards": {
           "item1": {
             "title": "Descubra el poder de la automatización",

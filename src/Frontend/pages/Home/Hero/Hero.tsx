@@ -16,7 +16,7 @@ function Hero() {
       id="hero"
     >
       <section className="order-2 md:order-1">
-        <AnimatedComponent animation="slide" direction="right" delay={0}>
+        <AnimatedComponent animation="slide" direction="right">
           <h1 className="text-3xl md:text-5xl xl:text-6xl font-bold mb-6">
             {t("pages.home.hero.title1")}{" "}
             <span className="text__purple-dark">
@@ -25,7 +25,7 @@ function Hero() {
             {t("pages.home.hero.title2")}
           </h1>
         </AnimatedComponent>
-        <AnimatedComponent animation="slide" direction="left" delay={0}>
+        <AnimatedComponent animation="slide" direction="left">
           <p
             className={`text-xl font-[400] leading-[33px] mb-6 ${
               isDarkMode ? "text-white/80" : "text-neutral-700"
@@ -56,7 +56,7 @@ function Hero() {
         </AnimatedComponent>
       </section>
       <figure className="order-1 md:order-2 w-2/3 md:w-80 lg:w-96 mx-auto md:mr-0">
-        <AnimatedComponent animation="scale" direction="in" delay={0}>
+        <AnimatedComponent animation="scale" direction="in">
           <img
             className={`w-full object-cover custom-drop-shadow ${
               isDarkMode ? "dark__drop-shadow" : ""
