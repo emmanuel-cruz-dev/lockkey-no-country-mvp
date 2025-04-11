@@ -1,15 +1,14 @@
-import { Link } from "react-router-dom";
 import LoginBanner from "../../../assets/Login.png";
 import LoginBoyBanner from "../../../assets/LoginBoy.png";
 import Planes from "../../../assets/planes.png";
 import "./Login.css";
 import { useDarkMode } from "../../hooks/useDarkMode";
-import useLogin from "../../hooks/useLogin";
 import { useTranslation } from "react-i18next";
+import AnimatedComponent from "../../components/AnimatedComponent/AnimatedComponent";
+import LoginForm from "./LoginForm";
 
 function Login() {
   const { isDarkMode } = useDarkMode();
-  const { state, handleChange, handleSubmit } = useLogin();
   const { t } = useTranslation();
 
   return (
@@ -39,68 +38,14 @@ function Login() {
         className={`relative w-full max-w-md rounded-lg ${
           isDarkMode ? "dark-mode__background-color" : "bg-white"
         } p-6 shadow-md backdrop-blur-md bg-opacity-90
-      transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-lg`}
+          transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-lg`}
       >
-        <h2 className="mb-4 text-center text-2xl font-semibold">
-          {t("pages.login.title")}
-        </h2>
-        <form onSubmit={handleSubmit} className="space-y-4 text-black">
-          <div>
-            <label
-              className={`block text-sm font-medium ${
-                isDarkMode ? "text-white/80" : "text-gray-700"
-              }`}
-            >
-              {t("pages.login.email")}
-            </label>
-            <input
-              type="email"
-              name="email"
-              value={state.email}
-              onChange={handleChange}
-              className="mt-1 w-full rounded-md border px-3 py-2"
-              required
-            />
-          </div>
-          <div>
-            <label
-              className={`block text-sm font-medium ${
-                isDarkMode ? "text-white/80" : "text-gray-700"
-              }`}
-            >
-              {t("pages.login.password")}
-            </label>
-            <input
-              type="password"
-              name="password"
-              value={state.password}
-              onChange={handleChange}
-              className="mt-1 w-full rounded-md border px-3 py-2"
-              required
-            />
-          </div>
-          <p
-            className={`mt-4 text-center text-sm ${
-              isDarkMode ? "text-white/80" : "text-gray-600"
-            }`}
-          >
-            {t("pages.login.account")}{" "}
-            <Link
-              to="/register"
-              className={`text-blue-600 ${
-                isDarkMode ? "text-blue-400" : ""
-              } hover:underline`}
-            >
-              {t("pages.login.signUp")}
-            </Link>
-          </p>
-          <button
-            type="submit"
-            className="btn__primary btn__lime w-full text-black"
-          >
-            {t("pages.login.logButton")}
-          </button>
-        </form>
+        <AnimatedComponent>
+          <h2 className="mb-4 text-center text-2xl font-semibold">
+            {t("pages.login.title")}
+          </h2>
+          <LoginForm />
+        </AnimatedComponent>
       </div>
     </section>
   );
