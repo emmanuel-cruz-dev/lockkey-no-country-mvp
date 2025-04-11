@@ -106,10 +106,17 @@ export interface ImportPasswordModalProps {
 interface EditModalData {
   id: string;
   name: string;
+  editMode: string;
+  folder: string;
+  content: string;
 }
 
 interface AddModalData {
   folderId: string;
+  name: string;
+  editMode: string;
+  folder: string;
+  content: string;
 }
 
 export type ModalDataType = EditModalData | AddModalData | null;
