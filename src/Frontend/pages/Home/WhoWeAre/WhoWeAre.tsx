@@ -37,7 +37,7 @@ function WhoWeAre() {
             {t("pages.home.whoWeAre.description")}
           </p>
         </AnimatedComponent>
-        <AnimatedComponent>
+        <AnimatedComponent delay={2}>
           <footer className="flex flex-col md:flex-row gap-8">
             <CounterItem
               count="2K"

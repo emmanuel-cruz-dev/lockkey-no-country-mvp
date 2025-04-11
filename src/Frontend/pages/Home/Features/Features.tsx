@@ -9,7 +9,7 @@ function Features() {
   const { t } = useTranslation();
 
   return (
-    <section className="features container py-12" id="features">
+    <section className="features container py-16" id="features">
       <article className="flex flex-col items-center">
         <AnimatedComponent animation="slide" direction="down">
           <p
@@ -20,7 +20,7 @@ function Features() {
             {t("pages.home.features.paragraph")}
           </p>
         </AnimatedComponent>
-        <AnimatedComponent animation="fade" direction="in">
+        <AnimatedComponent animation="fade" direction="in" delay={2}>
           <h2 className="text-center md:w-9/12 text-3xl xl:text-5xl font-bold mb-12 mx-auto">
             {t("pages.home.features.title")}
           </h2>
