@@ -81,7 +81,7 @@ function Header() {
           ) : (
             <Link
               to="/login"
-              className="text-3xl hover:opacity-75 z-10"
+              className="text-3xl z-10 hover:text-[--purple-vivid-color] transition-colors duration-300"
               title={t("layout.header.logIn")}
             >
               <MdPerson />

@@ -8,6 +8,7 @@ function DarkModeToggle() {
 
   return (
     <button
+      className="hover:text-[--purple-vivid-color] transition-colors duration-300"
       onClick={toggleDarkMode}
       title={
         isDarkMode

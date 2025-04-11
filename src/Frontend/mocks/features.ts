@@ -2,7 +2,6 @@ export const featuresItems = [
   {
     id: 1,
     img: "/features-icon1.avif",
-    // title: "Descubra el poder de la automatización",
     title: "pages.home.features.cards.item1.title",
     paragraph: "pages.home.features.cards.item1.paragraph",
   },

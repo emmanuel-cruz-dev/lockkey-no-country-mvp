@@ -15,8 +15,8 @@ function LanguageSwitcher() {
 
   return (
     <button
+      className="text-[18px] hover:text-[--purple-vivid-color] transition-colors duration-300"
       onClick={() => changeLanguage()}
-      className="text-[18px]"
       title={t("layout.header.switchLanguage")}
     >
       {currentLanguage === "es" ? "EN" : "ES"}

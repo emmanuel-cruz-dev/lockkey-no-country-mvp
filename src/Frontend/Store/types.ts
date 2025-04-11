@@ -85,8 +85,6 @@ export type Action = { type: "SET_FIELD"; field: string; value: string };
 
 export type Field = "email" | "password" | "confirmPassword";
 
-// export type Action = { type: "SET_FIELD"; field: Field; value: string };
-
 export const initialState = { email: "", password: "", confirmPassword: "" };
 
 export type InitialStateType = typeof initialState;
