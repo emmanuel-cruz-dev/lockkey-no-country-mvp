@@ -4,8 +4,8 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App.tsx";
 import ScrollToTop from "./hooks/useScrollToTop.ts";
-import { DarkModeProvider } from "./context/DarkModeContext.tsx";
 import "./i18n/languages.ts";
+import { DarkModeProvider } from "./providers/DarkModeProvider.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
