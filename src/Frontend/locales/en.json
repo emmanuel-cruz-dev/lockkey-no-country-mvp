@@ -370,10 +370,10 @@
       "title": "Registration",
       "registerForm": {
         "email": "Email",
-        "masterPassword": "Master Password",
+        "masterPassword": "Master password",
         "showPassword": "Show password",
         "hidePassword": "Hide password",
-        "confirmMasterPassword": "Confirm Master Password",
+        "confirmMasterPassword": "Confirm master password",
         "decryptTime": "Estimated time to decrypt",
         "account": "Do you already have an account?",
         "logHere": "Log in here",

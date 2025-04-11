@@ -369,11 +369,11 @@
     "registration": {
       "title": "Registro",
       "registerForm": {
-        "email": "Correo Electrónico",
-        "masterPassword": "Contraseña Maestra",
+        "email": "Correo electrónico",
+        "masterPassword": "Contraseña maestra",
         "showPassword": "Mostrar contraseña",
         "hidePassword": "Ocultar contraseña",
-        "confirmMasterPassword": "Confirmar Contraseña Maestra",
+        "confirmMasterPassword": "Confirmar contraseña maestra",
         "decryptTime": "Tiempo estimado para descifrar",
         "account": "¿Ya tienes una cuenta?",
         "logHere": "Inicia sesión aquí",
