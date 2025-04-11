@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import { useDarkMode } from "../../hooks/useDarkMode";
 
 function SharingCenter() {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   return (
     <article className="flex-1 p-6 relative z-10">
@@ -11,11 +13,10 @@ function SharingCenter() {
             isDarkMode ? "text-white/90" : "text-gray-800"
           } text-2xl font-semibold`}
         >
-          Comparte de Forma Segura
+          {t("components.sharingCenter.title")}
         </h1>
         <p className={`${isDarkMode ? "text-white/70" : "text-gray-600"} mt-2`}>
-          Aquí puedes gestionar los elementos que has compartido o que otros han
-          compartido contigo.
+          {t("components.sharingCenter.subtitle")}
         </p>
 
         <div
@@ -28,7 +29,7 @@ function SharingCenter() {
               isDarkMode ? "text-white/90" : "text-gray-800"
             } text-lg font-semibold`}
           >
-            Elementos Compartidos
+            {t("components.sharingCenter.content")}
           </h2>
         </div>
       </div>

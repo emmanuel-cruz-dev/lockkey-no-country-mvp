@@ -74,6 +74,11 @@
       "title": "Tus Tarjetas de Pago",
       "subtitle": "Aquí puedes añadir, editar o eliminar las tarjetas de crédito o débito que utilizas.",
       "content": "Tarjetas guardadas"
+    },
+    "sharingCenter": {
+      "title": "Comparte de Forma Segura",
+      "subtitle": "Aquí puedes gestionar los elementos que has compartido o que otros han compartido contigo.",
+      "content": "Elementos compartidos"
     }
   },
   "pages": {

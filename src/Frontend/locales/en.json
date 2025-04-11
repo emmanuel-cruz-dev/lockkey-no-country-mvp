@@ -74,6 +74,11 @@
       "title": "Your Payment Cards",
       "subtitle": "Here you can add, edit, or delete the credit or debit cards you use.",
       "content": "Saved cards"
+    },
+    "sharingCenter": {
+      "title": "Share Securely",
+      "subtitle": "Here you can manage items you've shared or that others have shared with you.",
+      "content": "Shared items"
     }
   },
   "pages": {
