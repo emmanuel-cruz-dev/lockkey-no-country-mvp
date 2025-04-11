@@ -41,7 +41,6 @@ function WhatWeDo() {
             <span className="text__purple-dark">
               {t("pages.home.whatWeDo.titleSpan")}
             </span>
-            .
           </h2>
           <p
             className={`${
