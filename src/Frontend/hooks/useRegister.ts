@@ -2,6 +2,7 @@ import { useReducer, useState, useEffect, useMemo } from "react";
 import { Field, initialState } from "../Store/types";
 import { reducer } from "../Store/reducer";
 import { isValidEmail } from "../utils/utils";
+import { useTranslation } from "react-i18next";
 
 const useRegister = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -11,6 +12,7 @@ const useRegister = () => {
   const [timeToCrack, setTimeToCrack] = useState("");
   const [apiError, setApiError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const { t } = useTranslation();
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -44,23 +46,23 @@ const useRegister = () => {
           setTimeToCrack(data.time_to_crack || "");
           setApiError("");
         } else {
-          setApiError(data.error || "Error en la validación de la contraseña.");
+          setApiError(data.error || t("hooks.passwordError"));
         }
       } catch (error) {
         console.error("Error de conexión:", error);
-        setApiError("Error al conectar con el servidor.");
+        setApiError(t("hooks.serverError"));
       }
     }, 500);
 
     return () => clearTimeout(timeout);
-  }, [state.password]);
+  }, [state.password, t]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     dispatch({ type: "SET_FIELD", field: name as Field, value });
 
     if (name === "email") {
-      setEmailError(isValidEmail(value) ? "" : "Correo electrónico no válido");
+      setEmailError(isValidEmail(value) ? "" : t("hooks.invalidEmail"));
     }
   };
 
@@ -68,17 +70,17 @@ const useRegister = () => {
     e.preventDefault();
 
     if (!isValidEmail(state.email)) {
-      alert("Por favor, ingresa un correo electrónico válido.");
+      alert(t("hooks.validEmail"));
       return;
     }
 
     if (state.password !== state.confirmPassword) {
-      alert("Las contraseñas no coinciden");
+      alert(t("hooks.passwordsMatch"));
       return;
     }
 
     if (passwordScore < 3) {
-      alert("La contraseña es demasiado débil. Usa una más segura.");
+      alert(t("pages.registration.registerForm.weakPassword"));
       return;
     }
 
@@ -98,11 +100,11 @@ const useRegister = () => {
         alert("Registro exitoso");
         window.location.href = "/login";
       } else {
-        setApiError(data.error || "Error en el registro");
+        setApiError(data.error || t("hooks.registrationError"));
       }
     } catch (error) {
       console.error("Error de conexión:", error);
-      setApiError("Error al conectar con el servidor.");
+      setApiError(t("hooks.serverError"));
     }
   };
 

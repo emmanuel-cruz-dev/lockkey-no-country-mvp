@@ -81,6 +81,15 @@
       "content": "Elementos compartidos"
     }
   },
+  "hooks": {
+    "serverError": "Error al conectar con el servidor",
+    "logInError": "Error al iniciar sesión",
+    "passwordError": "Error en la validación de la contraseña.",
+    "registrationError": "Error en el registro.",
+    "invalidEmail": "Correo electrónico no válido.",
+    "validEmail": "Por favor, ingresa un correo electrónico válido.",
+    "passwordsMatch": "Las contraseñas no coinciden."
+  },
   "pages": {
     "about": {
       "aboutUs": {

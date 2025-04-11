@@ -2,10 +2,12 @@ import { useReducer } from "react";
 import { useNavigate } from "react-router-dom";
 import { initialState } from "../Store/types";
 import { reducer } from "../Store/reducer";
+import { useTranslation } from "react-i18next";
 
 const useLogin = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({
@@ -39,11 +41,11 @@ const useLogin = () => {
         localStorage.setItem("access_token", data.access_token);
         navigate("/panel");
       } else {
-        alert(data.error || "Error al iniciar sesión");
+        alert(data.error || t("hooks.logInError"));
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("Error al conectar con el servidor");
+      alert(t("hooks.serverError"));
     }
   };
 

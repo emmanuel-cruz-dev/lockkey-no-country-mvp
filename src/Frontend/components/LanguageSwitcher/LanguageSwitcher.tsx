@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-const LanguageSwitcher: React.FC = () => {
+function LanguageSwitcher() {
   const { i18n, t } = useTranslation();
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
@@ -22,6 +22,6 @@ const LanguageSwitcher: React.FC = () => {
       {currentLanguage === "es" ? "EN" : "ES"}
     </button>
   );
-};
+}
 
 export default LanguageSwitcher;

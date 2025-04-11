@@ -81,6 +81,15 @@
       "content": "Shared items"
     }
   },
+  "hooks": {
+    "serverError": "Error connecting to the server",
+    "logInError": "Error logging in",
+    "passwordError": "Password validation error.",
+    "registrationError": "Registration error.",
+    "invalidEmail": "Invalid email address.",
+    "validEmail": "Please enter a valid email address.",
+    "passwordsMatch": "The passwords do not match."
+  },
   "pages": {
     "about": {
       "aboutUs": {
