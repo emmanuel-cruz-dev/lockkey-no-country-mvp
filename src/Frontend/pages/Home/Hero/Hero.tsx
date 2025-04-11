@@ -4,6 +4,7 @@ import GradientImg from "../../../../assets/gradient-background-img.avif";
 import { Link } from "react-router-dom";
 import { useDarkMode } from "../../../hooks/useDarkMode";
 import { useTranslation } from "react-i18next";
+import AnimatedComponent from "../../../components/AnimatedComponent/AnimatedComponent";
 
 function Hero() {
   const { isDarkMode } = useDarkMode();
@@ -15,49 +16,57 @@ function Hero() {
       id="hero"
     >
       <section className="order-2 md:order-1">
-        <h1 className="text-3xl md:text-5xl xl:text-6xl font-bold mb-6">
-          {t("pages.home.hero.title1")}{" "}
-          <span className="text__purple-dark">
-            {t("pages.home.hero.titleSpan")}
-          </span>{" "}
-          {t("pages.home.hero.title2")}
-        </h1>
-        <p
-          className={`text-xl font-[400] leading-[33px] mb-6 ${
-            isDarkMode ? "text-white/80" : "text-neutral-700"
-          }`}
-        >
-          {t("pages.home.hero.description")}
-        </p>
-        <div className="flex gap-4 mb-5">
-          <Link to="/login" className="btn__primary btn__lime text-black">
-            {t("pages.home.hero.startButton")}
-          </Link>
-          <Link
-            to="/contact"
-            className={`btn__primary ${isDarkMode ? "border-white" : ""}`}
+        <AnimatedComponent animation="slide" direction="right" delay={0}>
+          <h1 className="text-3xl md:text-5xl xl:text-6xl font-bold mb-6">
+            {t("pages.home.hero.title1")}{" "}
+            <span className="text__purple-dark">
+              {t("pages.home.hero.titleSpan")}
+            </span>{" "}
+            {t("pages.home.hero.title2")}
+          </h1>
+        </AnimatedComponent>
+        <AnimatedComponent animation="slide" direction="left" delay={0}>
+          <p
+            className={`text-xl font-[400] leading-[33px] mb-6 ${
+              isDarkMode ? "text-white/80" : "text-neutral-700"
+            }`}
           >
-            {t("pages.home.hero.contactButton")}
-          </Link>
-        </div>
-        <p
-          className={`text-sm ${
-            isDarkMode ? "text-white/60" : "text-neutral-600"
-          }`}
-        >
-          {t("pages.home.hero.paragraph")}
-        </p>
+            {t("pages.home.hero.description")}
+          </p>
+        </AnimatedComponent>
+        <AnimatedComponent animation="slide" delay={4}>
+          <div className="flex gap-4 mb-5">
+            <Link to="/login" className="btn__primary btn__lime text-black">
+              {t("pages.home.hero.startButton")}
+            </Link>
+            <Link
+              to="/contact"
+              className={`btn__primary ${isDarkMode ? "border-white" : ""}`}
+            >
+              {t("pages.home.hero.contactButton")}
+            </Link>
+          </div>
+          <p
+            className={`text-sm ${
+              isDarkMode ? "text-white/60" : "text-neutral-600"
+            }`}
+          >
+            {t("pages.home.hero.paragraph")}
+          </p>
+        </AnimatedComponent>
       </section>
       <figure className="order-1 md:order-2 w-2/3 md:w-80 lg:w-96 mx-auto md:mr-0">
-        <img
-          className={`w-full object-cover custom-drop-shadow ${
-            isDarkMode ? "dark__drop-shadow" : ""
-          }`}
-          src={HeroBanner}
-          alt="Icono de una pantalla con un escudo delante, el escudo tiene un simbolo de check en el centro."
-          width={601}
-          height={565}
-        />
+        <AnimatedComponent animation="scale" direction="in" delay={0}>
+          <img
+            className={`w-full object-cover custom-drop-shadow ${
+              isDarkMode ? "dark__drop-shadow" : ""
+            }`}
+            src={HeroBanner}
+            alt="Icono de una pantalla con un escudo delante, el escudo tiene un simbolo de check en el centro."
+            width={601}
+            height={565}
+          />
+        </AnimatedComponent>
       </figure>
       <img
         className="absolute z-[-1] w-72 -top-40 -left-56 opacity-10 transform rotate-180"

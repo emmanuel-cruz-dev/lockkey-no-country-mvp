@@ -9,7 +9,7 @@ import Panel from "../pages/Panel/Panel";
 
 function AppRouter() {
   // const isAuthenticated = !!localStorage.getItem("access_token"); // Agregar esta línea al finalizar
-  const isAuthenticated = true; // No olvidar borrar esta línea
+  const isAuthenticated = true; // Borrar esta línea
 
   return (
     <Routes>
