@@ -66,10 +66,6 @@ LockKey allows users to generate, store, and manage passwords securely, using ad
    python app.py   # Backend
    ```
 
-## Contribución
-
-Si deseas contribuir a LockKey, por favor sigue las mejores prácticas de desarrollo y abre un Pull Request con tus cambios.
-
 ## Installation
 
 1. Clone the repository:
@@ -91,6 +87,6 @@ Si deseas contribuir a LockKey, por favor sigue las mejores prácticas de desarr
    ```
    ````
 
-## Contribute
+## Aclaración
 
-If you wish to contribute to LockKey, please follow development best practices and open a Pull Request with your changes.
+Esta es una versión de prueba, no final.

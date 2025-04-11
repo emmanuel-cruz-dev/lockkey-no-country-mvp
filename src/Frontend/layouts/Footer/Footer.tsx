@@ -46,7 +46,9 @@ function Footer() {
               <Link to="/contact">{t("layout.header.contact")}</Link>
             </li>
             <li>
-              <Link to="/panel">Panel</Link>
+              <Link to="/panel">
+                Panel (<strong>demo test</strong>)
+              </Link>
             </li>
           </ul>
         </article>
