@@ -1,7 +1,28 @@
-import { ReactNode } from "react";
+import { ReactNode, RefObject } from "react";
 
 export interface HeaderNavBarProps {
   handleClick: () => void;
+}
+
+export interface GetAnimationClassesProps {
+  animation: string;
+  direction?: string;
+  delay?: number;
+}
+
+export interface UseAnimationProps {
+  threshold?: number;
+  animation: string;
+}
+
+export type UseAnimationReturn = RefObject<HTMLDivElement | null>;
+
+export interface AnimatedComponentProps {
+  children: ReactNode;
+  threshold?: number;
+  animation?: string;
+  direction?: string;
+  delay?: number;
 }
 
 export interface FeatureCardProps {

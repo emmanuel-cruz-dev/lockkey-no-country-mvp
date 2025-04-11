@@ -3,29 +3,10 @@
   transition: transform 2000ms ease-in-out, opacity 2000ms ease-in-out;
 }
 
-/* FLIP */
-.animated.flip {
-  opacity: 1;
-}
-.animated.flip .front {
-  transform: perspective(600px) rotateY(0deg);
-}
-.animated.flip .back {
-  transform: perspective(600px) rotateY(180deg);
-}
-.animated.flip-in .front {
-  transform: perspective(600px) rotateY(180deg);
-}
-.animated.flip-in .back {
-  transform: perspective(600px) rotateY(360deg);
-}
-
-/* FADE */
 .animated.fade-in {
   opacity: 1;
 }
 
-/* SLIDE */
 .animated.slide.up {
   transform: translateY(3.2rem);
 }
@@ -43,7 +24,6 @@
   opacity: 1;
 }
 
-/* SCALE */
 .animated.scale {
   transform: scale(0.75);
 }
@@ -52,7 +32,6 @@
   opacity: 1;
 }
 
-/* DELAYS */
 .animated.delay-1 {
   transition-delay: 100ms;
 }
