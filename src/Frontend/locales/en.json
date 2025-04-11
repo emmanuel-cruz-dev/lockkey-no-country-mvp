@@ -82,8 +82,8 @@
     }
   },
   "hooks": {
-    "serverError": "Error connecting to the server",
-    "logInError": "Error logging in",
+    "serverError": "Error connecting to the server.",
+    "logInError": "Error logging in.",
     "passwordError": "Password validation error.",
     "registrationError": "Registration error.",
     "invalidEmail": "Invalid email address.",
@@ -371,6 +371,8 @@
       "registerForm": {
         "email": "Email",
         "masterPassword": "Master Password",
+        "showPassword": "Show password",
+        "hidePassword": "Hide password",
         "confirmMasterPassword": "Confirm Master Password",
         "decryptTime": "Estimated time to decrypt",
         "account": "Do you already have an account?",

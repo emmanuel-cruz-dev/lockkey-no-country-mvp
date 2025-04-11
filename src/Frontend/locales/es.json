@@ -82,8 +82,8 @@
     }
   },
   "hooks": {
-    "serverError": "Error al conectar con el servidor",
-    "logInError": "Error al iniciar sesión",
+    "serverError": "Error al conectar con el servidor.",
+    "logInError": "Error al iniciar sesión.",
     "passwordError": "Error en la validación de la contraseña.",
     "registrationError": "Error en el registro.",
     "invalidEmail": "Correo electrónico no válido.",
@@ -371,6 +371,8 @@
       "registerForm": {
         "email": "Correo Electrónico",
         "masterPassword": "Contraseña Maestra",
+        "showPassword": "Mostrar contraseña",
+        "hidePassword": "Ocultar contraseña",
         "confirmMasterPassword": "Confirmar Contraseña Maestra",
         "decryptTime": "Tiempo estimado para descifrar",
         "account": "¿Ya tienes una cuenta?",
