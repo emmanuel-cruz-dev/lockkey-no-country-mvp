@@ -40,7 +40,7 @@ function WhoWeAre() {
         <AnimatedComponent>
           <footer className="flex flex-col md:flex-row gap-8">
             <CounterItem
-              count={16}
+              count={24}
               quantity="K"
               text={t("pages.home.whoWeAre.counterItem1")}
             />
@@ -50,7 +50,7 @@ function WhoWeAre() {
               text={t("pages.home.whoWeAre.counterItem2")}
             />
             <CounterItem
-              count={23}
+              count={21}
               quantity="K"
               text={t("pages.home.whoWeAre.counterItem3")}
             />

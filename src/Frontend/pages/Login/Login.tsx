@@ -4,7 +4,6 @@ import Planes from "../../../assets/planes.png";
 import "./Login.css";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import { useTranslation } from "react-i18next";
-import AnimatedComponent from "../../components/AnimatedComponent/AnimatedComponent";
 import LoginForm from "./LoginForm";
 
 function Login() {
@@ -40,12 +39,10 @@ function Login() {
         } p-6 shadow-md backdrop-blur-md bg-opacity-90
           transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-lg`}
       >
-        <AnimatedComponent>
-          <h2 className="mb-4 text-center text-2xl font-semibold">
-            {t("pages.login.title")}
-          </h2>
-          <LoginForm />
-        </AnimatedComponent>
+        <h2 className="mb-4 text-center text-2xl font-semibold">
+          {t("pages.login.title")}
+        </h2>
+        <LoginForm />
       </div>
     </section>
   );

@@ -45,6 +45,9 @@ function Footer() {
             <li>
               <Link to="/contact">{t("layout.header.contact")}</Link>
             </li>
+            <li>
+              <Link to="/panel">Panel</Link>
+            </li>
           </ul>
         </article>
         <article className="xl:col-span-2">

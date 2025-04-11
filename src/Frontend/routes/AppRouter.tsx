@@ -8,8 +8,8 @@ import Login from "../pages/Login/Login";
 import Panel from "../pages/Panel/Panel";
 
 function AppRouter() {
-  // const isAuthenticated = !!localStorage.getItem("access_token"); // Agregar esta línea al finalizar
-  const isAuthenticated = true; // Borrar esta línea
+  // const isAuthenticated = !!localStorage.getItem("access_token"); // Ruta original
+  const isAuthenticated = true; // Ruta abierta para demostración
 
   return (
     <Routes>

@@ -345,7 +345,7 @@
       "paymentCards": "Tarjetas de pago",
       "bankAccounts": "Cuentas bancarias",
       "mainContent": {
-        "title": "¡Bienvenida a tu panel!",
+        "title": "¡Bienvenido/a a tu panel!",
         "subtitle": "Aquí puedes gestionar tus contraseñas, notas y otros elementos.",
         "articlesList": {
           "item1": {
