@@ -69,6 +69,11 @@
       "title": "Tus Contraseñas",
       "subtitle": "Aquí puedes ver y gestionar tus contraseñas guardadas.",
       "content": "Contraseñas guardadas"
+    },
+    "paymentCards": {
+      "title": "Tus Tarjetas de Pago",
+      "subtitle": "Aquí puedes añadir, editar o eliminar las tarjetas de crédito o débito que utilizas.",
+      "content": "Tarjetas guardadas"
     }
   },
   "pages": {

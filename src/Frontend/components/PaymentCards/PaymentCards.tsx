@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import { useDarkMode } from "../../hooks/useDarkMode";
 
 function PaymentCards() {
   const { isDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   return (
     <article className="flex-1 p-6 relative z-10">
@@ -11,11 +13,10 @@ function PaymentCards() {
             isDarkMode ? "text-white/90" : "text-gray-800"
           } text-2xl font-semibold`}
         >
-          Tus Tarjetas de Pago
+          {t("components.paymentCards.title")}
         </h1>
         <p className={`${isDarkMode ? "text-white/70" : "text-gray-600"} mt-2`}>
-          Aquí puedes añadir, editar o eliminar las tarjetas de débito o crédito
-          que utilizas.
+          {t("components.paymentCards.subtitle")}
         </p>
 
         <div
@@ -28,7 +29,7 @@ function PaymentCards() {
               isDarkMode ? "text-white/90" : "text-gray-800"
             } text-lg font-semibold`}
           >
-            Tarjetas Guardadas
+            {t("components.paymentCards.content")}
           </h2>
         </div>
       </div>
