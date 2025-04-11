@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface HeaderNavBarProps {
   handleClick: () => void;
 }
@@ -99,4 +101,27 @@ export interface ContentArticleProps {
 export interface ImportPasswordModalProps {
   isOpen: boolean;
   onClose: () => void;
+}
+
+interface EditModalData {
+  id: string;
+  name: string;
+}
+
+interface AddModalData {
+  folderId: string;
+}
+
+export type ModalDataType = EditModalData | AddModalData | null;
+
+export interface ModalContextType {
+  isModalOpen: boolean;
+  modalType: string | null;
+  modalData: ModalDataType;
+  openModal: (type: string, data?: ModalDataType) => void;
+  closeModal: () => void;
+}
+
+export interface ModalProviderProps {
+  children: ReactNode;
 }

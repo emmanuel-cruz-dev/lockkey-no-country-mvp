@@ -7,8 +7,9 @@ import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton"
 import Loading from "./components/Loading/Loading";
 import PasswordModal from "./components/PasswordModal/PasswordModal";
 import NotesModal from "./components/NotesModal/NotesModal";
-import { ModalProvider, useModal } from "./Store/ModalContext";
+import { useModal } from "./Store/ModalContext";
 import ImportPasswordModal from "./components/ImportPassword/ImportPassword";
+import { ModalProvider } from "./providers/ModalProvider";
 
 const Contact = lazy(() => import("./pages/Contact/Contact/Contact"));
 const Features = lazy(() => import("./pages/Home/Features/Features"));
