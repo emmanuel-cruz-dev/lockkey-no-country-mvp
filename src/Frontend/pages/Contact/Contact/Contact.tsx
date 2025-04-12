@@ -8,7 +8,7 @@ function Contact() {
   const { t } = useTranslation();
 
   return (
-    <section className="container contact py-12" id="contact">
+    <section className="container contact py-12 overflow-x-hidden" id="contact">
       <article className="text-center">
         <AnimatedComponent animation="slide" direction="down">
           <h2

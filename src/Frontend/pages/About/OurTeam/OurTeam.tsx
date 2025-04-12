@@ -9,7 +9,7 @@ function OurTeam() {
   const { t } = useTranslation();
 
   return (
-    <section className="container">
+    <section className="container overflow-x-hidden">
       <article className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-12">
         <article>
           <AnimatedComponent animation="slide" direction="left">

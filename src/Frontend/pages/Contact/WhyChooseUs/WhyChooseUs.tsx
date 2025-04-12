@@ -11,7 +11,7 @@ function WhyChooseUs() {
   const { t } = useTranslation();
 
   return (
-    <section className="container" id="why-choose-us">
+    <section className="container overflow-x-hidden" id="why-choose-us">
       <article className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-8">
         <article className="order-2 md:order-none">
           <AnimatedComponent animation="slide" direction="right">
