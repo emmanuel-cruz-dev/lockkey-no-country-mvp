@@ -10,7 +10,7 @@ function Panel() {
   const { t } = useTranslation();
 
   return (
-    <section className="flex min-h-screen relative -mt-1">
+    <section className="flex min-h-screen relative -mt-1" id="panel">
       <aside
         className={`${
           isDarkMode ? "bg-[#171d34]" : "bg-white"
