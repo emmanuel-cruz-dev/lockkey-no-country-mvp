@@ -7,7 +7,7 @@ function MainContent() {
   const { t } = useTranslation();
 
   return (
-    <main className="flex-1 p-6 relative z-10">
+    <main className="flex-1 p-6 relative z-[1]">
       <section className="max-w-4xl mx-auto">
         <h1
           className={`${
