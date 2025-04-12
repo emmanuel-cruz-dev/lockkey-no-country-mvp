@@ -36,12 +36,17 @@ function Hero() {
         </AnimatedComponent>
         <AnimatedComponent animation="slide" delay={4}>
           <div className="flex gap-4 mb-5">
-            <Link to="/login" className="btn__primary btn__lime text-black">
+            <Link
+              to="/login"
+              className="whitespace-nowrap btn__primary btn__lime text-black"
+            >
               {t("pages.home.hero.startButton")}
             </Link>
             <Link
               to="/contact"
-              className={`btn__primary ${isDarkMode ? "border-white" : ""}`}
+              className={`whitespace-nowrap btn__primary ${
+                isDarkMode ? "border-white" : ""
+              }`}
             >
               {t("pages.home.hero.contactButton")}
             </Link>
