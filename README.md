@@ -48,45 +48,6 @@ LockKey allows users to generate, store, and manage passwords securely, using ad
 - Credential organization by categories.
 - Protection against brute force attacks and activity monitoring.
 
-## Instalación
-
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/tu-repositorio.git
-   ```
-2. Instala las dependencias:
-   ```bash
-   npm install   # Frontend
-   pip install -r requirements.txt   # Backend
-   ```
-3. Configura las variables de entorno
-4. Inicia la aplicación:
-   ```bash
-   npm run dev   # Frontend con Vite
-   python app.py   # Backend
-   ```
-
-## Installation
-
-1. Clone the repository:
-   ````bash
-   git clone https://github.com/tu-repositorio.git
-   ```
-   ````
-2. Install the dependencies:
-   ````bash
-   npm install # Frontend
-   pip install -r requirements.txt # Backend
-   ```
-   ````
-3. Configure the environment variables
-4. Start the application:
-   ````bash
-   npm run dev # Frontend with Vite
-   python app.py # Backend
-   ```
-   ````
-
 ## Aclaración
 
 Esta es una versión de prueba, no final.
