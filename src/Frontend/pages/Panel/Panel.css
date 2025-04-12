@@ -2,6 +2,12 @@
   overflow-x: hidden;
 }
 
+@media screen and (min-width: 680px) {
+  #panel {
+    overflow-x: visible;
+  }
+}
+
 .nav__panel-button__container button {
   color: rgb(255 255 255 / 0.8);
 }

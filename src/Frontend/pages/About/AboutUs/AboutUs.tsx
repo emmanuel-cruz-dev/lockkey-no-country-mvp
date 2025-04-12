@@ -11,10 +11,10 @@ function AboutUs() {
   const { t } = useTranslation();
 
   return (
-    <section className="container overflow-x-hidden">
+    <section className="container overflow-x-hidden md:overflow-x-visible">
       <article className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-8">
         <AnimatedComponent animation="slide" direction="right">
-          <article className="grid grid-cols-2 gap-8 mx-auto">
+          <article className="w-5/6 md:w-auto grid grid-cols-2 gap-8 mx-auto">
             <img
               className={`col-span-2 rounded-xl overflow-hidden box-shadow__item ${
                 isDarkMode ? "dark__box-shadow__item" : ""

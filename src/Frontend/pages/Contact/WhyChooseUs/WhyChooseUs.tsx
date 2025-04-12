@@ -11,7 +11,10 @@ function WhyChooseUs() {
   const { t } = useTranslation();
 
   return (
-    <section className="container overflow-x-hidden" id="why-choose-us">
+    <section
+      className="container overflow-x-hidden md:overflow-x-visible"
+      id="why-choose-us"
+    >
       <article className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-8">
         <article className="order-2 md:order-none">
           <AnimatedComponent animation="slide" direction="right">
@@ -73,7 +76,7 @@ function WhyChooseUs() {
           </AnimatedComponent>
         </article>
         <AnimatedComponent animation="slide" direction="left">
-          <aside className="order-1 md:order-none grid grid-cols-3 grid-rows-7 gap-6 mx-auto">
+          <aside className="w-5/6 md:w-auto order-1 md:order-none grid grid-cols-3 grid-rows-7 gap-6 mx-auto">
             <figure
               className={`row-start-3 row-span-2 rounded-xl overflow-hidden box-shadow__item ${
                 isDarkMode ? "dark__box-shadow__item" : ""

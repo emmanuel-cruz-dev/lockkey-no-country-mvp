@@ -10,7 +10,7 @@ function WhatWeDo() {
 
   return (
     <section
-      className="container overflow-x-hidden what-we-do grid grid-cols-1 lg:grid-cols-5 justify-center items-center gap-2 py-12"
+      className="container overflow-x-hidden md:overflow-x-visible what-we-do grid grid-cols-1 lg:grid-cols-5 justify-center items-center gap-2 py-12"
       id="what-we-do"
     >
       <figure className="w-2/3 md:max-w-72 xl:max-w-96 mx-auto lg:col-span-2 lg:ml-0">

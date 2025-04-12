@@ -9,7 +9,7 @@ function OurTeam() {
   const { t } = useTranslation();
 
   return (
-    <section className="container overflow-x-hidden">
+    <section className="container overflow-x-hidden md:overflow-x-visible">
       <article className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-12">
         <article>
           <AnimatedComponent animation="slide" direction="left">
@@ -34,7 +34,7 @@ function OurTeam() {
           </AnimatedComponent>
         </article>
         <AnimatedComponent animation="slide" direction="right">
-          <aside className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 mx-auto">
+          <aside className="w-5/6 md:w-auto grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 mx-auto">
             {teamMembers.map((member) => {
               return <TeamCard key={member.id} {...member} />;
             })}
