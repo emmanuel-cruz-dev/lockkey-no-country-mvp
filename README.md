@@ -22,8 +22,6 @@ LockKey allows users to generate, store, and manage passwords securely, using ad
 
 ## 🚀 Technologies Used
 
-### Frontend
-
 <div style="text-align: left;">
   <img src="https://img.shields.io/badge/Vite-%E2%9C%94-blue?logo=vite&logoColor=white" alt="Vite">
   <img src="https://img.shields.io/badge/React-%E2%9C%94-blue?logo=react&logoColor=white" alt="React">
