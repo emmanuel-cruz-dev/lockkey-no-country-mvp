@@ -30,19 +30,16 @@ LockKey permite a los usuarios generar, almacenar y gestionar contraseñas de ma
   <img src="https://img.shields.io/badge/TypeScript-%E2%9C%94-blue?logo=typescript&logoColor=white" alt="TypeScript">
 </div>
 
-### Backend
-
-<div style="text-align: left;">
-  <img src="https://img.shields.io/badge/Python-%E2%9C%94-yellow?logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Flask-%E2%9C%94-black?logo=flask&logoColor=white" alt="Flask">
-  <img src="https://img.shields.io/badge/PostgreSQL-%E2%9C%94-blue?logo=postgresql&logoColor=white" alt="PostgreSQL">
-  <img src="https://img.shields.io/badge/JWT-%E2%9C%94-red?logo=jsonwebtokens&logoColor=white" alt="JWT">
-  <img src="https://img.shields.io/badge/Werkzeug-%E2%9C%94-green" alt="Werkzeug">
-</div>
-
 ## ✨ Características
 
-- Cifrado de contraseñas con algoritmos avanzados.
-- Autenticación y autorización seguras con JWT.
-- Organización de credenciales en categorías.
-- Protección contra ataques de fuerza bruta y monitoreo de actividad.
+- **Modo Claro/Oscuro:** Cambia entre temas claro y oscuro para una experiencia personalizada.
+- **Switch de Idioma:** Alterna entre español e inglés con soporte para traducciones dinámicas.
+- **Navegación SPA:** Navegación fluida entre secciones utilizando React Router DOM.
+- **Animaciones OnScroll:** Animaciones atractivas que se activan al hacer scroll.
+- **Diseño Responsive:** Totalmente optimizado para dispositivos móviles, tablets y escritorios.
+- **Secciones Interactivas:** Incluye varias secciones como inicio, características, precios, testimonios y más.
+- **Diseño Moderno:** Interfaz atractiva y profesional con colores y tipografía bien definidos.
+
+## ⚠️ Nota Importante
+
+Esta es una **versión de prueba enfocada en el Frontend** del proyecto. El desarrollo continuará y otro equipo se encargará de extender su funcionalidad en futuras versiones. Por lo tanto, esta versión no debe considerarse como el producto final.

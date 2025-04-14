@@ -31,23 +31,16 @@ LockKey allows users to generate, store, and manage passwords securely, using ad
   <img src="https://img.shields.io/badge/TailwindCSS-%E2%9C%94-06B6D4?logo=tailwindcss&logoColor=white" alt="Tailwind CSS">
 </div>
 
-### Backend
-
-<div style="text-align: left;">
-  <img src="https://img.shields.io/badge/Python-%E2%9C%94-yellow?logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Flask-%E2%9C%94-black?logo=flask&logoColor=white" alt="Flask">
-  <img src="https://img.shields.io/badge/PostgreSQL-%E2%9C%94-blue?logo=postgresql&logoColor=white" alt="PostgreSQL">
-  <img src="https://img.shields.io/badge/JWT-%E2%9C%94-red?logo=jsonwebtokens&logoColor=white" alt="JWT">
-  <img src="https://img.shields.io/badge/Werkzeug-%E2%9C%94-green" alt="Werkzeug">
-</div>
-
 ## ✨ Features
 
-- Password encryption with advanced algorithms.
-- Secure authentication and authorization with JWT.
-- Credential organization by categories.
-- Protection against brute force attacks and activity monitoring.
+- **Light/Dark Mode:** Switch between light and dark themes for a personalized experience.
+- **Language Switcher:** Toggle between Spanish and English with support for dynamic translations.
+- **SPA Navigation:** Fluid navigation between sections using the React Router DOM.
+- **OnScroll Animations:** Engaging animations that trigger when scrolling.
+- **Responsive Design:** Fully optimized for mobile, tablet, and desktop devices.
+- **Interactive Sections:** Includes various sections such as home, features, pricing, testimonials, and more.
+- **Modern Design:** Attractive and professional interface with well-defined colors and typography.
 
-## Aclaración
+## ⚠️ Important Note
 
-Esta es una versión de prueba, no final.
+This is a **test version focused on the frontend** of the project. Development will continue, and another team will expand its functionality in future versions. Therefore, this version should not be considered the final product.
