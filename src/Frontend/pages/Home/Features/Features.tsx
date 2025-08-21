@@ -25,11 +25,11 @@ function Features() {
             {t("pages.home.features.title")}
           </h2>
         </AnimatedComponent>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <main className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {featuresItems.map((item) => (
             <FeaturedCard key={item.id} {...item} />
           ))}
-        </div>
+        </main>
       </article>
     </section>
   );
