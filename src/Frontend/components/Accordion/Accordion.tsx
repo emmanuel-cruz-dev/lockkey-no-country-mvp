@@ -11,7 +11,7 @@ export const Accordion: FC<AccordionProps> = ({ id, title, content }) => {
   const { t } = useTranslation();
 
   return (
-    <div key={id} className="text-left">
+    <article key={id} className="text-left">
       <button
         onClick={() => toggleSection(id)}
         className={`w-full flex justify-between items-center p-4 text-left ${
@@ -26,7 +26,7 @@ export const Accordion: FC<AccordionProps> = ({ id, title, content }) => {
         </span>
       </button>
       {activeIndex === id && (
-        <div
+        <main
           className={`p-4 ${
             isDarkMode
               ? "bg-white/10 text-white/90"
@@ -34,8 +34,8 @@ export const Accordion: FC<AccordionProps> = ({ id, title, content }) => {
           } transition-all duration-300 ease-in-out`}
         >
           {t(`${content}`)}
-        </div>
+        </main>
       )}
-    </div>
+    </article>
   );
 };
